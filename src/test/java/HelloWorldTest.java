@@ -20,13 +20,13 @@ class HelloWorldTest {
 
     @Test
     void sayHelloWorld() {
-        String result = helloWorld.sayHello();
+        String result = helloWorld.sayHelloWorld();
         assertEquals("Hello World", result);
     }
 
     @Test
     void saySomethingElse() {
-        String result = helloWorld.sayHello();
+        String result = helloWorld.sayHelloWorld();
         assertNotEquals("Something Else", result);
     }
 }
