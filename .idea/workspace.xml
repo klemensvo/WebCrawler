@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7196258-2185-4831-a486-280bfc6cee1e" name="Changes" comment="initial commit with hello world and test">
+    <list default="true" id="c7196258-2185-4831-a486-280bfc6cee1e" name="Changes" comment="initial commit of develop_klemens, rename sayHello to sayHelloWorld">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,7 +80,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HelloWorldTest">
+  <component name="RunManager" selected="Gradle.Tests in 'WebCrawler.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -133,8 +134,30 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'WebCrawler.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'WebCrawler.test'" />
         <item itemvalue="Gradle.HelloWorldTest" />
         <item itemvalue="Gradle.MainTest" />
         <item itemvalue="Application.Main" />
@@ -157,7 +180,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678397153771</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit of develop, no changes">
+      <created>1678398143694</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678398143694</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial commit of develop_klemens, rename sayHello to sayHelloWorld">
+      <created>1678398383891</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678398383891</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +210,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit with hello world and test" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit with hello world and test" />
+    <MESSAGE value="initial commit of develop, no changes" />
+    <MESSAGE value="initial commit of develop_klemens, rename sayHello to sayHelloWorld" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit of develop_klemens, rename sayHello to sayHelloWorld" />
   </component>
 </project>
