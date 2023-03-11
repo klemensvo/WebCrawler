@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7196258-2185-4831-a486-280bfc6cee1e" name="Changes" comment="initial commit of develop_klemens, rename sayHello to sayHelloWorld">
+    <list default="true" id="c7196258-2185-4831-a486-280bfc6cee1e" name="Changes" comment="first draft of basic structure in README.md">
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WelcomeText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/WelcomeTextTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +84,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'WebCrawler.test'">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -155,8 +159,32 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UserInputTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;UserInputTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserInputTest" />
         <item itemvalue="Gradle.Tests in 'WebCrawler.test'" />
         <item itemvalue="Gradle.HelloWorldTest" />
         <item itemvalue="Gradle.MainTest" />
@@ -194,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678398383891</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first draft of basic structure in README.md">
+      <created>1678474190123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678474190123</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +247,7 @@
     <MESSAGE value="initial commit with hello world and test" />
     <MESSAGE value="initial commit of develop, no changes" />
     <MESSAGE value="initial commit of develop_klemens, rename sayHello to sayHelloWorld" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit of develop_klemens, rename sayHello to sayHelloWorld" />
+    <MESSAGE value="first draft of basic structure in README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="first draft of basic structure in README.md" />
   </component>
 </project>
