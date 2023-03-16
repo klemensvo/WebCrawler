@@ -4,26 +4,30 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class UserInput {
-    private String url;
+    // private String url;
     private int crawlDepth;
     private String targetLanguage;
 
-    public String getUrl() {
+    public String getStartingWebsiteFromUser() {
+        String url;
         Scanner scanner = new Scanner(System.in);
         do {
-            System.out.print("Please enter a valid website: ");
+            new Texts().printPromptStartingWebsite();
             url = scanner.nextLine();
-        } while (!isValidURL(url));
-        // url = addHttpsTo(url); // todo: is this doing more than one thing?
+            if (!url.startsWith("https://")) {
+                url = prependHttps(url);
+            }
+        } while (!isValidWebsite(url));
         return url;
     }
 
-    private boolean isValidURL(String urlToBeValidated) {
-        /* todo: prepend "https://" if not provided
-        if (!urlToBeValidated.startsWith("https://")) {
-            urlToBeValidated = "https://" + urlToBeValidated;
-        } */
+    private String prependHttps(String url) {
+        return "https://" + url;
+    }
+
+    private boolean isValidWebsite(String urlToBeValidated) { // todo: make tests
         try {
+            // if the next two lines pass, the URL is valid
             URL debatableUrl = new URL(urlToBeValidated);
             debatableUrl.toURI();
             return true;
@@ -32,7 +36,20 @@ public class UserInput {
         }
     }
 
-    private String addHttpsTo(String url) { // todo: remove function if not used
-        return "https://" + url;
+    public int getCrawlingDepthFromUser() {
+        int crawlingDepth;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            new Texts().printPromptCrawlingDepth();
+            crawlingDepth = scanner.nextInt();
+        } while (!isValidCrawlingDepth(crawlingDepth));
+        return 0;
+    }
+
+    private boolean isValidCrawlingDepth(int crawlingDepth) {
+        if (crawlingDepth < 1 || crawlingDepth > 3) {
+            return false;
+        }
+        return true;
     }
 }
