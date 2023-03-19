@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserInputTest {
 
     UserInput userInput;
-    Scanner scanner;
+    // Scanner scanner;
 
     @BeforeEach
     void setUp() {
@@ -21,6 +21,42 @@ class UserInputTest {
     void tearDown() {
         userInput = null;
     }
+
+
+
+    @Test
+    void getStartingWebsiteFromUser() {
+    }
+
+    @Test
+    void prependHttps() {
+    }
+
+    @Test
+    void isValidWebsite() {
+    }
+
+    @Test
+    void getCrawlingDepthFromUser() {
+
+    }
+
+    @Test
+    void isValidCrawlingDepth() {
+        UserInput userInput = new UserInput();
+
+        assertTrue(userInput.isValidCrawlingDepth(1));
+        assertTrue(userInput.isValidCrawlingDepth(2));
+        assertTrue(userInput.isValidCrawlingDepth(3));
+
+        assertFalse(userInput.isValidCrawlingDepth(0));
+        assertFalse(userInput.isValidCrawlingDepth(4));
+        assertFalse(userInput.isValidCrawlingDepth(-1));
+
+        // userInput = null;
+    }
+
+
 
     @Test
     void getUrlFunctionalTest() {

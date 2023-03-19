@@ -1,10 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        new Texts().printWelcomeText();
-        String startingWebsite = new UserInput().getStartingWebsiteFromUser();
-        int crawlingDepth = new UserInput().getCrawlingDepthFromUser();
+        String startingWebsite;
+        int crawlingDepth;
+        String targetLanguage;
 
-        System.out.println(startingWebsite); // todo: delete later
+        new Texts().printWelcome();
+
+        startingWebsite = new UserInput().getStartingWebsiteFromUser();
+        crawlingDepth = new UserInput().getCrawlingDepthFromUser();
+        targetLanguage = "German"; // todo: implement prompt for targetLanguage in UserInput
+
+        System.out.println("\nStarting website: " + startingWebsite +
+                ", crawling depth: " + crawlingDepth +
+                ", target language: " + targetLanguage); // todo: delete later
     }
 }
 

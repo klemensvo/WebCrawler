@@ -12,20 +12,21 @@ public class UserInput {
         String url;
         Scanner scanner = new Scanner(System.in);
         do {
-            new Texts().printPromptStartingWebsite();
+            new Texts().printPromptForStartingWebsite();
             url = scanner.nextLine();
+            /* todo: prepend https:// if necessary
             if (!url.startsWith("https://")) {
                 url = prependHttps(url);
-            }
+            } */
         } while (!isValidWebsite(url));
         return url;
     }
 
-    private String prependHttps(String url) {
+    protected String prependHttps(String url) {
         return "https://" + url;
     }
 
-    private boolean isValidWebsite(String urlToBeValidated) { // todo: make tests
+    protected boolean isValidWebsite(String urlToBeValidated) { // todo: make tests
         try {
             // if the next two lines pass, the URL is valid
             URL debatableUrl = new URL(urlToBeValidated);
@@ -40,16 +41,16 @@ public class UserInput {
         int crawlingDepth;
         Scanner scanner = new Scanner(System.in);
         do {
-            new Texts().printPromptCrawlingDepth();
-            crawlingDepth = scanner.nextInt();
+            new Texts().printPromptForCrawlingDepth();
+            crawlingDepth = scanner.nextInt(); // todo: change to .nextLine() and convert it (?)
         } while (!isValidCrawlingDepth(crawlingDepth));
-        return 0;
+        return crawlingDepth;
     }
 
-    private boolean isValidCrawlingDepth(int crawlingDepth) {
-        if (crawlingDepth < 1 || crawlingDepth > 3) {
-            return false;
+    protected boolean isValidCrawlingDepth(int crawlingDepth) {
+        if (crawlingDepth >= 1 && crawlingDepth <= 3) {
+            return true;
         }
-        return true;
+        return false;
     }
 }
