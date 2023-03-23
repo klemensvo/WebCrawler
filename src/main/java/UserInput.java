@@ -26,7 +26,7 @@ public class UserInput {
         return "https://" + url;
     }
 
-    protected boolean isValidWebsite(String urlToBeValidated) { // todo: make tests
+    protected boolean isValidWebsite(String urlToBeValidated) {
         try {
             // if the next two lines pass, the URL is valid
             URL debatableUrl = new URL(urlToBeValidated);
@@ -47,6 +47,7 @@ public class UserInput {
         return crawlingDepth;
     }
 
+    @SuppressWarnings("RedundantIfStatement")
     protected boolean isValidCrawlingDepth(int crawlingDepth) {
         if (crawlingDepth >= 1 && crawlingDepth <= 3) {
             return true;
