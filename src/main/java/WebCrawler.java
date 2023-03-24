@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class WebCrawler {
 
-    String website;
+    final String website;
     ArrayList<String> headings = new ArrayList<>();
     // ArrayList<String> links = new ArrayList<>();
 
@@ -82,36 +82,6 @@ public class WebsiteCrawler {
             linkUrls.add(link.attr("abs:href")); // store the absolute URL of each link in the array
         }
         return linkUrls;
-    }
-}
-
- */
-
-/*
-import java.io.IOException;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-public class WebsiteCrawler {
-    public static void main(String[] args) {
-        String url = "https://example.com"; // replace with the URL of the website you want to crawl
-        try {
-            Document doc = Jsoup.connect(url).get(); // connect to the website and retrieve its HTML
-            Elements headings = doc.select("h1, h2, h3, h4, h5, h6"); // select all headings
-            System.out.println("Headings:");
-            for (Element heading : headings) {
-                System.out.println(heading.text()); // print the text of each heading
-            }
-            Elements links = doc.select("a[href]"); // select all links
-            System.out.println("Links:");
-            for (Element link : links) {
-                System.out.println(link.attr("abs:href")); // print the absolute URL of each link
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
 

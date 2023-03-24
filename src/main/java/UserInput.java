@@ -12,7 +12,7 @@ public class UserInput {
         String url;
         Scanner scanner = new Scanner(System.in);
         do {
-            new Texts().printPromptForStartingWebsite();
+            new Text().printPromptForStartingWebsite();
             url = scanner.nextLine();
             /* todo: prepend https:// if necessary
             if (!url.startsWith("https://")) {
@@ -38,10 +38,9 @@ public class UserInput {
     }
 
     public int getCrawlingDepthFromUser() {
-        // int crawlingDepth;
         Scanner scanner = new Scanner(System.in);
         do {
-            new Texts().printPromptForCrawlingDepth();
+            new Text().printPromptForCrawlingDepth();
             crawlingDepth = scanner.nextInt(); // todo: change to .nextLine() and convert it (?)
         } while (!isValidCrawlingDepth());
         return crawlingDepth;

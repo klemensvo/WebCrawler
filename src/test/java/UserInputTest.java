@@ -42,15 +42,15 @@ class UserInputTest {
         UserInput userInput = new UserInput();
         userInput.crawlingDepth = 1;
         assertTrue(userInput.isValidCrawlingDepth());
-        // assertTrue(userInput.isValidCrawlingDepth(2));
-        // assertTrue(userInput.isValidCrawlingDepth(3));
+        userInput.crawlingDepth = 3;
+        assertTrue(userInput.isValidCrawlingDepth());
 
         userInput.crawlingDepth = 0;
         assertFalse(userInput.isValidCrawlingDepth());
-        // assertFalse(userInput.isValidCrawlingDepth(4));
-        // assertFalse(userInput.isValidCrawlingDepth(-1));
-
-        // userInput = null;
+        userInput.crawlingDepth = 4;
+        assertFalse(userInput.isValidCrawlingDepth());
+        userInput.crawlingDepth = -1;
+        assertFalse(userInput.isValidCrawlingDepth());
     }
 
 
