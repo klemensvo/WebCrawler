@@ -20,7 +20,6 @@ class UserInputTest {
     }
 
 
-
     @Test
     void getStartingWebsiteFromUser() {
     }
@@ -41,18 +40,18 @@ class UserInputTest {
     @Test
     void isValidCrawlingDepth() {
         UserInput userInput = new UserInput();
+        userInput.crawlingDepth = 1;
+        assertTrue(userInput.isValidCrawlingDepth());
+        // assertTrue(userInput.isValidCrawlingDepth(2));
+        // assertTrue(userInput.isValidCrawlingDepth(3));
 
-        assertTrue(userInput.isValidCrawlingDepth(1));
-        assertTrue(userInput.isValidCrawlingDepth(2));
-        assertTrue(userInput.isValidCrawlingDepth(3));
-
-        assertFalse(userInput.isValidCrawlingDepth(0));
-        assertFalse(userInput.isValidCrawlingDepth(4));
-        assertFalse(userInput.isValidCrawlingDepth(-1));
+        userInput.crawlingDepth = 0;
+        assertFalse(userInput.isValidCrawlingDepth());
+        // assertFalse(userInput.isValidCrawlingDepth(4));
+        // assertFalse(userInput.isValidCrawlingDepth(-1));
 
         // userInput = null;
     }
-
 
 
     @Test

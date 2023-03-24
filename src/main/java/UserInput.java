@@ -4,9 +4,9 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class UserInput {
-    // private String url;
-    private int crawlDepth;
-    private String targetLanguage;
+    protected String url;
+    protected int crawlingDepth;
+    protected String targetLanguage;
 
     public String getStartingWebsiteFromUser() {
         String url;
@@ -38,20 +38,33 @@ public class UserInput {
     }
 
     public int getCrawlingDepthFromUser() {
-        int crawlingDepth;
+        // int crawlingDepth;
         Scanner scanner = new Scanner(System.in);
         do {
             new Texts().printPromptForCrawlingDepth();
             crawlingDepth = scanner.nextInt(); // todo: change to .nextLine() and convert it (?)
-        } while (!isValidCrawlingDepth(crawlingDepth));
+        } while (!isValidCrawlingDepth());
         return crawlingDepth;
     }
 
     @SuppressWarnings("RedundantIfStatement")
-    protected boolean isValidCrawlingDepth(int crawlingDepth) {
+    protected boolean isValidCrawlingDepth() {
         if (crawlingDepth >= 1 && crawlingDepth <= 3) {
             return true;
         }
         return false;
     }
+
+    String getTargetLanguageFromUser() {
+        String targetLanguage = "German";
+        do {
+
+        } while (!isValidTargetLanguage());
+        return targetLanguage;
+    }
+    protected boolean isValidTargetLanguage() {
+
+        return true;
+    }
+
 }
