@@ -4,37 +4,18 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class UserInput {
-    protected String url;
+    StartingWebsite startingWebsite = new StartingWebsite();
+
+    protected String url; // todo: change url to StartingWebsite later?
     protected int crawlingDepth;
     protected String targetLanguage;
 
-    public String getStartingWebsiteFromUser() {
-        String url;
-        Scanner scanner = new Scanner(System.in);
-        do {
-            new Text().printPromptForStartingWebsite();
-            url = scanner.nextLine();
-            /* todo: prepend https:// if necessary
-            if (!url.startsWith("https://")) {
-                url = prependHttps(url);
-            } */
-        } while (!isValidWebsite(url));
-        return url;
+    public UserInput() {
+        this.url = startingWebsite.toString();
     }
 
-    protected String prependHttps(String url) {
-        return "https://" + url;
-    }
-
-    protected boolean isValidWebsite(String urlToBeValidated) {
-        try {
-            // if the next two lines pass, the URL is valid
-            URL debatableUrl = new URL(urlToBeValidated);
-            debatableUrl.toURI();
-            return true;
-        } catch (MalformedURLException | URISyntaxException e) {
-            return false;
-        }
+    public String getStartingWebsiteFromUser() { // todo: change as soon as UserInteraction is deleted
+        return startingWebsite.getStartingWebsiteFromUser();
     }
 
     public int getCrawlingDepthFromUser() {
