@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="moved functions and tests from UserInput to StartingWebsite and StartingWebsiteTest">
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="cleared StartingWebsite, moved prependHttpsIfNecessary()">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CrawlingDepth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Text.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInteraction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,7 +76,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.43448275",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -81,7 +88,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'WebCrawler.test'">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -216,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680329125467</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="cleared StartingWebsite, moved prependHttpsIfNecessary()">
+      <created>1680330935175</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680330935175</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +263,7 @@
     <MESSAGE value="new class UserInteraction to handle UserInput" />
     <MESSAGE value="tests for function getStartingWebsiteFromUser with ByteArrayInputStream" />
     <MESSAGE value="moved functions and tests from UserInput to StartingWebsite and StartingWebsiteTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved functions and tests from UserInput to StartingWebsite and StartingWebsiteTest" />
+    <MESSAGE value="cleared StartingWebsite, moved prependHttpsIfNecessary()" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleared StartingWebsite, moved prependHttpsIfNecessary()" />
   </component>
 </project>

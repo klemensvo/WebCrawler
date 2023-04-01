@@ -28,12 +28,16 @@ public class StartingWebsite {
 
     protected boolean isValidWebsite(String urlToBeValidated) {
         try {
-            // if the next two lines pass, the URL is valid (todo ?)
+            // if the next two lines pass, the URL is valid (todo)
             URL debatableUrl = new URL(urlToBeValidated);
             debatableUrl.toURI();
             return true;
         } catch (MalformedURLException | URISyntaxException e) {
             return false;
         }
+    }
+
+    public String getUrl() {
+        return url;
     }
 }

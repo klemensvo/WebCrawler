@@ -1,46 +1,45 @@
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class UserInput {
     StartingWebsite startingWebsite = new StartingWebsite();
+    CrawlingDepth crawlingDepth = new CrawlingDepth();
+    TargetLanguage targetLanguage = new TargetLanguage();
+    String url;
+    int depth;
+    String language;
 
-    protected String url; // todo: change url to StartingWebsite later?
-    protected int crawlingDepth;
-    protected String targetLanguage;
+    public void start() {
+        new Text().printWelcome();
+        url = getStartingWebsiteFromUser();
+        depth = getCrawlingDepthFromUser();
+        language = getTargetLanguageFromUser();
 
-    public String getStartingWebsiteFromUser() { // todo: change as soon as UserInteraction is deleted
+        printSummaryOfUserInput();
+
+        // todo: move the following part to CrawlingList
+        System.out.println("\nHeadings from " + url + ":\n");
+        WebCrawler webCrawler = new WebCrawler(startingWebsite.getUrl());
+        ArrayList<String> headings = webCrawler.crawlHeadings();
+        for (String heading : headings) {
+            System.out.println(heading);
+        }
+    }
+
+    public String getStartingWebsiteFromUser() {
         return startingWebsite.getStartingWebsiteFromUser();
     }
 
     public int getCrawlingDepthFromUser() {
-        Scanner scanner = new Scanner(System.in);
-        do {
-            new Text().printPromptForCrawlingDepth();
-            crawlingDepth = scanner.nextInt(); // todo: change to .nextLine() and convert it (?)
-        } while (!isValidCrawlingDepth());
-        return crawlingDepth;
+        return crawlingDepth.getCrawlingDepthFromUser();
     }
 
-    @SuppressWarnings("RedundantIfStatement")
-    protected boolean isValidCrawlingDepth() {
-        if (crawlingDepth >= 1 && crawlingDepth <= 3) {
-            return true;
-        }
-        return false;
+    public String getTargetLanguageFromUser() {
+        return targetLanguage.getTargetLanguageFromUser();
     }
 
-    String getTargetLanguageFromUser() {
-        String targetLanguage = "German";
-        do {
-
-        } while (!isValidTargetLanguage());
-        return targetLanguage;
+    private void printSummaryOfUserInput() {
+        System.out.println("\nStarting website: " + url +
+                ", crawling depth: " + depth +
+                ", target language: " + language);
     }
-    protected boolean isValidTargetLanguage() {
-
-        return true;
-    }
-
 }

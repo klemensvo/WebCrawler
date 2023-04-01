@@ -14,8 +14,8 @@ class StartingWebsiteTest {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(testWebsite.getBytes());
         System.setIn(byteArrayInputStream);
 
-        UserInput userInput = new UserInput();
-        String url = userInput.getStartingWebsiteFromUser();
+        StartingWebsite startingWebsite = new StartingWebsite();
+        String url = startingWebsite.getStartingWebsiteFromUser();
         assertEquals("https://javatpoint.com", url);
 
         System.setIn(originalSystemInput);
@@ -28,8 +28,8 @@ class StartingWebsiteTest {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(testWebsite.getBytes());
         System.setIn(byteArrayInputStream);
 
-        UserInput userInput = new UserInput();
-        String url = userInput.getStartingWebsiteFromUser();
+        StartingWebsite startingWebsite = new StartingWebsite();
+        String url = startingWebsite.getStartingWebsiteFromUser();
         assertNotEquals("https://javatpoint.com", url);
 
         System.setIn(originalSystemInput);
@@ -48,6 +48,7 @@ class StartingWebsiteTest {
     }
 
     @Test
-    void testToString() {
+    void getUrlFunctionalTest() {
+
     }
 }
