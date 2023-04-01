@@ -6,9 +6,6 @@ public class Text {
         System.out.println("the target language:\n");
     }
 
-    public void printPromptForStartingWebsite() {
-        System.out.print("Please enter a starting website: ");
-    }
 
     public void printPromptForCrawlingDepth() {
         System.out.print("Please enter the crawling depth (max. 3): ");

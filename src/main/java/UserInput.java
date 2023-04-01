@@ -10,10 +10,6 @@ public class UserInput {
     protected int crawlingDepth;
     protected String targetLanguage;
 
-    public UserInput() {
-        this.url = startingWebsite.toString();
-    }
-
     public String getStartingWebsiteFromUser() { // todo: change as soon as UserInteraction is deleted
         return startingWebsite.getStartingWebsiteFromUser();
     }

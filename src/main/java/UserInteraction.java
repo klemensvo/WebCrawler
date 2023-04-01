@@ -5,7 +5,6 @@ public class UserInteraction {
     protected int crawlingDepth;
     protected String targetLanguage;
 
-
     public void start() {
 
         new Text().printWelcome();
