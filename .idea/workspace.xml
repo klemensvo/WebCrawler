@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="started WebsiteCrawler">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jsoup-1.15.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="cleared StartingWebsite, moved prependHttpsIfNecessary()">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CrawlingDepth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Text.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebsiteCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInteraction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -44,9 +45,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -63,16 +68,26 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "C:/Users/Megaport/OneDrive - Vospernik Klemens, Dr/Informatik/Clean Code/WebCrawler/lib/jsoup-1.15.4.jar",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.43448275",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -102,10 +117,58 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UserInputTest.getStartingWebsiteFromUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;UserInputTest.getStartingWebsiteFromUser&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserInputTest.isValidWebsite" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;UserInputTest.isValidWebsite&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.Tests in 'WebCrawler.test'" />
+        <item itemvalue="Gradle.UserInputTest.isValidWebsite" />
+        <item itemvalue="Gradle.UserInputTest.getStartingWebsiteFromUser" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +188,49 @@
       <option name="project" value="LOCAL" />
       <updated>1679234445264</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Jsoup added to build.gradle, working now">
+      <created>1679605680193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679605680193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactored getCrawlingDepthFromUser() to use no arguments, started getTargetLanguageFromUser()">
+      <created>1679636901271</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679636901271</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new class UserInteraction to handle UserInput">
+      <created>1679698042849</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679698042849</updated>
+    </task>
+    <task id="LOCAL-00005" summary="tests for function getStartingWebsiteFromUser with ByteArrayInputStream">
+      <created>1680301503824</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680301503824</updated>
+    </task>
+    <task id="LOCAL-00006" summary="moved functions and tests from UserInput to StartingWebsite and StartingWebsiteTest">
+      <created>1680329125467</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680329125467</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cleared StartingWebsite, moved prependHttpsIfNecessary()">
+      <created>1680330935175</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680330935175</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,7 +238,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop_klemens" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -141,6 +258,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started WebsiteCrawler" />
-    <option name="LAST_COMMIT_MESSAGE" value="started WebsiteCrawler" />
+    <MESSAGE value="Jsoup added to build.gradle, working now" />
+    <MESSAGE value="refactored getCrawlingDepthFromUser() to use no arguments, started getTargetLanguageFromUser()" />
+    <MESSAGE value="new class UserInteraction to handle UserInput" />
+    <MESSAGE value="tests for function getStartingWebsiteFromUser with ByteArrayInputStream" />
+    <MESSAGE value="moved functions and tests from UserInput to StartingWebsite and StartingWebsiteTest" />
+    <MESSAGE value="cleared StartingWebsite, moved prependHttpsIfNecessary()" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleared StartingWebsite, moved prependHttpsIfNecessary()" />
   </component>
 </project>

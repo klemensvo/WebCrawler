@@ -1,57 +1,45 @@
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class UserInput {
-    // private String url;
-    private int crawlDepth;
-    private String targetLanguage;
+    StartingWebsite startingWebsite = new StartingWebsite();
+    CrawlingDepth crawlingDepth = new CrawlingDepth();
+    TargetLanguage targetLanguage = new TargetLanguage();
+    String url;
+    int depth;
+    String language;
+
+    public void start() {
+        new Text().printWelcome();
+        url = getStartingWebsiteFromUser();
+        depth = getCrawlingDepthFromUser();
+        language = getTargetLanguageFromUser();
+
+        printSummaryOfUserInput();
+
+        // todo: move the following part to CrawlingList
+        System.out.println("\nHeadings from " + url + ":\n");
+        WebCrawler webCrawler = new WebCrawler(startingWebsite.getUrl());
+        ArrayList<String> headings = webCrawler.crawlHeadings();
+        for (String heading : headings) {
+            System.out.println(heading);
+        }
+    }
 
     public String getStartingWebsiteFromUser() {
-        String url;
-        Scanner scanner = new Scanner(System.in);
-        do {
-            new Texts().printPromptForStartingWebsite();
-            url = scanner.nextLine();
-            /* todo: prepend https:// if necessary
-            if (!url.startsWith("https://")) {
-                url = prependHttps(url);
-            } */
-        } while (!isValidWebsite(url));
-        return url;
-    }
-
-    protected String prependHttps(String url) {
-        return "https://" + url;
-    }
-
-    protected boolean isValidWebsite(String urlToBeValidated) {
-        try {
-            // if the next two lines pass, the URL is valid
-            URL debatableUrl = new URL(urlToBeValidated);
-            debatableUrl.toURI();
-            return true;
-        } catch (MalformedURLException | URISyntaxException e) {
-            return false;
-        }
+        return startingWebsite.getStartingWebsiteFromUser();
     }
 
     public int getCrawlingDepthFromUser() {
-        int crawlingDepth;
-        Scanner scanner = new Scanner(System.in);
-        do {
-            new Texts().printPromptForCrawlingDepth();
-            crawlingDepth = scanner.nextInt(); // todo: change to .nextLine() and convert it (?)
-        } while (!isValidCrawlingDepth(crawlingDepth));
-        return crawlingDepth;
+        return crawlingDepth.getCrawlingDepthFromUser();
     }
 
-    @SuppressWarnings("RedundantIfStatement")
-    protected boolean isValidCrawlingDepth(int crawlingDepth) {
-        if (crawlingDepth >= 1 && crawlingDepth <= 3) {
-            return true;
-        }
-        return false;
+    public String getTargetLanguageFromUser() {
+        return targetLanguage.getTargetLanguageFromUser();
+    }
+
+    private void printSummaryOfUserInput() {
+        System.out.println("\nStarting website: " + url +
+                ", crawling depth: " + depth +
+                ", target language: " + language);
     }
 }
