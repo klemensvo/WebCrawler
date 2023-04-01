@@ -24,7 +24,7 @@ class StartingWebsiteTest {
     @Test
     void getInvalidStartingWebsiteFromUser() {
         InputStream originalSystemInput = System.in;
-        String testWebsite = "https://javatpoint\n";
+        String testWebsite = "https://www.google.com\n";
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(testWebsite.getBytes());
         System.setIn(byteArrayInputStream);
 
@@ -35,16 +35,67 @@ class StartingWebsiteTest {
         System.setIn(originalSystemInput);
     }
 
-
     @Test
-    void prependHttps() {
+    void prependHttpsNecessaryTest() {
+        StartingWebsite startingWebsite = new StartingWebsite();
+        startingWebsite.url = "www.google.com";
+        startingWebsite.prependHttpsIfNecessary();
+        assertEquals("https://www.google.com", startingWebsite.getUrl());
     }
 
     @Test
-    void isValidWebsite() {
+    void prependHttpsNotNecessaryTest() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        boolean shouldBeValidWebsite = startingWebsite.isValidWebsite("https://www.google.com");
+        startingWebsite.url = "https://www.google.com";
+        startingWebsite.prependHttpsIfNecessary();
+        assertEquals("https://www.google.com", startingWebsite.getUrl());
+    }
+    @Test
+    void isValidWebsiteTest() {
+        StartingWebsite startingWebsite = new StartingWebsite();
+        startingWebsite.url = "https://www.google.com";
+        boolean shouldBeValidWebsite = startingWebsite.isValidWebsite();
         assertTrue(shouldBeValidWebsite);
+    }
+
+    @Test
+    void isNotValidWebsiteTest1() {
+        StartingWebsite startingWebsite = new StartingWebsite();
+        startingWebsite.url = "";
+        boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
+        assertFalse(shouldNotBeValidWebsite);
+    }
+
+    @Test
+    void isNotValidWebsiteTest2() {
+        StartingWebsite startingWebsite = new StartingWebsite();
+        startingWebsite.url = "https://";
+        boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
+        assertFalse(shouldNotBeValidWebsite);
+    }
+
+    @Test
+    void isNotValidWebsiteTest3() {
+        StartingWebsite startingWebsite = new StartingWebsite();
+        startingWebsite.url = "https://hello";
+        boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
+        assertFalse(shouldNotBeValidWebsite);
+    }
+
+    @Test
+    void isNotValidWebsiteTest4() {
+        StartingWebsite startingWebsite = new StartingWebsite();
+        startingWebsite.url = "https://at";
+        boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
+        assertFalse(shouldNotBeValidWebsite);
+    }
+
+    @Test
+    void isNotValidWebsiteTest5() {
+        StartingWebsite startingWebsite = new StartingWebsite();
+        startingWebsite.url = "https://||9";
+        boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
+        assertFalse(shouldNotBeValidWebsite);
     }
 
     @Test

@@ -1,25 +1,22 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class UserInputTest {
 
-    UserInput userInput;
-
-    @BeforeEach
-    void setUp() {
-        userInput = new UserInput();
-
+    @Test
+    void start() { // todo: is there a way to test start() ?
     }
+    @Test
+    void summaryOfUserInputTest() {
+        UserInput userInput = new UserInput();
+        userInput.url = "https://www.google.com";
+        userInput.depth = 1;
+        userInput.language = "German";
 
-    @AfterEach
-    void tearDown() {
-        userInput = null;
+        assertEquals("\nStarting website: https://www.google.com, crawling depth: 1, " +
+                "target language: German", userInput.summaryOfUserInput());
     }
 
 
