@@ -4,11 +4,9 @@ public class UserInput {
     final StartingWebsite startingWebsite = new StartingWebsite();
     final CrawlingDepth crawlingDepth = new CrawlingDepth();
     final TargetLanguage targetLanguage = new TargetLanguage();
-    String url;
-    int depth;
-    String language;
-
-
+    protected String url;
+    protected int depth;
+    protected String language;
 
     public void start() {
         new Text().printWelcome();
@@ -16,9 +14,9 @@ public class UserInput {
         depth = getCrawlingDepthFromUser();
         language = getTargetLanguageFromUser();
 
-        System.out.println(summaryOfUserInput()); // todo delete later
+        System.out.println(summaryOfUserInput());
 
-        // todo: move the following part to CrawlingList
+        // todo: move the following part to Website, called from CrawlingList
         System.out.println("\nHeadings from " + url + ":\n");
         WebCrawler webCrawler = new WebCrawler(startingWebsite.getUrl());
         ArrayList<String> headings = webCrawler.crawlHeadings();
