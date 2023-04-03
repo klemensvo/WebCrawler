@@ -12,7 +12,7 @@ public class CrawlingDepth {
         return crawlingDepth;
     }
 
-    public void printPromptForCrawlingDepth() {
+    private void printPromptForCrawlingDepth() {
         System.out.print("Please enter the crawling depth (max. 3): ");
     }
 

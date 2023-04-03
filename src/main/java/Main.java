@@ -1,8 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        UserInput userInput = new UserInput();
-        userInput.start();
+        UserQuery userQuery = new UserQuery();
+        userQuery.start();
+
+        CrawlingManager crawlingManager = new CrawlingManager();
+        crawlingManager.start();
     }
 }
 

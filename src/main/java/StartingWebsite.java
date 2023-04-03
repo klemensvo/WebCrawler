@@ -1,10 +1,11 @@
 import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StartingWebsite {
-    String url;
+    protected String url;
 
     public String getStartingWebsiteFromUser() {
         Scanner scanner = new Scanner(System.in);
@@ -12,11 +13,11 @@ public class StartingWebsite {
             printPromptForStartingWebsite();
             url = scanner.nextLine();
             prependHttpsIfNecessary();
-        } while (!isValidWebsite(url));
+        } while (!isValidWebsite());
         return url;
     }
 
-    public void printPromptForStartingWebsite() {
+    private void printPromptForStartingWebsite() {
         System.out.print("Please enter a starting website: ");
     }
 
@@ -26,13 +27,20 @@ public class StartingWebsite {
         }
     }
 
-    protected boolean isValidWebsite(String urlToBeValidated) {
-        try {
-            // if the next two lines pass, the URL is valid (todo)
-            URL debatableUrl = new URL(urlToBeValidated);
-            debatableUrl.toURI();
-            return true;
-        } catch (MalformedURLException | URISyntaxException e) {
+    protected boolean isValidWebsite() {
+        // regular expression tests for valid URL
+        String regex = "^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(url);
+
+        if (matcher.matches()) {
+            try {
+                new URL(url);
+                return true;
+            } catch (MalformedURLException e) {
+                return false;
+            }
+        } else {
             return false;
         }
     }

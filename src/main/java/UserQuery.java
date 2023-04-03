@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
-public class UserInput {
-    StartingWebsite startingWebsite = new StartingWebsite();
-    CrawlingDepth crawlingDepth = new CrawlingDepth();
-    TargetLanguage targetLanguage = new TargetLanguage();
-    String url;
-    int depth;
-    String language;
+public class UserQuery {
+    final StartingWebsite startingWebsite = new StartingWebsite();
+    final CrawlingDepth crawlingDepth = new CrawlingDepth();
+    final TargetLanguage targetLanguage = new TargetLanguage();
+    protected String url;
+    protected int depth;
+    protected String language;
 
     public void start() {
         new Text().printWelcome();
@@ -14,9 +14,9 @@ public class UserInput {
         depth = getCrawlingDepthFromUser();
         language = getTargetLanguageFromUser();
 
-        printSummaryOfUserInput();
+        System.out.println(summaryOfUserInput());
 
-        // todo: move the following part to CrawlingList
+        // todo: move the following part to Website, called from CrawlingList
         System.out.println("\nHeadings from " + url + ":\n");
         WebCrawler webCrawler = new WebCrawler(startingWebsite.getUrl());
         ArrayList<String> headings = webCrawler.crawlHeadings();
@@ -37,9 +37,9 @@ public class UserInput {
         return targetLanguage.getTargetLanguageFromUser();
     }
 
-    private void printSummaryOfUserInput() {
-        System.out.println("\nStarting website: " + url +
+    protected String summaryOfUserInput() {
+         return "\nStarting website: " + url +
                 ", crawling depth: " + depth +
-                ", target language: " + language);
+                ", target language: " + language;
     }
 }
