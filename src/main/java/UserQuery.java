@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class UserInput {
+public class UserQuery {
     final StartingWebsite startingWebsite = new StartingWebsite();
     final CrawlingDepth crawlingDepth = new CrawlingDepth();
     final TargetLanguage targetLanguage = new TargetLanguage();

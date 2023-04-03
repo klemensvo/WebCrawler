@@ -8,7 +8,7 @@ WebCrawler is a project of an assignment of the course Clean Code at AAU Klagenf
 ### Main
 entry point
 
-### UserInput  
+### UserQuery  
 url  
 crawlDepth  
 targetLanguage
