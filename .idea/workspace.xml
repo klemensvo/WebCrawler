@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="introduced InputData, changed UserInput to UserQuery">
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="changed the data flow structure by use of UserData and CrawlingList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingDepth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingDepth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserQueryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +58,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -286,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680542174415</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changed the data flow structure by use of UserData and CrawlingList">
+      <created>1680840894331</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680840894331</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,7 +334,8 @@
     <MESSAGE value="added tests in UserInputTest and StartingWebsiteTest" />
     <MESSAGE value="started CrawlingManager, CrawlingList and Website" />
     <MESSAGE value="introduced InputData, changed UserInput to UserQuery" />
-    <option name="LAST_COMMIT_MESSAGE" value="introduced InputData, changed UserInput to UserQuery" />
+    <MESSAGE value="changed the data flow structure by use of UserData and CrawlingList" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the data flow structure by use of UserData and CrawlingList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

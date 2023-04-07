@@ -44,8 +44,4 @@ public class StartingWebsite {
             return false;
         }
     }
-
-    public String getUrl() {
-        return startingUrl;
-    }
 }

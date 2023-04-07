@@ -13,8 +13,4 @@ public class TargetLanguage {
 
         return true;
     }
-
-    public String getLanguage() {
-        return targetLanguage;
-    }
 }

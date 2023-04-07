@@ -1,23 +1,31 @@
 import java.util.ArrayList;
 
 public class CrawlingManager {
-    UserData userData;
-    ArrayList<Website> crawlingList;
+    final UserData userData;
+    final CrawlingList<Website> crawlingList;
+    final String url;
+    final int crawlingDepth;
+    final String targetLanguage;
 
 
     public CrawlingManager(UserData userData) {
         this.userData = userData;
-        this.crawlingList = new ArrayList<>();
+        this.url = userData.startingWebsite;
+        this.crawlingDepth = userData.crawlingDepth;
+        this.targetLanguage = userData.targetLanguage;
+
+        this.crawlingList = new CrawlingList<>();
     }
 
-    public void getWebsites() {
+    public CrawlingList<Website> getWebsites() {
         WebCrawler webCrawler = new WebCrawler(userData.startingWebsite);
         ArrayList<String> headings = webCrawler.crawlHeadings();
         for (String heading : headings) {
             System.out.println(heading);
+            // crawlingList.add(heading);
         }
 
-        // System.out.println("The starting website is: " + userData.startingWebsite);
+        return crawlingList;
 
         /*
         Website website = new Website();
@@ -30,21 +38,5 @@ public class CrawlingManager {
             webCrawler = new WebCrawler(website.url);
 
         } */
-
-        /*
-        crawlingList = new CrawlingList(); // .next(), .hasNext(), .add()
-        crawlingList.add(startingWebsite);
-
-        webCrawler = new WebCrawler(startingWebsite);
-        ArrayList<String> headings = webCrawler.crawlHeadings();
-        for (String heading : headings) {
-            System.out.println(heading);
-        } */
-
-        /*
-        while (crawlingList.hasNext()) {
-
-        } */
-
     }
 }
