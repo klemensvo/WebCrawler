@@ -23,8 +23,4 @@ public class CrawlingDepth {
         }
         return false;
     }
-
-    public int getDepth() {
-        return crawlingDepth;
-    }
 }

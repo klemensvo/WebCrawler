@@ -40,7 +40,7 @@ class StartingWebsiteTest {
         StartingWebsite startingWebsite = new StartingWebsite();
         startingWebsite.startingUrl = "www.google.com";
         startingWebsite.prependHttpsIfNecessary();
-        assertEquals("https://www.google.com", startingWebsite.getUrl());
+        assertEquals("https://www.google.com", startingWebsite.startingUrl);
     }
 
     @Test
@@ -48,7 +48,7 @@ class StartingWebsiteTest {
         StartingWebsite startingWebsite = new StartingWebsite();
         startingWebsite.startingUrl = "https://www.google.com";
         startingWebsite.prependHttpsIfNecessary();
-        assertEquals("https://www.google.com", startingWebsite.getUrl());
+        assertEquals("https://www.google.com", startingWebsite.startingUrl);
     }
     @Test
     void isValidWebsiteTest() {
@@ -96,10 +96,5 @@ class StartingWebsiteTest {
         startingWebsite.startingUrl = "https://||9";
         boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
         assertFalse(shouldNotBeValidWebsite);
-    }
-
-    @Test
-    void getUrlFunctionalTest() {
-
     }
 }

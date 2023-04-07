@@ -2,7 +2,7 @@ public class UserQuery {
     final StartingWebsite startingWebsite = new StartingWebsite();
     final CrawlingDepth crawlingDepth = new CrawlingDepth();
     final TargetLanguage targetLanguage = new TargetLanguage();
-    UserData userData = new UserData();
+    final UserData userData = new UserData();
 
 
     public UserData getUserData() {

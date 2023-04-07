@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class WebCrawler {
-
     final String url;
     public WebCrawler(String url) {
         this.url = url;
@@ -15,12 +14,6 @@ public class WebCrawler {
     }
     ArrayList<String> headings = new ArrayList<>();
     // ArrayList<String> links = new ArrayList<>();
-
-    /* public WebCrawler(String website) {
-        this.website = website;
-    } */
-
-
 
     public ArrayList<String> crawlHeadings() {
         try {
