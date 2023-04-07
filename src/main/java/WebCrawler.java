@@ -8,18 +8,23 @@ import java.util.ArrayList;
 
 public class WebCrawler {
 
-    final String website;
+    final String url;
+    public WebCrawler(String url) {
+        this.url = url;
+
+    }
     ArrayList<String> headings = new ArrayList<>();
     // ArrayList<String> links = new ArrayList<>();
 
-    public WebCrawler(String website) {
+    /* public WebCrawler(String website) {
         this.website = website;
-    }
+    } */
+
 
 
     public ArrayList<String> crawlHeadings() {
         try {
-            Document document = Jsoup.connect(website).get();
+            Document document = Jsoup.connect(url).get(); // was .connect(website), todo: delete later
             headings = getHeadings(document);
         } catch (IOException e) {
             e.printStackTrace();

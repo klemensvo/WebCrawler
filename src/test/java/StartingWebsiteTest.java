@@ -38,7 +38,7 @@ class StartingWebsiteTest {
     @Test
     void prependHttpsNecessaryTest() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "www.google.com";
+        startingWebsite.startingUrl = "www.google.com";
         startingWebsite.prependHttpsIfNecessary();
         assertEquals("https://www.google.com", startingWebsite.getUrl());
     }
@@ -46,14 +46,14 @@ class StartingWebsiteTest {
     @Test
     void prependHttpsNotNecessaryTest() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "https://www.google.com";
+        startingWebsite.startingUrl = "https://www.google.com";
         startingWebsite.prependHttpsIfNecessary();
         assertEquals("https://www.google.com", startingWebsite.getUrl());
     }
     @Test
     void isValidWebsiteTest() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "https://www.google.com";
+        startingWebsite.startingUrl = "https://www.google.com";
         boolean shouldBeValidWebsite = startingWebsite.isValidWebsite();
         assertTrue(shouldBeValidWebsite);
     }
@@ -61,7 +61,7 @@ class StartingWebsiteTest {
     @Test
     void isNotValidWebsiteTest1() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "";
+        startingWebsite.startingUrl = "";
         boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
         assertFalse(shouldNotBeValidWebsite);
     }
@@ -69,7 +69,7 @@ class StartingWebsiteTest {
     @Test
     void isNotValidWebsiteTest2() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "https://";
+        startingWebsite.startingUrl = "https://";
         boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
         assertFalse(shouldNotBeValidWebsite);
     }
@@ -77,7 +77,7 @@ class StartingWebsiteTest {
     @Test
     void isNotValidWebsiteTest3() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "https://hello";
+        startingWebsite.startingUrl = "https://hello";
         boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
         assertFalse(shouldNotBeValidWebsite);
     }
@@ -85,7 +85,7 @@ class StartingWebsiteTest {
     @Test
     void isNotValidWebsiteTest4() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "https://at";
+        startingWebsite.startingUrl = "https://at";
         boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
         assertFalse(shouldNotBeValidWebsite);
     }
@@ -93,7 +93,7 @@ class StartingWebsiteTest {
     @Test
     void isNotValidWebsiteTest5() {
         StartingWebsite startingWebsite = new StartingWebsite();
-        startingWebsite.url = "https://||9";
+        startingWebsite.startingUrl = "https://||9";
         boolean shouldNotBeValidWebsite = startingWebsite.isValidWebsite();
         assertFalse(shouldNotBeValidWebsite);
     }

@@ -1,10 +1,15 @@
 import java.util.ArrayList;
-import java.util.Iterator;
+// import java.util.Iterator;
 
 public class CrawlingList<Website> {
-    protected ArrayList<Website> websiteList;
-    protected Iterator<Website> websiteIterator;
+    // data structure
 
+    // todo: use only as data structure or not at all
+
+    protected ArrayList<Website> crawlingList;
+    // protected Iterator<Website> websiteIterator;
+
+    /* moved to CrawlingManager
     public CrawlingList() {
         websiteList = new ArrayList<>();
         websiteIterator = websiteList.iterator();
@@ -21,5 +26,5 @@ public class CrawlingList<Website> {
 
     public Website next() {
         return websiteIterator.next();
-    }
+    } */
 }

@@ -1,28 +1,20 @@
-import java.util.ArrayList;
-
 public class UserQuery {
     final StartingWebsite startingWebsite = new StartingWebsite();
     final CrawlingDepth crawlingDepth = new CrawlingDepth();
     final TargetLanguage targetLanguage = new TargetLanguage();
-    protected String url;
-    protected int depth;
-    protected String language;
+    UserData userData = new UserData();
 
-    public void start() {
+
+    public UserData getUserData() {
+
         new Text().printWelcome();
-        url = getStartingWebsiteFromUser();
-        depth = getCrawlingDepthFromUser();
-        language = getTargetLanguageFromUser();
+        userData.startingWebsite = getStartingWebsiteFromUser();
+        userData.crawlingDepth = getCrawlingDepthFromUser();
+        userData.targetLanguage = getTargetLanguageFromUser();
 
-        System.out.println(summaryOfUserInput());
+        // summaryOfUserInput(); // todo: side-effect, delete later
 
-        // todo: move the following part to Website, called from CrawlingList
-        System.out.println("\nHeadings from " + url + ":\n");
-        WebCrawler webCrawler = new WebCrawler(startingWebsite.getUrl());
-        ArrayList<String> headings = webCrawler.crawlHeadings();
-        for (String heading : headings) {
-            System.out.println(heading);
-        }
+        return userData;
     }
 
     public String getStartingWebsiteFromUser() {
@@ -38,8 +30,8 @@ public class UserQuery {
     }
 
     protected String summaryOfUserInput() {
-         return "\nStarting website: " + url +
-                ", crawling depth: " + depth +
-                ", target language: " + language;
+         return "\nStarting website: " + userData.startingWebsite +
+                ", crawling depth: " + userData.crawlingDepth +
+                ", target language: " + userData.targetLanguage;
     }
 }
