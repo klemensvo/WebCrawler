@@ -1,11 +1,13 @@
 public class Main {
 
     public static void main(String[] args) {
-        UserQuery userQuery = new UserQuery();
-        userQuery.start();
+        UserData userData;
 
-        CrawlingManager crawlingManager = new CrawlingManager();
-        crawlingManager.start();
+        UserQuery userQuery = new UserQuery();
+        userData = userQuery.getUserData();
+
+        CrawlingManager crawlingManager = new CrawlingManager(userData);
+        crawlingManager.getWebsites();
     }
 }
 

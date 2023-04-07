@@ -5,16 +5,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StartingWebsite {
-    protected String url;
+    protected String startingUrl;
 
     public String getStartingWebsiteFromUser() {
         Scanner scanner = new Scanner(System.in);
         do {
             printPromptForStartingWebsite();
-            url = scanner.nextLine();
+            startingUrl = scanner.nextLine();
             prependHttpsIfNecessary();
         } while (!isValidWebsite());
-        return url;
+        return startingUrl;
     }
 
     private void printPromptForStartingWebsite() {
@@ -22,8 +22,8 @@ public class StartingWebsite {
     }
 
     protected void prependHttpsIfNecessary() {
-        if (!url.startsWith("https://")) {
-            url = "https://" + url;
+        if (!startingUrl.startsWith("https://")) {
+            startingUrl = "https://" + startingUrl;
         }
     }
 
@@ -31,11 +31,11 @@ public class StartingWebsite {
         // regular expression tests for valid URL
         String regex = "^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$";
         Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(url);
+        Matcher matcher = pattern.matcher(startingUrl);
 
         if (matcher.matches()) {
             try {
-                new URL(url);
+                new URL(startingUrl);
                 return true;
             } catch (MalformedURLException e) {
                 return false;
@@ -46,6 +46,6 @@ public class StartingWebsite {
     }
 
     public String getUrl() {
-        return url;
+        return startingUrl;
     }
 }

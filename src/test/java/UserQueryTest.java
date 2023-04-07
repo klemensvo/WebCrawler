@@ -6,17 +6,25 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserQueryTest {
 
     @Test
-    void start() { // todo: is there a way to test start() ?
+    void getUserDataTest() { // todo: is there a way to test this function?
     }
     @Test
     void summaryOfUserInputTest() {
+        // todo: is this a valid test? do I not rather test UserData?
+        // this should be private, how can I test it?
+        /*
+        UserData userData = new UserData();
+        userData.startingWebsite = "https://www.google.com";
+        userData.crawlingDepth = 1;
+        userData.targetLanguage = "German";
+
         UserQuery userQuery = new UserQuery();
-        userQuery.url = "https://www.google.com";
-        userQuery.depth = 1;
-        userQuery.language = "German";
+        userQuery.startingWebsite = "https://www.google.com"; // userData.startingWebsite;
+        userQuery.crawlingDepth.crawlingDepth = 1; // userData.crawlingDepth;
+        userQuery.targetLanguage.targetLanguage = "German"; // userData.targetLanguage;
 
         assertEquals("\nStarting website: https://www.google.com, crawling depth: 1, " +
-                "target language: German", userQuery.summaryOfUserInput());
+                "target language: German", userQuery.summaryOfUserInput()); */
     }
 
 
