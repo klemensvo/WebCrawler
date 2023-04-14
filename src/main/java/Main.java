@@ -13,14 +13,24 @@ public class Main {
         websites = crawlingManager.getWebsites();
 
         // todo: input websites to ResultProducer, then remove this
-        System.out.println("\nheadings of websites: \n");
-        while (!websites.isEmpty()) {
-            for (int i = 0; i < websites.get(0).headings.size(); i++) {
-                System.out.println(websites.get(0).headings.get(i));
+
+        for (int i = 0; i < websites.size(); i++) {
+            System.out.println("\nheadings of website " + i + ":");
+            for (int j = 0; j < websites.get(0).headings.size(); j++) {
+                System.out.println("  " + websites.get(0).headings.get(j));
+            }
+
+            System.out.println("\nfunctionalLinks of website " + i + ":");
+            for (int j = 0; j < websites.get(0).functionalLinks.size(); j++) {
+                System.out.println("  " + websites.get(0).functionalLinks.get(j));
+            }
+
+            System.out.println("\nbrokenLinks of website " + i + ":");
+            for (int j = 0; j < websites.get(0).brokenLinks.size(); j++) {
+                System.out.println("  " + websites.get(0).brokenLinks.get(j));
             }
             websites.remove(0);
         }
-
     }
 }
 

@@ -11,10 +11,19 @@ public class WebCrawler {
     public WebCrawler(String url) {
         this.url = url;
     }
-    ArrayList<String> headings = new ArrayList<>();
-    // ArrayList<String> links = new ArrayList<>();
+    private ArrayList<String> headings = new ArrayList<>();
+    private ArrayList<String> functionalLinks = new ArrayList<>();
+    private ArrayList<String> brokenLinks = new ArrayList<>();
 
-    public ArrayList<String> crawlHeadings() {
+    public Website getWebsiteHeadingsAndLinks() {
+        Website website = new Website();
+        website.url = url;
+        website.headings = crawlHeadings();
+        website.functionalLinks = crawlFunctionalLinks();
+        website.brokenLinks = crawlBrokenLinks();
+        return  website;
+    }
+    private ArrayList<String> crawlHeadings() {
         try {
             Document document = Jsoup.connect(url).get();
             headings = getHeadings(document);
@@ -25,12 +34,23 @@ public class WebCrawler {
     }
 
     private ArrayList<String> getHeadings(Document document) {
-        ArrayList<String> headings = new ArrayList<>();
+        headings = new ArrayList<>();
         Elements elements = document.select("h1, h3, h3, h4, h5, h6");
         for (Element element : elements) {
             headings.add(element.text());
         }
         return headings;
+    }
+
+    private ArrayList<String> crawlFunctionalLinks() {
+        functionalLinks.add("https://javatpoint.com");
+        functionalLinks.add("https://nationalgeographic.com");
+        return functionalLinks;
+    }
+
+    private ArrayList<String> crawlBrokenLinks() {
+        brokenLinks.add("https://stackoverflow.com");
+        return brokenLinks;
     }
 }
 

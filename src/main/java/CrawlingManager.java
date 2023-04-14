@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class CrawlingManager {
     final UserData userData;
     ArrayList<String> crawlingList = new ArrayList<>();
+    HashSet<String> crawledSet = new HashSet<>();
     ArrayList<Website> websites = new ArrayList<>();
     WebCrawler webCrawler;
 
@@ -12,10 +14,19 @@ public class CrawlingManager {
 
     public ArrayList<Website> getWebsites() {
         crawlingList.add(userData.startingWebsite);
+
         while (!crawlingList.isEmpty()) {
-            webCrawler = new WebCrawler(crawlingList.remove(0));
-            Website website = new Website();
-            website.headings = webCrawler.crawlHeadings();
+            String currentLink = crawlingList.remove(0);
+            crawledSet.add(currentLink);
+            webCrawler = new WebCrawler(currentLink);
+
+            Website website = webCrawler.getWebsiteHeadingsAndLinks();
+            for (String functionalLink : website.functionalLinks) {
+                if(!crawledSet.contains(functionalLink)) {
+                    crawlingList.add(functionalLink);
+                    crawledSet.add(functionalLink);
+                }
+            }
             websites.add(website);
         }
 
