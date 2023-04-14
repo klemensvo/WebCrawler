@@ -10,14 +10,13 @@ public class WebCrawler {
     final String url;
     public WebCrawler(String url) {
         this.url = url;
-
     }
     ArrayList<String> headings = new ArrayList<>();
     // ArrayList<String> links = new ArrayList<>();
 
     public ArrayList<String> crawlHeadings() {
         try {
-            Document document = Jsoup.connect(url).get(); // was .connect(website), todo: delete later
+            Document document = Jsoup.connect(url).get();
             headings = getHeadings(document);
         } catch (IOException e) {
             e.printStackTrace();

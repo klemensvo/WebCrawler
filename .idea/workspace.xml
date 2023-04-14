@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="changed the data flow structure by use of UserData and CrawlingList">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingDepth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingDepth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartingWebsiteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserQueryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Tests in 'WebCrawler.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
