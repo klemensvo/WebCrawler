@@ -1,42 +1,35 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class CrawlingManager {
     final UserData userData;
-    final CrawlingList<Website> crawlingList;
-    final String url;
-    final int crawlingDepth;
-    final String targetLanguage;
-
+    ArrayList<String> crawlingList = new ArrayList<>();
+    HashSet<String> crawledSet = new HashSet<>();
+    ArrayList<Website> websites = new ArrayList<>();
+    WebCrawler webCrawler;
 
     public CrawlingManager(UserData userData) {
         this.userData = userData;
-        this.url = userData.startingWebsite;
-        this.crawlingDepth = userData.crawlingDepth;
-        this.targetLanguage = userData.targetLanguage;
-
-        this.crawlingList = new CrawlingList<>();
     }
 
-    public CrawlingList<Website> getWebsites() {
-        WebCrawler webCrawler = new WebCrawler(userData.startingWebsite);
-        ArrayList<String> headings = webCrawler.crawlHeadings();
-        for (String heading : headings) {
-            System.out.println(heading);
-            // crawlingList.add(heading);
+    public ArrayList<Website> getWebsites() {
+        crawlingList.add(userData.startingWebsite);
+
+        while (!crawlingList.isEmpty()) {
+            String currentLink = crawlingList.remove(0);
+            crawledSet.add(currentLink);
+            webCrawler = new WebCrawler(currentLink);
+
+            Website website = webCrawler.initializeCrawledWebsite();
+            for (String functionalLink : website.functionalLinks) {
+                if(!crawledSet.contains(functionalLink)) {
+                    crawlingList.add(functionalLink);
+                    crawledSet.add(functionalLink);
+                }
+            }
+            websites.add(website);
         }
 
-        return crawlingList;
-
-        /*
-        Website website = new Website();
-        website.url = startingWebsite;
-        crawlingList.add(website);
-
-        WebCrawler webCrawler; // = new WebCrawler(); // todo: use webCrawler to crawl websites
-        while (!crawlingList.isEmpty()) {
-            website = crawlingList.remove(0);
-            webCrawler = new WebCrawler(website.url);
-
-        } */
+        return websites;
     }
 }
