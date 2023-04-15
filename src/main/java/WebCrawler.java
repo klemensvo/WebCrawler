@@ -23,7 +23,7 @@ public class WebCrawler {
     }
 
 
-    public Website initializeCrawledWebsite() {
+    public Website setWebsiteHeadingsAndLinks() {
         Website website = new Website();
         website.url = url;
         website.headings = crawlHeadings();

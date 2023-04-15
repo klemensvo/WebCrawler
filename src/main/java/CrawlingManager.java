@@ -20,7 +20,7 @@ public class CrawlingManager {
             crawledSet.add(currentLink);
             webCrawler = new WebCrawler(currentLink);
 
-            Website website = webCrawler.initializeCrawledWebsite();
+            Website website = webCrawler.setWebsiteHeadingsAndLinks();
             for (String functionalLink : website.functionalLinks) {
                 if(!crawledSet.contains(functionalLink)) {
                     crawlingList.add(functionalLink);
