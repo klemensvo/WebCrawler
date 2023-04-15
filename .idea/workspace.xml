@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681589928957</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Renamed a method &quot;initializeCrawledWebsite&quot;">
+      <created>1681590263984</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681590263984</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,9 +157,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Renamed a getWebsiteHeadingsAndLinks method. Added methods to crawl headings, broken- -and functional links." />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed a getWebsiteHeadingsAndLinks method. Added methods to crawl headings, broken- -and functional links." />
+    <MESSAGE value="Renamed a method &quot;initializeCrawledWebsite&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed a method &quot;initializeCrawledWebsite&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WebCrawler$Main.ic" NAME="Main Coverage Results" MODIFIED="1681588715009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/WebCrawler$Main.ic" NAME="Main Coverage Results" MODIFIED="1681596550968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

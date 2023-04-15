@@ -21,6 +21,30 @@ public class CrawlingManager {
             webCrawler = new WebCrawler(currentLink);
 
             Website website = webCrawler.setWebsiteHeadingsAndLinks();
+
+            System.out.println("URL: "+website.url);  //todo: delete
+
+            int i=1;                                  //todo: delete
+            System.out.println("Headings: ");
+            for(String heading: website.headings){
+                System.out.println(heading+" "+i);
+                i++;
+            }
+
+            int j=1;                                  //todo: delete
+            System.out.println("Functional links: ");
+            for(String link: website.functionalLinks){
+                System.out.println(link+" "+j);
+                j++;
+            }
+
+            int k = 1;                                  //todo: delete
+            System.out.println("Broken links: ");
+            for(String link: website.brokenLinks){
+                System.out.println(link+" "+k);
+                k++;
+            }
+
             for (String functionalLink : website.functionalLinks) {
                 if(!crawledSet.contains(functionalLink)) {
                     crawlingList.add(functionalLink);
