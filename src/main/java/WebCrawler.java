@@ -8,6 +8,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class WebCrawler {
 
@@ -53,12 +54,13 @@ public class WebCrawler {
     }
 
     private ArrayList<String> getLinks(Document document){ // finds all links of the webpage
-        links = new ArrayList<>();
+        HashSet<String> uniqueLinks = new HashSet<>();
         Elements elements = document.select("a[href]");
         for(Element element: elements){
             String absUrl = element.absUrl("href");
-            links.add(absUrl);
+            uniqueLinks.add(absUrl);
         }
+        links = new ArrayList<>(uniqueLinks);
         return links;
     }
 
@@ -70,6 +72,7 @@ public class WebCrawler {
             for(String link: links){
                 if(isValidLink(link)){
                     funktionalLinks.add(link);
+                   // System.out.println("Functional link " + link); //todo: delete later
                 }
             }
         }catch (IOException e){
@@ -86,6 +89,7 @@ public class WebCrawler {
             for (String link : links){
                 if(!isValidLink(link)){
                     brokenLinks.add(link);
+                   // System.out.println("Broken link: "+link); //todo: delete later
                 }
             }
         }catch (IOException e){
@@ -100,7 +104,7 @@ public class WebCrawler {
         try {
             Connection.Response response = Jsoup.connect(url).ignoreContentType(true).execute();
             int statusCode = response.statusCode();
-            System.out.println("Found functional link: "+ url+" with status code "+statusCode);// todo: delete later
+            //System.out.println("Found functional link: "+ url+" with status code "+statusCode);// todo: delete later
             if(statusCode==200){
                 isValid=true;
             }
