@@ -7,4 +7,5 @@ public class Website {
     protected ArrayList<String> headings;
     protected ArrayList<String> functionalLinks;
     protected ArrayList<String> brokenLinks;
+
 }

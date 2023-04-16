@@ -19,8 +19,19 @@ public class WebCrawler {
     ArrayList<String> funktionalLinks = new ArrayList<>();
     ArrayList<String> brokenLinks = new ArrayList<>();
 
+
     public WebCrawler(String url) {
         this.url = url;
+    }
+
+
+    private Document connectToURL (String url){
+        try {
+           return Jsoup.connect(url).get();      //return an instance of Document
+        }catch (IOException e){
+            System.out.println("Connection failed: IOException. ");
+            return null;
+        }
     }
 
 
@@ -34,17 +45,11 @@ public class WebCrawler {
     }
 
     private ArrayList<String> crawlHeadings() {
-        try {
-            Document document = Jsoup.connect(url).get();
-            headings = getHeadings(document);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return headings;
+            headings = getHeadings(connectToURL(url));
+            return headings;
     }
 
     private ArrayList<String> getHeadings(Document document) {
-        headings = new ArrayList<>();
         Elements elements = document.select("h1, h3, h3, h4, h5, h6");
         for (Element element : elements) {
             String heading = element.tagName()+" "+element.text(); // example output: "h1 Hello"
@@ -65,37 +70,25 @@ public class WebCrawler {
     }
 
     private ArrayList<String> crawlFunctionalLinks() {
-        try{
-            funktionalLinks = new ArrayList<>();
-            Document document = Jsoup.connect(url).get();
-            ArrayList<String> links = getLinks(document);
+            ArrayList<String> links = getLinks(connectToURL(url));
             for(String link: links){
                 if(isValidLink(link)){
                     funktionalLinks.add(link);
                    // System.out.println("Functional link " + link); //todo: delete later
                 }
             }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-       return funktionalLinks;
+            return funktionalLinks;
     }
 
     private ArrayList<String> crawlBrokenLinks() {
-        try{
-            brokenLinks = new ArrayList<>();
-            Document document = Jsoup.connect(url).get();
-            ArrayList <String> links = getLinks(document);
+            ArrayList <String> links = getLinks(connectToURL(url));
             for (String link : links){
                 if(!isValidLink(link)){
                     brokenLinks.add(link);
                    // System.out.println("Broken link: "+link); //todo: delete later
                 }
             }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        return brokenLinks;
+              return brokenLinks;
     }
 
     private boolean isValidLink(String url){
@@ -114,6 +107,8 @@ public class WebCrawler {
             System.out.println("Found broken link: " + url + " with unknown host"); // todo: delete later
         }catch (IOException e3){
             System.out.println("IOException has occured: "+ url); // todo: delete later
+        }catch (Exception e){
+            System.out.println("Something went wrong" + e.getMessage());
         }
            return isValid;
            }
