@@ -1,16 +1,17 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
         UserData userData;
-        ArrayList<Website> websites;
+        Websites websites;
 
         UserQuery userQuery = new UserQuery();
         userData = userQuery.getUserData();
 
         CrawlingManager crawlingManager = new CrawlingManager(userData);
         websites = crawlingManager.getWebsites();
+
+        ResultProducer resultProducer = new ResultProducer(userData, websites);
+
 
         // todo: input websites to ResultProducer, then remove this
 
