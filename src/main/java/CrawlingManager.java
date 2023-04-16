@@ -1,24 +1,43 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class CrawlingManager {
     final UserData userData;
-    ArrayList<String> crawlingList = new ArrayList<>();
-    ArrayList<Website> websites = new ArrayList<>();
+    Websites websites = new Websites();
+    Website website;
+
     WebCrawler webCrawler;
+    ArrayList<String> crawlingList = new ArrayList<>();
+    HashSet<String> crawledSet = new HashSet<>();
 
     public CrawlingManager(UserData userData) {
         this.userData = userData;
     }
 
-    public ArrayList<Website> getWebsites() {
+    public Websites getWebsites() {
         crawlingList.add(userData.startingWebsite);
+        int crawlingDepth = userData.crawlingDepth;
+
         while (!crawlingList.isEmpty()) {
-            webCrawler = new WebCrawler(crawlingList.remove(0));
-            Website website = new Website();
-            website.headings = webCrawler.crawlHeadings();
+            String currentLink = crawlingList.remove(0);
+            crawledSet.add(currentLink);
+
+            webCrawler = new WebCrawler(currentLink);
+            website = webCrawler.getWebsiteHeadingsAndLinks();
+
             websites.add(website);
+
+            addFunctionalLinksToCrawlingListIfNotContained();
         }
 
         return websites;
+    }
+
+    private void addFunctionalLinksToCrawlingListIfNotContained() {
+        for (String functionalLink : website.functionalLinks) {
+            if(!crawledSet.contains(functionalLink)) {
+                crawlingList.add(functionalLink);
+            }
+        }
     }
 }
