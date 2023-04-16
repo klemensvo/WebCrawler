@@ -7,6 +7,7 @@ public class CrawlingManager {
     HashSet<String> crawledSet = new HashSet<>();
     ArrayList<Website> websites = new ArrayList<>();
     WebCrawler webCrawler;
+    Website website;
 
     public CrawlingManager(UserData userData) {
         this.userData = userData;
@@ -20,16 +21,21 @@ public class CrawlingManager {
             crawledSet.add(currentLink);
             webCrawler = new WebCrawler(currentLink);
 
-            Website website = webCrawler.getWebsiteHeadingsAndLinks();
-            for (String functionalLink : website.functionalLinks) {
-                if(!crawledSet.contains(functionalLink)) {
-                    crawlingList.add(functionalLink);
-                    crawledSet.add(functionalLink);
-                }
-            }
+            website = webCrawler.getWebsiteHeadingsAndLinks();
             websites.add(website);
+
+            addFunctionalLinksToCrawlingListIfNotContained();
         }
 
         return websites;
+    }
+
+    private void addFunctionalLinksToCrawlingListIfNotContained() {
+        for (String functionalLink : website.functionalLinks) {
+            if(!crawledSet.contains(functionalLink)) {
+                crawlingList.add(functionalLink);
+                crawledSet.add(functionalLink);
+            }
+        }
     }
 }
