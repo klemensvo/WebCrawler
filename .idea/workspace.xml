@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="ResultProducer and -Test started">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="ResultProducer advanced, initialized ArrayLists in Website">
+      <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ResultProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResultProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Websites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebsiteList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -350,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681657426492</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ResultProducer advanced, initialized ArrayLists in Website">
+      <created>1681889431816</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681889431816</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,7 +401,8 @@
     <MESSAGE value="changed CrawlingManager and Main to corrected types, deleted CrawlingList.java, working display of headers" />
     <MESSAGE value="improved CrawlingManager, adds websites to crawlingList while receiving new functionalLinks" />
     <MESSAGE value="ResultProducer and -Test started" />
-    <option name="LAST_COMMIT_MESSAGE" value="ResultProducer and -Test started" />
+    <MESSAGE value="ResultProducer advanced, initialized ArrayLists in Website" />
+    <option name="LAST_COMMIT_MESSAGE" value="ResultProducer advanced, initialized ArrayLists in Website" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

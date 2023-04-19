@@ -1,23 +1,23 @@
 public class ResultProducer {
     UserData userData;
-    Websites websites;
+    WebsiteList websiteList;
     StringBuilder report = new StringBuilder();
-    ResultProducer(UserData userData, Websites websites) {
+    ResultProducer(UserData userData, WebsiteList websiteList) {
         this.userData = userData;
-        this.websites = websites;
+        this.websiteList = websiteList;
     }
 
-    String makeMdDocument(Websites websites) {
+    String makeMdDocument(WebsiteList websiteList) {
         report.append("# Web Crawler Report");
         report.append(newLine());
         report.append(assembleInput());
         report.append(newLine());
 
-        for (Website website: websites) {
+        for (Website website: websiteList) {
             report.append(website.url);
             report.append(newLine());
             for (String heading : website.headings) {
-                report.append(heading).append("\n");
+                report.append(heading).append("\n"); // hashtags hinzufügen
             }
             for (String functionalLink : website.functionalLinks) {
                 //
