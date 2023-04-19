@@ -11,13 +11,13 @@ class ResultProducerTest {
         userData.crawlingDepth = 2;
         userData.targetLanguage = "German";
 
-        Websites websites = new Websites();
+        WebsiteList websiteList = new WebsiteList();
         Website website = new Website();
         website.url = "https://google.com";
         website.headings.add("h1 Test");
         // website.functionalLinks
-        websites.add(website);
-        ResultProducer resultProducer = new ResultProducer(userData, websites);
+        websiteList.add(website);
+        ResultProducer resultProducer = new ResultProducer(userData, websiteList);
 
         String testString
                 = "# Web Crawler Report"
@@ -33,7 +33,7 @@ class ResultProducerTest {
                 + website.headings.get(0)
                 + "\n";
 
-        assertEquals(testString, resultProducer.makeMdDocument(websites));
+        assertEquals(testString, resultProducer.makeMdDocument(websiteList));
 
     }
 

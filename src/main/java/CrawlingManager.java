@@ -3,7 +3,7 @@ import java.util.HashSet;
 
 public class CrawlingManager {
     final UserData userData;
-    Websites websites = new Websites();
+    WebsiteList websiteList = new WebsiteList();
     Website website;
 
     WebCrawler webCrawler;
@@ -14,7 +14,7 @@ public class CrawlingManager {
         this.userData = userData;
     }
 
-    public Websites getWebsites() {
+    public WebsiteList getWebsites() {
         crawlingList.add(userData.startingWebsite);
         int crawlingDepth = userData.crawlingDepth;
 
@@ -25,12 +25,12 @@ public class CrawlingManager {
             webCrawler = new WebCrawler(currentLink);
             website = webCrawler.getWebsiteHeadingsAndLinks();
 
-            websites.add(website);
+            websiteList.add(website);
 
             addFunctionalLinksToCrawlingListIfNotContained();
         }
 
-        return websites;
+        return websiteList;
     }
 
     private void addFunctionalLinksToCrawlingListIfNotContained() {

@@ -2,35 +2,35 @@ public class Main {
 
     public static void main(String[] args) {
         UserData userData;
-        Websites websites;
+        WebsiteList websiteList;
 
         UserQuery userQuery = new UserQuery();
         userData = userQuery.getUserData();
 
         CrawlingManager crawlingManager = new CrawlingManager(userData);
-        websites = crawlingManager.getWebsites();
+        websiteList = crawlingManager.getWebsites();
 
-        ResultProducer resultProducer = new ResultProducer(userData, websites);
+        ResultProducer resultProducer = new ResultProducer(userData, websiteList);
 
 
-        // todo: input websites to ResultProducer, then remove this
+        // todo: input websiteList to ResultProducer, then remove this
 
-        for (int i = 0; i < websites.size(); i++) {
+        for (int i = 0; i < websiteList.size(); i++) {
             System.out.println("\nheadings of website " + i + ":");
-            for (int j = 0; j < websites.get(0).headings.size(); j++) {
-                System.out.println("  " + websites.get(0).headings.get(j));
+            for (int j = 0; j < websiteList.get(0).headings.size(); j++) {
+                System.out.println("  " + websiteList.get(0).headings.get(j));
             }
 
             System.out.println("\nfunctionalLinks of website " + i + ":");
-            for (int j = 0; j < websites.get(0).functionalLinks.size(); j++) {
-                System.out.println("  " + websites.get(0).functionalLinks.get(j));
+            for (int j = 0; j < websiteList.get(0).functionalLinks.size(); j++) {
+                System.out.println("  " + websiteList.get(0).functionalLinks.get(j));
             }
 
             System.out.println("\nbrokenLinks of website " + i + ":");
-            for (int j = 0; j < websites.get(0).brokenLinks.size(); j++) {
-                System.out.println("  " + websites.get(0).brokenLinks.get(j));
+            for (int j = 0; j < websiteList.get(0).brokenLinks.size(); j++) {
+                System.out.println("  " + websiteList.get(0).brokenLinks.get(j));
             }
-            websites.remove(0);
+            websiteList.remove(0);
         }
     }
 }
