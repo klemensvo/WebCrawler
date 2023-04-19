@@ -12,7 +12,7 @@ import java.util.HashSet;
 
 public class WebCrawler {
 
-    final String url;
+    final String url="";
 
     ArrayList<String> headings = new ArrayList<>();
     ArrayList<String> links = new ArrayList<>();
@@ -38,6 +38,7 @@ public class WebCrawler {
     public Website setWebsiteHeadingsAndLinks() {
         Website website = new Website();
         website.url = url;
+        //getLinks(connectToURL(url));
         website.headings = crawlHeadings();
         website.functionalLinks = crawlFunctionalLinks();
         website.brokenLinks = crawlBrokenLinks();
@@ -69,7 +70,7 @@ public class WebCrawler {
         return links;
     }
 
-    private ArrayList<String> crawlFunctionalLinks() {
+    private ArrayList<String> crawlFunctionalLinks() { //todo: remove duplication
             ArrayList<String> links = getLinks(connectToURL(url));
             for(String link: links){
                 if(isValidLink(link)){
@@ -80,7 +81,7 @@ public class WebCrawler {
             return funktionalLinks;
     }
 
-    private ArrayList<String> crawlBrokenLinks() {
+    private ArrayList<String> crawlBrokenLinks() {//todo: remove duplication
             ArrayList <String> links = getLinks(connectToURL(url));
             for (String link : links){
                 if(!isValidLink(link)){

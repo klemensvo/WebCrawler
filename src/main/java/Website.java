@@ -4,8 +4,8 @@ public class Website {
     // data structure
     protected String url;
     protected int depth;
-    protected ArrayList<String> headings;
-    protected ArrayList<String> functionalLinks;
-    protected ArrayList<String> brokenLinks;
+    protected ArrayList<String> headings = new ArrayList<>();
+    protected ArrayList<String> functionalLinks= new ArrayList<>();
+    protected ArrayList<String> brokenLinks = new ArrayList<>();
 
 }
