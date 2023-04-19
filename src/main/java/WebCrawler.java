@@ -12,7 +12,7 @@ import java.util.HashSet;
 
 public class WebCrawler {
 
-    final String url="";
+    final String url;
 
     ArrayList<String> headings = new ArrayList<>();
     ArrayList<String> links = new ArrayList<>();
