@@ -1,58 +1,121 @@
+import org.jsoup.Connection;
+import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class WebCrawler {
+
     final String url;
+
+    ArrayList<String> headings = new ArrayList<>();
+    ArrayList<String> links = new ArrayList<>();
+    ArrayList<String> funktionalLinks = new ArrayList<>();
+    ArrayList<String> brokenLinks = new ArrayList<>();
+
+
     public WebCrawler(String url) {
         this.url = url;
     }
-    private ArrayList<String> headings = new ArrayList<>();
-    private ArrayList<String> functionalLinks = new ArrayList<>();
-    private ArrayList<String> brokenLinks = new ArrayList<>();
+
+
+    private Document connectToURL(String url) {
+        try {
+            return Jsoup.connect(url).get();      //return an instance of Document
+        } catch (IOException e) {
+            System.out.println("Connection failed: IOException. ");
+            return null;
+        }
+    }
+
 
     public Website getWebsiteHeadingsAndLinks() {
         Website website = new Website();
         website.url = url;
+        //getLinks(connectToURL(url));
         website.headings = crawlHeadings();
         website.functionalLinks = crawlFunctionalLinks();
-        website.brokenLinks = crawlBrokenLinks();
-        return  website;
+        // website.brokenLinks = crawlBrokenLinks();
+        return website;
     }
+
     private ArrayList<String> crawlHeadings() {
-        try {
-            Document document = Jsoup.connect(url).get();
-            headings = getHeadings(document);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        headings = getHeadings(connectToURL(url));
         return headings;
     }
 
     private ArrayList<String> getHeadings(Document document) {
-        headings = new ArrayList<>();
         Elements elements = document.select("h1, h3, h3, h4, h5, h6");
         for (Element element : elements) {
-            headings.add(element.text());
+            String heading = element.tagName() + " " + element.text(); // example output: "h1 Hello"
+            headings.add(heading);
         }
         return headings;
     }
 
-    private ArrayList<String> crawlFunctionalLinks() {
-        functionalLinks.add("https://javatpoint.com");
-        functionalLinks.add("https://nationalgeographic.com");
-        return functionalLinks;
+    private ArrayList<String> getLinks(Document document) { // finds all links of the webpage
+        HashSet<String> uniqueLinks = new HashSet<>();
+        Elements elements = document.select("a[href]");
+        for (Element element : elements) {
+            String absUrl = element.absUrl("href");
+            uniqueLinks.add(absUrl);
+        }
+        links = new ArrayList<>(uniqueLinks);
+        return links;
     }
 
-    private ArrayList<String> crawlBrokenLinks() {
-        brokenLinks.add("https://stackoverflow.com");
+    private ArrayList<String> crawlFunctionalLinks() { //todo: remove duplication
+        ArrayList<String> links = getLinks(connectToURL(url));
+        for (String link : links) {
+            if (isValidLink(link)) {
+                funktionalLinks.add(link);
+                // System.out.println("Functional link " + link); //todo: delete later
+            }
+        }
+        return funktionalLinks;
+    }
+
+    private ArrayList<String> crawlBrokenLinks() {//todo: remove duplication
+        ArrayList<String> links = getLinks(connectToURL(url));
+        for (String link : links) {
+            if (!isValidLink(link)) {
+                brokenLinks.add(link);
+                // System.out.println("Broken link: "+link); //todo: delete later
+            }
+        }
         return brokenLinks;
     }
+
+    private boolean isValidLink(String url) {
+        boolean isValid = false;
+
+        try {
+            Connection.Response response = Jsoup.connect(url).ignoreContentType(true).execute();
+            int statusCode = response.statusCode();
+            //System.out.println("Found functional link: "+ url+" with status code "+statusCode);// todo: delete later
+            if (statusCode == 200) {
+                isValid = true;
+            }
+        } catch (HttpStatusException e1) {
+            System.out.println("Found broken link: " + url + " with status code " + e1.getStatusCode()); // todo: delete later
+        } catch (UnknownHostException e2) {
+            System.out.println("Found broken link: " + url + " with unknown host"); // todo: delete later
+        } catch (IOException e3) {
+            System.out.println("IOException has occurred: " + url); // todo: delete later
+        } catch (Exception e) {
+            System.out.println("Something went wrong" + e.getMessage());
+        }
+        return isValid;
+    }
 }
+
+
 
 /*
 import java.io.IOException;
