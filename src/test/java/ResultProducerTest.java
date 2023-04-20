@@ -33,7 +33,7 @@ class ResultProducerTest {
                 + website.headings.get(0)
                 + "\n";
 
-        assertEquals(testString, resultProducer.makeMdDocument(websiteList));
+        assertEquals(testString, resultProducer.makeMdDocument());
 
     }
 

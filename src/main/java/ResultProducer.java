@@ -7,7 +7,7 @@ public class ResultProducer {
         this.websiteList = websiteList;
     }
 
-    String makeMdDocument(WebsiteList websiteList) {
+    String makeMdDocument() { // WebsiteList websiteList) {
         report.append("# Web Crawler Report");
         report.append(newLine());
         report.append(assembleInput());

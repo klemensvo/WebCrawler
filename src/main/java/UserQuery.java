@@ -7,7 +7,8 @@ public class UserQuery {
 
     public UserData getUserData() {
 
-        new Text().printWelcome();
+        printWelcome();
+
         userData.startingWebsite = getStartingWebsiteFromUser();
         userData.crawlingDepth = getCrawlingDepthFromUser();
         userData.targetLanguage = getTargetLanguageFromUser();
@@ -16,7 +17,12 @@ public class UserQuery {
 
         return userData;
     }
-
+    public void printWelcome() {
+        System.out.println("\nWelcome to WebCrawler\n");
+        System.out.println("Please enter a website to start,");
+        System.out.println("the depth of websiteList to crawl and");
+        System.out.println("the target language:\n");
+    }
     public String getStartingWebsiteFromUser() {
         return startingWebsite.getStartingWebsiteFromUser();
     }
