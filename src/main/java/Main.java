@@ -1,7 +1,12 @@
 public class Main {
 
     public static void main(String[] args) {
-        WebCrawler webCrawler = new WebCrawler("https://javatpoint.com");
+
+        // testWebCrawlerFromMain();
+
+        // WebCrawler webCrawler = new WebCrawler("https://javatpoint.com");
+        WebCrawler webCrawler = new WebCrawler("https://w3schools.com");
+
         Website website = webCrawler.getWebsiteHeadingsAndLinks();
         System.out.println("Website: " + website.url);
         System.out.println("\nHeadings: ");
@@ -16,7 +21,6 @@ public class Main {
         for (String brokenLink : website.brokenLinks) {
             System.out.println(brokenLink);
         }
-
 
         /*
         UserData userData;
@@ -53,6 +57,26 @@ public class Main {
             }
             websiteList.remove(0);
         } */
+    }
+
+    static void testWebCrawlerFromMain() {
+        WebCrawler webCrawler = new WebCrawler("https://javatpoint.com");
+        // WebCrawler webCrawler = new WebCrawler("https://w3schools.com");
+
+        Website website = webCrawler.getWebsiteHeadingsAndLinks();
+        System.out.println("Website: " + website.url);
+        System.out.println("\nHeadings: ");
+        for (String heading : website.headings) {
+            System.out.println(heading);
+        }
+        System.out.println("\nFunctional Links:");
+        for (String functionalLink : website.functionalLinks) {
+            System.out.println(functionalLink);
+        }
+        System.out.println("\nBroken Links:");
+        for (String brokenLink : website.brokenLinks) {
+            System.out.println(brokenLink);
+        }
     }
 }
 

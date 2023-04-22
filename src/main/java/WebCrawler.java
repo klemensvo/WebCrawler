@@ -4,6 +4,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class WebCrawler {
@@ -32,39 +33,37 @@ public class WebCrawler {
             for (Element link : links) {
                 String absoluteUrl = link.absUrl("href");
                 if (!absoluteUrl.isEmpty()) {
-                    URL linkUrl = new URL(absoluteUrl);
-                    String linkDomain = linkUrl.getHost();
-                    if (!linkDomain.contains(baseDomain)) {
-                        try {
-                            int statusCode = Jsoup.connect(absoluteUrl)
-                                    .ignoreHttpErrors(true)
-                                    .method(org.jsoup.Connection.Method.HEAD)
-                                    .execute()
-                                    .statusCode();
+                    try {
+                        URL linkUrl = new URL(absoluteUrl);
 
-                            if (statusCode >= 200 && statusCode < 400) {
-                                website.functionalLinks.add(absoluteUrl);
-                            } else {
+
+                        //URL linkUrl = new URL(absoluteUrl);
+
+
+                        String linkDomain = linkUrl.getHost();
+                        if (!linkDomain.contains(baseDomain)) {
+                            try {
+                                int statusCode = Jsoup.connect(absoluteUrl)
+                                        .ignoreHttpErrors(true)
+                                        .method(org.jsoup.Connection.Method.HEAD)
+                                        .execute()
+                                        .statusCode();
+
+                                if (statusCode >= 200 && statusCode < 400) {
+                                    website.functionalLinks.add(absoluteUrl);
+                                } else {
+                                    website.brokenLinks.add(absoluteUrl);
+                                }
+                            } catch (IOException e) {
                                 website.brokenLinks.add(absoluteUrl);
                             }
-                        } catch (IOException e) {
-                            website.brokenLinks.add(absoluteUrl);
                         }
-
-
-
-                        // System.out.println("absolute URL: " + absoluteUrl);
-                        /*
-                        Jsoup.connect(absoluteUrl).ignoreHttpErrors(true).execute().parse();
-                        int statusCode = Jsoup.connect(absoluteUrl).ignoreHttpErrors(true).execute().statusCode();
-
-                        if (statusCode >= 200 && statusCode < 400) {
-                            website.functionalLinks.add(absoluteUrl);
-                        } else {
-                            website.brokenLinks.add(absoluteUrl);
-                        } */
-
+                    } catch (MalformedURLException e) {
+                        // Manejar específicamente la excepción MalformedURLException
+                        // e.printStackTrace();
+                        // website.brokenLinks.add(absoluteUrl);
                     }
+
                 }
             }
         } catch (IOException e) {

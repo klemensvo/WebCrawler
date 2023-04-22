@@ -1,6 +1,68 @@
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.Mockito.when;
+
 public class WebCrawlerTest {
 
+    @Mock
+    private Document document;
+
+    @Mock
+    private Connection connection;
+
+    @Mock
+    private Connection.Response response;
+
+    private WebCrawler webCrawler;
+    private String testUrl;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+        testUrl = "https://example.com";
+        webCrawler = new WebCrawler(testUrl);
+    }
+
+    @Test
+    void getWebsiteHeadingsAndLinks() throws IOException {
+        // Mock document and elements
+        Elements headings = new Elements();
+        Elements links = new Elements();
+
+        // when(Jsoup.connect(anyString())).thenReturn(connection);
+        // when(Jsoup.connect(Mockito.anyString())).thenReturn(connection);
+        when(Jsoup.connect(argThat(url -> url != null && !url.isEmpty()))).thenReturn(connection);
+
+        when(connection.get()).thenReturn(document);
+        when(document.select(anyString())).thenReturn(headings, links);
+        when(connection.method(Mockito.any())).thenReturn(connection);
+        when(connection.ignoreHttpErrors(Mockito.anyBoolean())).thenReturn(connection);
+        when(connection.execute()).thenReturn(response);
+        when(response.statusCode()).thenReturn(200);
+
+        // Perform test
+        Website website = webCrawler.getWebsiteHeadingsAndLinks();
+
+        // Assertions
+        assertNotNull(website);
+        assertEquals(testUrl, website.url);
+    }
 }
+
+
 
 /*
 import org.jsoup.Connection;

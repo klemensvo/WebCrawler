@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="Changed Websites to WebsiteList">
-      <change afterPath="$PROJECT_DIR$/src/test/java/WebCrawlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingDispatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ResultProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResultProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlingDispatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlingDispatcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WebCrawlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebCrawlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,8 +204,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WebCrawlerTest (1)" />
         <item itemvalue="Gradle.Tests in 'WebCrawler.test'" />
+        <item itemvalue="Gradle.WebCrawlerTest (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.CrawlingDispatcherTest" />
       </list>
@@ -348,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681894983125</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)">
+      <created>1682156077759</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682156077759</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +398,7 @@
     <MESSAGE value="ResultProducer and -Test started" />
     <MESSAGE value="ResultProducer advanced, initialized ArrayLists in Website" />
     <MESSAGE value="Changed Websites to WebsiteList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Websites to WebsiteList" />
+    <MESSAGE value="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)" />
+    <option name="LAST_COMMIT_MESSAGE" value="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)" />
   </component>
 </project>
