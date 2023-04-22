@@ -5,8 +5,8 @@ public class CrawlingDispatcher {
     String startingWebsite;
     int maxCrawlingDepth;
 
-    WebsiteList websiteList;
-    HashSet<String> crawledUrls;
+    WebsiteList websiteList = new WebsiteList();
+    HashSet<String> crawledUrls = new HashSet<>();
 
     WebCrawler webCrawler;
 
@@ -19,8 +19,8 @@ public class CrawlingDispatcher {
     }
 
     public WebsiteList getWebsiteList() {
-        websiteList = new WebsiteList();
-        crawledUrls = new HashSet<>();
+        // websiteList = new WebsiteList();
+        // crawledUrls = new HashSet<>();
 
         dispatchCrawlRecursively(startingWebsite, 0, websiteList, crawledUrls);
 
@@ -36,6 +36,7 @@ public class CrawlingDispatcher {
         }
 
         crawledUrls.add(url);
+        System.out.println("added: " + url);
 
         Website website = webCrawler.getWebsiteHeadingsAndLinks();
         if (website != null) {

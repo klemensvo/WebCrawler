@@ -1,6 +1,24 @@
 public class Main {
 
     public static void main(String[] args) {
+        WebCrawler webCrawler = new WebCrawler("https://javatpoint.com");
+        Website website = webCrawler.getWebsiteHeadingsAndLinks();
+        System.out.println("Website: " + website.url);
+        System.out.println("\nHeadings: ");
+        for (String heading : website.headings) {
+            System.out.println(heading);
+        }
+        System.out.println("\nFunctional Links:");
+        for (String functionalLink : website.functionalLinks) {
+            System.out.println(functionalLink);
+        }
+        System.out.println("\nBroken Links:");
+        for (String brokenLink : website.brokenLinks) {
+            System.out.println(brokenLink);
+        }
+
+
+        /*
         UserData userData;
         WebsiteList websiteList;
 
@@ -17,7 +35,7 @@ public class Main {
 
 
         // todo: input websiteList to ResultProducer, then remove this
-        /*
+
         for (int i = 0; i < websiteList.size(); i++) {
             System.out.println("\nheadings of website " + i + ":");
             for (int j = 0; j < websiteList.get(0).headings.size(); j++) {
