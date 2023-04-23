@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="ResultProducer advanced, initialized ArrayLists in Website">
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop_olha" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -336,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681889431816</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Created a branch for translation function">
+      <created>1682260867711</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1682260867711</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,7 +388,8 @@
     <MESSAGE value="improved CrawlingManager, adds websites to crawlingList while receiving new functionalLinks" />
     <MESSAGE value="ResultProducer and -Test started" />
     <MESSAGE value="ResultProducer advanced, initialized ArrayLists in Website" />
-    <option name="LAST_COMMIT_MESSAGE" value="ResultProducer advanced, initialized ArrayLists in Website" />
+    <MESSAGE value="Created a branch for translation function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a branch for translation function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
