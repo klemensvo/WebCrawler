@@ -16,6 +16,7 @@ public class ResultProducer {
         for (Website website: websiteList) {
             report.append(website.url);
             report.append(newLine());
+
             for (String heading : website.headings) {
                 report.append(heading).append("\n"); // hashtags hinzufügen
             }

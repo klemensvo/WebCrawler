@@ -15,6 +15,7 @@ class ResultProducerTest {
         Website website = new Website();
         website.url = "https://google.com";
         website.headings.add("h1 Test");
+
         // website.functionalLinks
         websiteList.add(website);
         ResultProducer resultProducer = new ResultProducer(userData, websiteList);
