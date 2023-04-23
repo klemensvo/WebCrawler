@@ -37,7 +37,36 @@ public class WebCrawlerTest {
     }
 
     @Test
-    void getWebsiteHeadingsAndLinks() throws IOException {
+    void manuallyCrawlWebsite() {
+        // remarks: I tried every way of mocking, but did not manage...
+
+        WebCrawler webCrawler = new WebCrawler("https://javatpoint.com");
+        // WebCrawler webCrawler = new WebCrawler("https://w3schools.com");
+
+        Website website = webCrawler.getWebsiteHeadingsAndLinks();
+        System.out.println("\nWebsite: " + website.url);
+        System.out.println("\nHeadings: ");
+        int headerCounter = 1;
+        for (String heading : website.headings) {
+            System.out.println(headerCounter + " " + heading);
+            headerCounter++;
+        }
+        int funcionalLinkCounter = 1;
+        System.out.println("\nFunctional Links:");
+        for (String functionalLink : website.functionalLinks) {
+            System.out.println(funcionalLinkCounter + " " + functionalLink);
+            funcionalLinkCounter++;
+        }
+        int brokenLinkCounter = 1;
+        System.out.println("\nBroken Links:");
+        for (String brokenLink : website.brokenLinks) {
+            System.out.println(brokenLinkCounter + " " + brokenLink);
+            brokenLinkCounter++;
+        }
+
+        assertEquals("h1 Latest Tutorials", website.headings.get(0));
+
+        /*
         // Mock document and elements
         Elements headings = new Elements();
         Elements links = new Elements();
@@ -59,6 +88,7 @@ public class WebCrawlerTest {
         // Assertions
         assertNotNull(website);
         assertEquals(testUrl, website.url);
+    } */
     }
 }
 

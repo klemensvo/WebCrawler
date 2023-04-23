@@ -14,6 +14,7 @@ public class CrawlingDispatcher {
         this.userData = userData;
         startingWebsite = userData.startingWebsite;
         maxCrawlingDepth = userData.crawlingDepth;
+
         webCrawler = new WebCrawler(startingWebsite);
     }
 

@@ -35,12 +35,8 @@ public class WebCrawler {
                 if (!absoluteUrl.isEmpty()) {
                     try {
                         URL linkUrl = new URL(absoluteUrl);
-
-
-                        //URL linkUrl = new URL(absoluteUrl);
-
-
                         String linkDomain = linkUrl.getHost();
+
                         if (!linkDomain.contains(baseDomain)) {
                             try {
                                 int statusCode = Jsoup.connect(absoluteUrl)
@@ -59,11 +55,8 @@ public class WebCrawler {
                             }
                         }
                     } catch (MalformedURLException e) {
-                        // Manejar específicamente la excepción MalformedURLException
-                        // e.printStackTrace();
-                        // website.brokenLinks.add(absoluteUrl);
+                       e.printStackTrace();
                     }
-
                 }
             }
         } catch (IOException e) {
