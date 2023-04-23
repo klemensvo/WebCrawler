@@ -1,16 +1,8 @@
 import java.util.ArrayList;
 
-public class WebsiteNode { //extends ArrayList<Website> {
-    // private String url;
+public class WebsiteNode {
     private Website website;
-    private WebsiteNode parent;
-    private ArrayList<WebsiteNode> children = new ArrayList<>();
-
-    /*
-    public WebsiteNode() {
-        // this.url = url;
-        this.children = new ArrayList<>(); // todo: move to variable declaration? delete?
-    } */
+    private final ArrayList<WebsiteNode> children = new ArrayList<>();
 
     public void addChild(WebsiteNode child) {
         child.setParent(this);
@@ -25,19 +17,10 @@ public class WebsiteNode { //extends ArrayList<Website> {
         this.website = website;
     }
 
-    public WebsiteNode getParent() {
-        return parent;
-    }
-
     public void setParent(WebsiteNode parent) {
-        this.parent = parent;
     }
 
     public ArrayList<WebsiteNode> getChildren() {
         return children;
-    }
-
-    public void setChildren(ArrayList<WebsiteNode> children) {
-        this.children = children;
     }
 }

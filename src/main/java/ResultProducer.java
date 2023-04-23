@@ -1,34 +1,72 @@
+import java.util.ArrayList;
+
 public class ResultProducer {
     UserData userData;
-    WebsiteNode websiteNode;
+    WebsiteNode rootNode;
     StringBuilder report = new StringBuilder();
-    ResultProducer(UserData userData, WebsiteNode websiteNode) {
+    ResultProducer(UserData userData, WebsiteNode rootNode) {
         this.userData = userData;
-        this.websiteNode = websiteNode;
+        this.rootNode = rootNode;
     }
 
-    String makeMdDocument() { // WebsiteNode websiteNode) {
+    public String makeMdDocument() {
         report.append("# Web Crawler Report");
         report.append(newLine());
         report.append(assembleInput());
         report.append(newLine());
 
-        /*
-        for (Website website: websiteNode) { // todo: change this to recursively read Website
-            report.append(website.url);
-            report.append(newLine());
-
-            for (String heading : website.headings) {
-                report.append(heading).append("\n"); // hashtags hinzufügen
-            }
-            for (String functionalLink : website.functionalLinks) {
-                //
-            }
-        } */
-
-
+        recursiveAppend(rootNode, 0);
 
         return report.toString();
+    }
+
+    private void recursiveAppend(WebsiteNode websiteNode, int depth) {
+        if (websiteNode.getWebsite() != null) {
+            String url = websiteNode.getWebsite().url;
+            report.append(newLine());
+            report.append(newLine());
+            report.append(newLine());
+            report.append(url);
+            report.append(newLine());
+            report.append(newLine());
+
+            ArrayList<String> headings = websiteNode.getWebsite().headings;
+            for (String heading : headings) {
+                String[] headingLevelAndHeading = heading.split(" ", 2);
+                // uses only the number of the string "h1 Example Heading", result: '1'
+                int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
+
+                for (int i = 0; i < headingLevel; i++) {
+                    report.append("#");
+                }
+                report.append(" ").append(headingLevelAndHeading[1]).append(newLine());
+            }
+
+            report.append(newLine());
+            report.append("Functional Links: ");
+            report.append(newLine());
+            report.append(newLine());
+
+            ArrayList<String> functionalLinks = websiteNode.getWebsite().functionalLinks;
+            for (String link : functionalLinks) {
+                report.append(makeFunctionalLink(link));
+            }
+
+            report.append(newLine());
+            report.append("Broken Links: ");
+            report.append(newLine());
+            report.append(newLine());
+
+            ArrayList<String> brokenLinks = websiteNode.getWebsite().brokenLinks;
+            for (String link : brokenLinks) {
+                report.append(makeBrokenLink(link));
+            }
+        }
+
+        // recursive call to children
+        for (WebsiteNode child : websiteNode.getChildren()) {
+            recursiveAppend(child, depth + 1);
+        }
     }
 
     String newLine() {
@@ -41,9 +79,9 @@ public class ResultProducer {
     }
 
     String makeFunctionalLink(String text) {
-        return "--> Link to: <a>" + text + "</a>";
+        return "--> Functional Link to: <a>" + text + "</a>\n";
     }
     String makeBrokenLink(String text) {
-        return "--> Link to: <a>" + text + "</a>";
+        return "--> Broken Link to: <a>" + text + "</a>\n";
     }
 }
