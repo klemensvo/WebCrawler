@@ -1,19 +1,20 @@
 public class ResultProducer {
     UserData userData;
-    WebsiteList websiteList;
+    WebsiteNode websiteNode;
     StringBuilder report = new StringBuilder();
-    ResultProducer(UserData userData, WebsiteList websiteList) {
+    ResultProducer(UserData userData, WebsiteNode websiteNode) {
         this.userData = userData;
-        this.websiteList = websiteList;
+        this.websiteNode = websiteNode;
     }
 
-    String makeMdDocument() { // WebsiteList websiteList) {
+    String makeMdDocument() { // WebsiteNode websiteNode) {
         report.append("# Web Crawler Report");
         report.append(newLine());
         report.append(assembleInput());
         report.append(newLine());
 
-        for (Website website: websiteList) {
+        /*
+        for (Website website: websiteNode) { // todo: change this to recursively read Website
             report.append(website.url);
             report.append(newLine());
 
@@ -23,7 +24,7 @@ public class ResultProducer {
             for (String functionalLink : website.functionalLinks) {
                 //
             }
-        }
+        } */
 
 
 

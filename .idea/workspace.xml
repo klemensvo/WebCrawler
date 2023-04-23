@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="WebCrawler new try - catch block">
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="restored Main, cleaned WebCrawler, CrawlingDispatcher doesn't yet work properly">
+      <change afterPath="$PROJECT_DIR$/src/main/java/WebsiteNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingDispatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ResultProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResultProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebsiteList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CrawlingDispatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlingDispatcherTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WebCrawlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebCrawlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +107,7 @@
       <command value="gradle wrapper --distribution-type all" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'WebCrawler.test'">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -353,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682156077759</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="restored Main, cleaned WebCrawler, CrawlingDispatcher doesn't yet work properly">
+      <created>1682249261994</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682249261994</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +409,7 @@
     <MESSAGE value="ResultProducer advanced, initialized ArrayLists in Website" />
     <MESSAGE value="Changed Websites to WebsiteList" />
     <MESSAGE value="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)" />
-    <option name="LAST_COMMIT_MESSAGE" value="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)" />
+    <MESSAGE value="restored Main, cleaned WebCrawler, CrawlingDispatcher doesn't yet work properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="restored Main, cleaned WebCrawler, CrawlingDispatcher doesn't yet work properly" />
   </component>
 </project>

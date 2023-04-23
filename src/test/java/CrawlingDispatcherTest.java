@@ -22,11 +22,11 @@ class CrawlingDispatcherTest {
 
         CrawlingDispatcher crawlingDispatcher = new CrawlingDispatcher(userData);
         crawlingDispatcher.webCrawler = mockWebCrawler;
-        WebsiteList websiteList = crawlingDispatcher.getWebsiteList();
+        WebsiteNode websiteNode = crawlingDispatcher.getWebsiteList();
 
-        assertEquals(2, websiteList.size()); // todo: why 2? (should rather be 1)
-        assertEquals(mockWebsite.url, websiteList.get(0).url);
-        assertEquals(mockWebsite.headings.get(0), websiteList.get(0).headings.get(0));
-        assertEquals(mockWebsite.functionalLinks.get(0), websiteList.get(0).functionalLinks.get(0));
+        assertEquals(2, websiteNode.size()); // todo: why 2? (should rather be 1)
+        assertEquals(mockWebsite.url, websiteNode.get(0).url);
+        assertEquals(mockWebsite.headings.get(0), websiteNode.get(0).headings.get(0));
+        assertEquals(mockWebsite.functionalLinks.get(0), websiteNode.get(0).functionalLinks.get(0));
     } */
 }
