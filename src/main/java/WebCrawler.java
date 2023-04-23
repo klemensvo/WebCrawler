@@ -16,6 +16,7 @@ public class WebCrawler {
     }
 
     public Website getWebsiteHeadingsAndLinks() {
+        // todo: make subroutines to make the function smaller and with less indentation
         website.url = url;
         try {
             Document document = Jsoup.connect(url).get();
