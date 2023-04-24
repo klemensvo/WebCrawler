@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TranslatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Translator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +96,9 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Console" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -113,7 +114,7 @@
       <command value="gradle wrapper --distribution-type all" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.TranslatorTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -163,12 +164,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.testGetSourceLanguage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TranslatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TranslatorTest.testGetSourceLanguage&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TranslatorTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -207,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.TranslatorTest.testGetTranslatedHeading" />
-        <item itemvalue="Gradle.TranslatorTest.testGetSourceLanguage" />
+        <item itemvalue="Gradle.TranslatorTest" />
         <item itemvalue="Gradle.TargetLanguageTest" />
         <item itemvalue="Gradle.TargetLanguageTest.getTargetLanguageFromUserOK" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.TranslatorTest.testGetTranslatedHeading" />
       </list>
     </recent_temporary>
   </component>
@@ -371,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682358536477</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added tests for Translator.java class.">
+      <created>1682361727008</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1682361727008</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -420,7 +428,8 @@
     <MESSAGE value="Improved WebCrawler.java: added a feature to fill out the List of translatedHeadings  of Website.java" />
     <MESSAGE value="Changed ResultProducer.java: show translated headings instead" />
     <MESSAGE value="Added tests for TargetLanguage.java class. Corrected a mistake." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests for TargetLanguage.java class. Corrected a mistake." />
+    <MESSAGE value="Added tests for Translator.java class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests for Translator.java class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

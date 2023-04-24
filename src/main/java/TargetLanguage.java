@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TargetLanguage {
+
     String targetLanguage="German";  //causes problems. todo: fix
     String targetLanguageCode;
 
@@ -24,7 +25,7 @@ public class TargetLanguage {
         return userInputLanguage;
     }
 
-    protected String getTargetLanguageAsISO639Code(){
+    protected String getTargetLanguageAsISO639Code(){ //todo: should have a parameter String, accepts targetLanguage from UserData
         Iterable<Language> supportedLanguages = getSupportedLanguagesFromTranlateAPI();
         for (Language language: supportedLanguages){
             if(targetLanguage.equals(language.getName())){
