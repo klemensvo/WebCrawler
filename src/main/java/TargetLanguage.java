@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TargetLanguage {
-    String targetLanguage;
+    String targetLanguage="German";  //causes problems. todo: fix
     String targetLanguageCode;
 
     String getTargetLanguageFromUser() {

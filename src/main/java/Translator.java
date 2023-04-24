@@ -1,4 +1,5 @@
 import com.google.cloud.translate.*;
+import com.google.gson.internal.bind.util.ISO8601Utils;
 
 import java.util.ArrayList;
 
@@ -33,9 +34,14 @@ public class Translator {
     }
 
     protected String getSourceLanguage(String heading){
-        Translate translate = TranslateOptions.getDefaultInstance().getService();
-        Detection detection = translate.detect(heading);
-        String sourceLanguageCode = detection.getLanguage();
+        String sourceLanguageCode="";
+        try {
+            Translate translate = TranslateOptions.getDefaultInstance().getService();
+            Detection detection = translate.detect(heading);
+            sourceLanguageCode = detection.getLanguage();
+        }catch (TranslateException e){
+            System.out.println("The text language cannot be detected.");
+        }
 
         return sourceLanguageCode;
     }

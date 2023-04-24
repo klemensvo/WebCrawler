@@ -25,9 +25,9 @@ public class Main {
         // todo: input websiteList to ResultProducer, then remove this
 
             for (int i = 0; i < websiteList.size(); i++) {
-            System.out.println("\nheadings of website " + i + ":");
-            for (int j = 0; j < websiteList.get(0).headings.size(); j++) {
-                System.out.println("  " + websiteList.get(0).headings.get(j));
+            System.out.println("\ntranslated headings of website " + i + ":");
+            for (int j = 0; j < websiteList.get(0).translatedHeadings.size(); j++) {
+                System.out.println("  " + websiteList.get(0).translatedHeadings.get(j));
             }
 
             System.out.println("\nfunctionalLinks of website " + i + ":");

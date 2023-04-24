@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TranslatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,7 @@
       <command value="gradle wrapper --distribution-type all" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TargetLanguageTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -163,12 +163,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TargetLanguageTest.testGetTargetLanguageAsISO639Code" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TranslatorTest.testGetSourceLanguage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.testGetTargetLanguageAsISO639Code&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TranslatorTest.testGetSourceLanguage&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -184,12 +184,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TargetLanguageTest.testGetTargetLanguageAsISO639Fail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TranslatorTest.testGetTranslatedHeading" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.testGetTargetLanguageAsISO639Fail&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TranslatorTest.testGetTranslatedHeading&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -207,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.TranslatorTest.testGetTranslatedHeading" />
+        <item itemvalue="Gradle.TranslatorTest.testGetSourceLanguage" />
         <item itemvalue="Gradle.TargetLanguageTest" />
         <item itemvalue="Gradle.TargetLanguageTest.getTargetLanguageFromUserOK" />
-        <item itemvalue="Gradle.TargetLanguageTest.testGetTargetLanguageAsISO639Fail" />
-        <item itemvalue="Gradle.TargetLanguageTest.testGetTargetLanguageAsISO639Code" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682344013939</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added tests for TargetLanguage.java class. Corrected a mistake.">
+      <created>1682358536477</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1682358536477</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +419,8 @@
     <MESSAGE value="Created a Translator.java class" />
     <MESSAGE value="Improved WebCrawler.java: added a feature to fill out the List of translatedHeadings  of Website.java" />
     <MESSAGE value="Changed ResultProducer.java: show translated headings instead" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed ResultProducer.java: show translated headings instead" />
+    <MESSAGE value="Added tests for TargetLanguage.java class. Corrected a mistake." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests for TargetLanguage.java class. Corrected a mistake." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
