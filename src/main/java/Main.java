@@ -14,8 +14,9 @@ public class Main {
         ResultProducer resultProducer = new ResultProducer(userData, websiteList);
         resultProducer.makeMdDocument();
 
-        LanguageTest languageTest = new LanguageTest();
-        System.out.println(languageTest.getTranslation());
+
+
+
 
         // todo: send the result on to make a pdf-document
 
