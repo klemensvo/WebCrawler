@@ -10,6 +10,7 @@ import java.net.URL;
 public class WebCrawler {
     String url;
     Website website = new Website();
+    Translator translator = new Translator();
 
     public WebCrawler(String url) {
         this.url = url;
@@ -26,6 +27,7 @@ public class WebCrawler {
                 Elements headings = document.select("h" + i);
                 for (Element heading : headings) {
                     website.headings.add("h" + i + " " + heading.text());
+                    website.translatedHeadings.add("h" + i + translator.getTranslatedHeading(heading.text()));
                 }
             }
 
