@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class TargetLanguage {
     String targetLanguage;
+    String targetLanguageCode;
 
     String getTargetLanguageFromUser() {
         do {
@@ -18,10 +19,19 @@ public class TargetLanguage {
     }
 
     String getUserInputLanguage(){      //example output "English"
-        String userInputLanguage;
         Scanner scanner = new Scanner(System.in);
-        userInputLanguage = scanner.nextLine();
+        String userInputLanguage = scanner.nextLine();
         return userInputLanguage;
+    }
+
+    protected String getTargetLanguageAsISO639Code(){
+        Iterable<Language> supportedLanguages = getSupportedLanguagesFromTranlateAPI();
+        for (Language language: supportedLanguages){
+            if(targetLanguage.equals(language.getName())){
+                targetLanguageCode=language.getCode();
+            }
+        }
+        return targetLanguageCode;
     }
 
 
@@ -49,6 +59,6 @@ public class TargetLanguage {
     }
 
     private void printPromptForTargetLanguage(){
-        System.out.println("Please enter a target language (for example \"English\"): ");
+        System.out.print("Please enter a target language (for example \"English\"): ");
     }
 }

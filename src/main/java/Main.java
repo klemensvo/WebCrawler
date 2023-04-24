@@ -18,12 +18,13 @@ public class Main {
 
 
 
+
         // todo: send the result on to make a pdf-document
 
 
         // todo: input websiteList to ResultProducer, then remove this
 
-        for (int i = 0; i < websiteList.size(); i++) {
+            for (int i = 0; i < websiteList.size(); i++) {
             System.out.println("\nheadings of website " + i + ":");
             for (int j = 0; j < websiteList.get(0).headings.size(); j++) {
                 System.out.println("  " + websiteList.get(0).headings.get(j));
