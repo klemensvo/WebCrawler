@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="Created a TargetLanguage.java class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ResultProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResultProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +343,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682336250713</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Created a Translator.java class">
+      <created>1682343584715</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682343584715</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Improved WebCrawler.java: added a feature to fill out the List of translatedHeadings  of Website.java">
+      <created>1682343919804</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682343919804</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,7 +402,9 @@
     <MESSAGE value="ResultProducer and -Test started" />
     <MESSAGE value="ResultProducer advanced, initialized ArrayLists in Website" />
     <MESSAGE value="Created a TargetLanguage.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a TargetLanguage.java class" />
+    <MESSAGE value="Created a Translator.java class" />
+    <MESSAGE value="Improved WebCrawler.java: added a feature to fill out the List of translatedHeadings  of Website.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved WebCrawler.java: added a feature to fill out the List of translatedHeadings  of Website.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
