@@ -25,17 +25,12 @@ public class TargetLanguage {
     }
 
 
-    /*String getTargetLanguageAsISO639(String userInput){
-        String languageInISO639="";
-
-        return languageInISO639;
-    }
-*/
     Iterable<Language> getSupportedLanguagesFromTranlateAPI(){
         Translate translate = TranslateOptions.getDefaultInstance().getService();
         Iterable<Language> languages = translate.listSupportedLanguages();
         return languages;
     }
+
 
     protected boolean isValidTargetLanguage() {
         String languageName;
