@@ -17,7 +17,7 @@ public class WebsiteNode {
         this.website = website;
     }
 
-    public void setParent(WebsiteNode parent) {
+    public void setParent(WebsiteNode parent) { // todo: if not needed, delete this method
     }
 
     public ArrayList<WebsiteNode> getChildren() {

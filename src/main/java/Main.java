@@ -11,7 +11,12 @@ public class Main {
         crawlingDispatcher.crawlWeb();
         rootNode = crawlingDispatcher.getRootNode();
 
-        ResultProducer resultProducer = new ResultProducer(userData, rootNode);
+
+        // Translator translator = new Translator(rootNode, userData.targetLanguage);
+        // translator.translateWebsiteNodes();
+        // translatedRootNode = translator.getTranslatedRootNode(); */
+
+        ResultProducer resultProducer = new ResultProducer(userData, rootNode); // todo: change to translatedRootNode
         String result = resultProducer.makeMdDocument();
 
         System.out.println(result);
