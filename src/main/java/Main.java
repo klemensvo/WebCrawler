@@ -11,14 +11,15 @@ public class Main {
         crawlingDispatcher.crawlWeb();
         rootNode = crawlingDispatcher.getRootNode();
 
+        // todo: Translator: change API
         // Translator translator = new Translator(rootNode, userData.targetLanguage);
         // translator.translateWebsiteNodes();
         // translatedRootNode = translator.getTranslatedRootNode(); */
 
-        ResultProducer resultProducer = new ResultProducer(userData, rootNode); // todo: change to translatedRootNode
+        // todo: change to translatedRootNode as soon as translation works
+        ResultProducer resultProducer = new ResultProducer(userData, rootNode);
         String mdString = resultProducer.makeMdString();
 
-        // System.out.println(mdString); // todo: delete later
         FileGenerator fileGenerator = new FileGenerator();
         String mdFileName = "Web_Crawler_Report.md";
         fileGenerator.createMdFile(mdString, mdFileName);

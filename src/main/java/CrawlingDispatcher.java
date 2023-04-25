@@ -15,6 +15,7 @@ public class CrawlingDispatcher {
     }
 
     public void crawlWeb() {
+        // todo: implement test
         WebCrawler webCrawler = new WebCrawler(startingWebsite);
         Website website = webCrawler.getWebsiteHeadingsAndLinks();
         rootNode = new WebsiteNode();
