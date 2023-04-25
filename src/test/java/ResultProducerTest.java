@@ -11,14 +11,14 @@ class ResultProducerTest {
         userData.crawlingDepth = 2;
         userData.targetLanguage = "German";
 
-        WebsiteList websiteList = new WebsiteList();
+        WebsiteNode websiteNode = new WebsiteNode();
         Website website = new Website();
         website.url = "https://google.com";
         website.headings.add("h1 Test");
 
         // website.functionalLinks
-        websiteList.add(website);
-        ResultProducer resultProducer = new ResultProducer(userData, websiteList);
+        // websiteNode.add(website); // todo: change reading from tree-structure
+        ResultProducer resultProducer = new ResultProducer(userData, websiteNode);
 
         String testString
                 = "# Web Crawler Report"
@@ -28,13 +28,14 @@ class ResultProducerTest {
                 + userData.crawlingDepth
                 + "\nTarget Language: "
                 + userData.targetLanguage
-                + "\n\n"
+                + "\n\n";
+                /*
                 + website.url
                 + "\n"
                 + website.headings.get(0)
-                + "\n";
+                + "\n"; */
 
-        assertEquals(testString, resultProducer.makeMdDocument());
+        assertEquals(testString, resultProducer.makeMdString());
 
     }
 
