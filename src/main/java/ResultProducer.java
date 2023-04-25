@@ -9,7 +9,7 @@ public class ResultProducer {
         this.rootNode = rootNode;
     }
 
-    public String makeMdDocument() {
+    public String makeMdString() {
         report.append("# Web Crawler Report");
         report.append(newLine());
         report.append(assembleInput());

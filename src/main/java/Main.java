@@ -11,15 +11,16 @@ public class Main {
         crawlingDispatcher.crawlWeb();
         rootNode = crawlingDispatcher.getRootNode();
 
-
         // Translator translator = new Translator(rootNode, userData.targetLanguage);
         // translator.translateWebsiteNodes();
         // translatedRootNode = translator.getTranslatedRootNode(); */
 
         ResultProducer resultProducer = new ResultProducer(userData, rootNode); // todo: change to translatedRootNode
-        String result = resultProducer.makeMdDocument();
+        String mdString = resultProducer.makeMdString();
 
-        System.out.println(result);
-        // todo: send the result on to make a pdf-document
+        // System.out.println(mdString); // todo: delete later
+        FileGenerator fileGenerator = new FileGenerator();
+        String mdFileName = "Web_Crawler_Report.md";
+        fileGenerator.createMdFile(mdString, mdFileName);
     }
 }
