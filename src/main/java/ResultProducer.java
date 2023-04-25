@@ -21,6 +21,9 @@ public class ResultProducer {
     }
 
     private void recursiveAppend(WebsiteNode websiteNode, int depth) {
+        // todo: we made it work
+        // todo: next we will make it clean
+
         if (websiteNode.getWebsite() != null) {
             String url = websiteNode.getWebsite().url;
             report.append(newLine());

@@ -4,14 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CrawlingDispatcherTest {
 
-    /*
+    /* todo: implement, doesn't work yet
     @Test
     void crawlingDispatcherTest() {
         WebCrawler mockWebCrawler = Mockito.mock(WebCrawler.class);
 
         Website mockWebsite = new Website();
         mockWebsite.url = "https://javatpoint.com";
-        // mockWebsite.headings.add("Test Heading"); // todo: change this back
+        // mockWebsite.headings.add("Test Heading");
         mockWebsite.functionalLinks.add("https://example.com/functionalLink");
         Mockito.when(mockWebCrawler.getWebsiteHeadingsAndLinks()).thenReturn(mockWebsite);
 
