@@ -1,18 +1,26 @@
 public class Main {
+
     public static void main(String[] args) {
-        String startingWebsite;
-        int crawlingDepth;
-        String targetLanguage;
+        UserData userData;
+        WebsiteNode rootNode;
 
-        new Texts().printWelcome();
+        UserQuery userQuery = new UserQuery();
+        userData = userQuery.getUserData();
 
-        startingWebsite = new UserInput().getStartingWebsiteFromUser();
-        crawlingDepth = new UserInput().getCrawlingDepthFromUser();
-        targetLanguage = "German"; // todo: implement prompt for targetLanguage in UserInput
+        CrawlingDispatcher crawlingDispatcher = new CrawlingDispatcher(userData);
+        crawlingDispatcher.crawlWeb();
+        rootNode = crawlingDispatcher.getRootNode();
 
-        System.out.println("\nStarting website: " + startingWebsite +
-                ", crawling depth: " + crawlingDepth +
-                ", target language: " + targetLanguage); // todo: delete later
+        // Translator translator = new Translator(rootNode, userData.targetLanguage);
+        // translator.translateWebsiteNodes();
+        // translatedRootNode = translator.getTranslatedRootNode(); */
+
+        ResultProducer resultProducer = new ResultProducer(userData, rootNode); // todo: change to translatedRootNode
+        String mdString = resultProducer.makeMdString();
+
+        // System.out.println(mdString); // todo: delete later
+        FileGenerator fileGenerator = new FileGenerator();
+        String mdFileName = "Web_Crawler_Report.md";
+        fileGenerator.createMdFile(mdString, mdFileName);
     }
 }
-

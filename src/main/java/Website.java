@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
 public class Website {
+    // data structure
+    public String url;
+    public ArrayList<String> headings = new ArrayList<>();
+    public ArrayList<String> tranlatedHeadings = new ArrayList<>();
 
-
-    public Website() {
-
-    }
+    public ArrayList<String> functionalLinks = new ArrayList<>();
+    public ArrayList<String> brokenLinks = new ArrayList<>();
 }
