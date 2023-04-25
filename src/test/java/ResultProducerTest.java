@@ -16,8 +16,6 @@ class ResultProducerTest {
         website.url = "https://google.com";
         website.headings.add("h1 Test");
 
-        // website.functionalLinks
-        // websiteNode.add(website); // todo: change reading from tree-structure
         ResultProducer resultProducer = new ResultProducer(userData, websiteNode);
 
         String testString
@@ -29,11 +27,6 @@ class ResultProducerTest {
                 + "\nTarget Language: "
                 + userData.targetLanguage
                 + "\n\n";
-                /*
-                + website.url
-                + "\n"
-                + website.headings.get(0)
-                + "\n"; */
 
         assertEquals(testString, resultProducer.makeMdString());
 

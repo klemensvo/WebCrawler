@@ -66,6 +66,9 @@ public class WebCrawlerTest {
 
         assertEquals("h1 Latest Tutorials", website.headings.get(0));
 
+
+        // todo: delete the commented out code below later
+
         /*
         // Mock document and elements
         Elements headings = new Elements();
