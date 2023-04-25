@@ -11,9 +11,9 @@ public class Main {
         crawlingDispatcher.crawlWeb();
         rootNode = crawlingDispatcher.getRootNode();
 
-        // Translator translator = new Translator(rootNode, userData.targetLanguage);
-        // translator.translateWebsiteNodes();
-        // translatedRootNode = translator.getTranslatedRootNode(); */
+        Translator translator = new Translator(rootNode, userData.targetLanguage);
+        translator.translateWebsiteNodes();
+        //translatedRootNode = translator.getTranslatedRootNode(); */
 
         ResultProducer resultProducer = new ResultProducer(userData, rootNode); // todo: change to translatedRootNode
         String mdString = resultProducer.makeMdString();

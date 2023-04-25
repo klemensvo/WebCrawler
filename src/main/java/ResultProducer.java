@@ -30,8 +30,9 @@ public class ResultProducer {
             report.append(newLine());
             report.append(newLine());
 
-            ArrayList<String> headings = websiteNode.getWebsite().headings;
-            for (String heading : headings) {
+            //ArrayList<String> headings = websiteNode.getWebsite().headings;
+            ArrayList<String> translatedHeadings = websiteNode.getWebsite().tranlatedHeadings;
+            for (String heading : translatedHeadings) {
                 String[] headingLevelAndHeading = heading.split(" ", 2);
                 // uses only the number of the string "h1 Example Heading", result: '1'
                 int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));

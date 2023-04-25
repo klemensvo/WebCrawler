@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FileGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Translator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WebsiteNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CrawlingDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrawlingDispatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ResultProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResultProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Website.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlingDepthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResultProducerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Translator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebsiteList.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +116,7 @@
       <command value="gradle wrapper --distribution-type all" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TranslatorTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -389,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682361727008</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Manually merged parts of develop- and develop_olha_translate branches">
+      <created>1682452200736</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1682452200736</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +438,8 @@
     <MESSAGE value="Changed ResultProducer.java: show translated headings instead" />
     <MESSAGE value="Added tests for TargetLanguage.java class. Corrected a mistake." />
     <MESSAGE value="Added tests for Translator.java class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests for Translator.java class." />
+    <MESSAGE value="Manually merged parts of develop- and develop_olha_translate branches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manually merged parts of develop- and develop_olha_translate branches" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
