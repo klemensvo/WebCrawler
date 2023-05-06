@@ -1,8 +1,8 @@
+import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class StartingWebsite {
     protected String startingUrl;
@@ -27,20 +27,27 @@ public class StartingWebsite {
         }
     }
 
-    protected boolean isValidWebsite() {
-        // regular expression tests for valid URL
-        String regex = "^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(startingUrl);
+    public boolean isValidWebsite() {
+        try {
+            URL url = new URL(startingUrl);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("HEAD"); // method GET would take longer
+            connection.setConnectTimeout(5000);
+            connection.setReadTimeout(5000);
+            int responseCode = connection.getResponseCode();
+            connection.disconnect();
 
-        if (matcher.matches()) {
-            try {
-                new URL(startingUrl);
-                return true;
-            } catch (MalformedURLException e) {
-                return false;
-            }
-        } else {
+            // 200 <= responseCode < 400 indicates a successful connection
+            return (responseCode >= 200 && responseCode < 400);
+        } catch (MalformedURLException e) {
+            // Invalid URL format
+            System.out.println("This URL is malformed: " + e.getMessage());
+            // e.printStackTrace(); // todo: delete, because it is to verbose
+            return false;
+        } catch (IOException e) {
+            // Error connecting to the URL
+            System.out.println("There was an error connecting to the URL: " + e.getMessage());
+            // e.printStackTrace(); // todo: delete, because it is to verbose
             return false;
         }
     }
