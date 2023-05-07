@@ -43,8 +43,9 @@ public class WebCrawler {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+            ExceptionLogger.log(e);
+            // e.printStackTrace();
+            // return null;
         }
 
         return website;
@@ -69,6 +70,7 @@ public class WebCrawler {
             }
         } catch (IOException e) {
             website.brokenLinks.add(absoluteUrl);
+            ExceptionLogger.log(e);
         }
     }
 
