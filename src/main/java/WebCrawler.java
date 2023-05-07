@@ -5,11 +5,15 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class WebCrawler {
     String url;
     Website website = new Website();
+    Document document;
+    String absoluteUrl;
 
     public WebCrawler(String url) {
         this.url = url;
@@ -17,57 +21,64 @@ public class WebCrawler {
 
     public Website getWebsiteHeadingsAndLinks() {
         // todo: make subroutines to make the function smaller and with less indentation
-        // todo: we made it work
-        // todo: next we will make it clean
 
         website.url = url;
         try {
-            Document document = Jsoup.connect(url).get();
+            document = Jsoup.connect(url).get();
             URL baseUrl = new URL(url);
-            String baseDomain = baseUrl.getHost();
+            String baseHost = baseUrl.getHost();
 
-            for (int i = 0; i <= 6; i++) {
-                Elements headings = document.select("h" + i);
-                for (Element heading : headings) {
-                    website.headings.add("h" + i + " " + heading.text());
-                }
-            }
+            addHeadingsToWebsite();
 
             Elements links = document.select("a[href]");
             for (Element link : links) {
-                String absoluteUrl = link.absUrl("href");
+                absoluteUrl = link.absUrl("href");
                 if (!absoluteUrl.isEmpty()) {
-                    try {
-                        URL linkUrl = new URL(absoluteUrl);
-                        String linkDomain = linkUrl.getHost();
+                    URL linkUrl = new URL(absoluteUrl);
+                    String linkHost = linkUrl.getHost();
 
-                        if (!linkDomain.contains(baseDomain)) {
-                            try {
-                                int statusCode = Jsoup.connect(absoluteUrl)
-                                        .ignoreHttpErrors(true)
-                                        .method(org.jsoup.Connection.Method.HEAD)
-                                        .execute()
-                                        .statusCode();
-
-                                if (statusCode >= 200 && statusCode < 400) {
-                                    website.functionalLinks.add(absoluteUrl);
-                                } else {
-                                    website.brokenLinks.add(absoluteUrl);
-                                }
-                            } catch (IOException e) {
-                                website.brokenLinks.add(absoluteUrl);
-                            }
-                        }
-                    } catch (MalformedURLException e) {
-                       e.printStackTrace();
+                    if (!linkHost.contains(baseHost)) {
+                        addLinksToWebsite();
                     }
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+            ExceptionLogger.log(e);
+            // e.printStackTrace();
+            // return null;
         }
 
         return website;
+    }
+
+    private void addHeadingsToWebsite() {
+        for (int i = 0; i <= 6; i++) {
+            Elements headings = document.select("h" + i);
+            for (Element heading : headings) {
+                website.headings.add("h" + i + " " + heading.text());
+            }
+        }
+    }
+
+    private void addLinksToWebsite() {
+        try {
+            int statusCode = getStatusCodeFromJsoup();
+            if (statusCode >= 200 && statusCode < 400) {
+                website.functionalLinks.add(absoluteUrl);
+            } else {
+                website.brokenLinks.add(absoluteUrl);
+            }
+        } catch (IOException e) {
+            website.brokenLinks.add(absoluteUrl);
+            ExceptionLogger.log(e);
+        }
+    }
+
+    private int getStatusCodeFromJsoup() throws IOException {
+        return Jsoup.connect(absoluteUrl)
+                .ignoreHttpErrors(true)
+                .method(org.jsoup.Connection.Method.HEAD)
+                .execute()
+                .statusCode();
     }
 }
