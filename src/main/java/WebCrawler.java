@@ -5,6 +5,8 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class WebCrawler {
@@ -24,28 +26,19 @@ public class WebCrawler {
         try {
             document = Jsoup.connect(url).get();
             URL baseUrl = new URL(url);
-            String baseDomain = baseUrl.getHost();
+            String baseHost = baseUrl.getHost();
 
-            for (int i = 0; i <= 6; i++) {
-                Elements headings = document.select("h" + i);
-                for (Element heading : headings) {
-                    website.headings.add("h" + i + " " + heading.text());
-                }
-            }
+            addHeadingsToWebsite();
 
             Elements links = document.select("a[href]");
             for (Element link : links) {
                 absoluteUrl = link.absUrl("href");
                 if (!absoluteUrl.isEmpty()) {
-                    try {
-                        URL linkUrl = new URL(absoluteUrl);
-                        String linkDomain = linkUrl.getHost();
+                    URL linkUrl = new URL(absoluteUrl);
+                    String linkHost = linkUrl.getHost();
 
-                        if (!linkDomain.contains(baseDomain)) {
-                            addFunctionalOrBrokenLinksToWebsite();
-                        }
-                    } catch (MalformedURLException e) {
-                       e.printStackTrace();
+                    if (!linkHost.contains(baseHost)) {
+                        addLinksToWebsite();
                     }
                 }
             }
@@ -57,9 +50,18 @@ public class WebCrawler {
         return website;
     }
 
-    private void addFunctionalOrBrokenLinksToWebsite() {
+    private void addHeadingsToWebsite() {
+        for (int i = 0; i <= 6; i++) {
+            Elements headings = document.select("h" + i);
+            for (Element heading : headings) {
+                website.headings.add("h" + i + " " + heading.text());
+            }
+        }
+    }
+
+    private void addLinksToWebsite() {
         try {
-            int statusCode = getStatusCodeFromJsoupConnect();
+            int statusCode = getStatusCodeFromJsoup();
             if (statusCode >= 200 && statusCode < 400) {
                 website.functionalLinks.add(absoluteUrl);
             } else {
@@ -69,7 +71,8 @@ public class WebCrawler {
             website.brokenLinks.add(absoluteUrl);
         }
     }
-    private int getStatusCodeFromJsoupConnect() throws IOException {
+
+    private int getStatusCodeFromJsoup() throws IOException {
         return Jsoup.connect(absoluteUrl)
                 .ignoreHttpErrors(true)
                 .method(org.jsoup.Connection.Method.HEAD)

@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="cleaned the code, added FileGeneratorTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExceptionLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="started to refactor WebCrawler, new ExceptionLogger">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jsoup-1.15.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartingWebsite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -408,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682457179088</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="started to refactor WebCrawler, new ExceptionLogger">
+      <created>1683385268364</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1683385268364</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +459,8 @@
     <MESSAGE value="Main, WebCrawler and ResultProducer are working properly, changes to WebsiteNode" />
     <MESSAGE value="Added FileGenerator, changed Main accordingly" />
     <MESSAGE value="cleaned the code, added FileGeneratorTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned the code, added FileGeneratorTest" />
+    <MESSAGE value="started to refactor WebCrawler, new ExceptionLogger" />
+    <option name="LAST_COMMIT_MESSAGE" value="started to refactor WebCrawler, new ExceptionLogger" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
