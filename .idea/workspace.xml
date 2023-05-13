@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="re">
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="started implementation of ExceptionLogger">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExceptionLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExceptionLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebCrawler.java" afterDir="false" />
@@ -110,7 +110,7 @@
       <command value="gradle clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Tests in 'WebCrawler.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/corretto-17.0.7" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -414,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683441670524</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="started implementation of ExceptionLogger">
+      <created>1683442958096</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683442958096</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started WebsiteCrawler" />
     <MESSAGE value="Jsoup added to build.gradle, working now" />
     <MESSAGE value="refactored getCrawlingDepthFromUser() to use no arguments, started getTargetLanguageFromUser()" />
     <MESSAGE value="new class UserInteraction to handle UserInput" />
@@ -469,7 +475,8 @@
     <MESSAGE value="cleaned the code, added FileGeneratorTest" />
     <MESSAGE value="started to refactor WebCrawler, new ExceptionLogger" />
     <MESSAGE value="re" />
-    <option name="LAST_COMMIT_MESSAGE" value="re" />
+    <MESSAGE value="started implementation of ExceptionLogger" />
+    <option name="LAST_COMMIT_MESSAGE" value="started implementation of ExceptionLogger" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
