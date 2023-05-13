@@ -7,6 +7,13 @@ import java.time.LocalDateTime;
 public class ExceptionLogger {
     private static final String LOG_FILE_PATH = "exceptions.log";
 
+    /*
+    exceptions to handle:
+
+    MalformedURLException
+    IOException
+     */
+
     public static void log(Exception e) {
         String message = createLogMessage(e);
         System.err.println(message);
@@ -18,9 +25,9 @@ public class ExceptionLogger {
         message.append("[").append(LocalDateTime.now()).append("] ");
         message.append("Exception: ");
 
-        if (e instanceof IOException) {
+        if (e instanceof MalformedURLException) {
             message.append("IOException - ");
-        } else if (e instanceof MalformedURLException) { // todo: change exceptions
+        } else if (e instanceof IOException) { // todo: manage exceptions
             message.append("MalformedURLException - ");
         }
         // todo: add all possibly occurring exceptions
