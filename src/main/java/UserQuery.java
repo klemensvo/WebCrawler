@@ -10,7 +10,7 @@ public class UserQuery {
         printWelcome();
 
         userData.startingWebsite = getStartingWebsiteFromUser();
-        userData.crawlingDepth = getCrawlingDepthFromUser();
+        userData.maxCrawlingDepth = getCrawlingDepthFromUser();
         userData.targetLanguage = getTargetLanguageFromUser();
 
         // summaryOfUserInput(); // todo: side-effect, delete later
@@ -37,7 +37,7 @@ public class UserQuery {
 
     protected String summaryOfUserInput() {
          return "\nStarting website: " + userData.startingWebsite +
-                ", crawling depth: " + userData.crawlingDepth +
+                ", crawling depth: " + userData.maxCrawlingDepth +
                 ", target language: " + userData.targetLanguage;
     }
 }

@@ -5,7 +5,6 @@ public class WebsiteNode {
     private final ArrayList<WebsiteNode> children = new ArrayList<>();
 
     public void addChild(WebsiteNode child) {
-        child.setParent(this);
         children.add(child);
     }
 
@@ -15,9 +14,6 @@ public class WebsiteNode {
 
     public void setWebsite(Website website) {
         this.website = website;
-    }
-
-    public void setParent(WebsiteNode parent) { // todo: if not needed, delete this method
     }
 
     public ArrayList<WebsiteNode> getChildren() {

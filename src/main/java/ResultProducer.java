@@ -39,9 +39,7 @@ public class ResultProducer {
                 // uses only the number of the string "h1 Example Heading", result: '1'
                 int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
 
-                for (int i = 0; i < headingLevel; i++) {
-                    report.append("#");
-                }
+                report.append("#".repeat(Math.max(0, headingLevel)));
                 report.append(" ").append(headingLevelAndHeading[1]).append(newLine());
             }
 
@@ -77,7 +75,7 @@ public class ResultProducer {
     }
     String assembleInput() {
         return "Starting Website: <a>" + userData.startingWebsite + "</a>\n"
-                + "Crawling Depth: " + userData.crawlingDepth + "\n"
+                + "Crawling Depth: " + userData.maxCrawlingDepth + "\n"
                 + "Target Language: " + userData.targetLanguage + "\n";
     }
 
