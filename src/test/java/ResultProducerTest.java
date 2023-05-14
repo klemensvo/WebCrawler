@@ -13,7 +13,7 @@ class ResultProducerTest {
 
         WebsiteNode websiteNode = new WebsiteNode();
         Website website = new Website();
-        website.url = "https://google.com";
+        website.urlString = "https://google.com";
         website.headings.add("h1 Test");
 
         ResultProducer resultProducer = new ResultProducer(userData, websiteNode);

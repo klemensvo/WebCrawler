@@ -25,7 +25,7 @@ public class ResultProducer {
         // todo: next we will make it clean
 
         if (websiteNode.getWebsite() != null) {
-            String url = websiteNode.getWebsite().url;
+            String url = websiteNode.getWebsite().urlString;
             report.append(newLine());
             report.append(newLine());
             report.append(newLine());

@@ -12,7 +12,7 @@ public class WebCrawler {
     Document document; // Jsoup document
 
     public WebCrawler(String urlString) {
-        website.url = urlString;
+        website.urlString = urlString;
     }
 
     public Website getWebsiteHeadingsAndLinks() {
@@ -28,7 +28,7 @@ public class WebCrawler {
     }
 
     private Document getDocumentFromJsoup() throws IOException {
-        return Jsoup.connect(website.url).get();
+        return Jsoup.connect(website.urlString).get();
     }
     private void addHeadingsToWebsite() {
         for (int i = 0; i <= 6; i++) {
@@ -43,7 +43,7 @@ public class WebCrawler {
         // remarks: we only need the host in this method, so we don't
         // make a class variable and shift the code of getting the host
         // to another method
-        URL currentWebsiteUrl = new URL(website.url);
+        URL currentWebsiteUrl = new URL(website.urlString);
         String currentWebsiteHost = currentWebsiteUrl.getHost();
 
         Elements links = document.select("a[href]");
