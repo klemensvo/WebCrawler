@@ -23,7 +23,7 @@ public class Translator {
         // todo: Abbruchkriterium der Rekursion
 
         if (websiteNode.getWebsite() != null) {
-            String url = websiteNode.getWebsite().url;
+            String url = websiteNode.getWebsite().urlString;
 
             ArrayList<String> headings = websiteNode.getWebsite().headings;
 
