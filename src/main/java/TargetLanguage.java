@@ -9,6 +9,7 @@ public class TargetLanguage {
         return targetLanguage;
     }
 
+    //todo: add functionality to check if the chosen API support the user defined target language
     protected boolean isValidTargetLanguage() {
 
         return true;
