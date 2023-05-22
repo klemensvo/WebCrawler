@@ -1,9 +1,15 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class TargetLanguage {
     String targetLanguage;
+    DeeplAPIWrapper deeplAPIWrapper = new DeeplAPIWrapper();
 
     String getTargetLanguageFromUser() {
-        String targetLanguage = "German";
+        String targetLanguage = "";
         do {
+            printPromptForTargetLanguage();
+            targetLanguage = getUserInputLanguage();
 
         } while (!isValidTargetLanguage());
         return targetLanguage;
@@ -11,9 +17,24 @@ public class TargetLanguage {
 
     //todo: add functionality to check if the chosen API support the user defined target language
     protected boolean isValidTargetLanguage() {
-
+        ArrayList<String> validLanguages = deeplAPIWrapper.getLanguageName();
+        if(!validLanguages.contains(targetLanguage)){
+            return false;
+        }
         return true;
     }
+
+    private void printPromptForTargetLanguage(){
+        System.out.print("Please enter a target language (for example \"English\"): ");
+    }
+
+    private String getUserInputLanguage(){      //example output "English"
+        Scanner scanner = new Scanner(System.in);
+        String userInputLanguage = scanner.nextLine();
+        return userInputLanguage;
+    }
+
+
 }
 
 /* todo: change API

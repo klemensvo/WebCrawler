@@ -1,7 +1,7 @@
 import com.deepl.api.*;
-import com.sun.java.accessibility.util.Translator;
 
-import javax.security.auth.callback.LanguageCallback;
+
+
 import java.util.*;
 
 public class DeeplAPIWrapper {
@@ -14,16 +14,34 @@ public class DeeplAPIWrapper {
         this.translator=new Translator(API_AUTH_KEY);
     }
 
-    public List <Language> getLanguages () throws Exception{
-        List<Language> languageList = new List<Language>();
 
+    //todo: replace with a Hashmap
+    public List <Language> getLanguages () throws Exception{
+        List <Language> languageList = new ArrayList<>();
         try {
-             languageList= translator.getSourceLanguages();
+             languageList= translator.getTargetLanguages();
+
+
         }catch (Exception e){
             e.printStackTrace();
         }
         return languageList;
     }
+
+
+    /*public ArrayList <String> getLanguageName () {
+        ArrayList <Language> languageList = getLanguages();
+        ArrayList <String> languageNamesList = new ArrayList<String>();
+        String name;
+
+        for(Language language: languageList){
+            name = language.getName();
+            languageNamesList.add(name);
+        }
+        return languageNamesList;
+    }
+    */
+
 
 
 
