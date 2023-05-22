@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Translator {
+public class TranslatorCustom {
 
     WebsiteNode rootNode;
     String targetLanguage;
@@ -8,7 +8,7 @@ public class Translator {
     String targetLanguageCode;
 
 
-    public Translator(WebsiteNode rootNode, String targetLanguage) {
+    public TranslatorCustom(WebsiteNode rootNode, String targetLanguage) {
         this.rootNode = rootNode;
         this.targetLanguage = targetLanguage;
     }
