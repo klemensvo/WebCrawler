@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
@@ -401,7 +400,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682452200736</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added a DeeplAPIWrapper class and its test class">
+      <created>1685359599493</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1685359599493</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added a DeeplAPIWrapper class and its test class">
+      <created>1685359654554</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1685359654554</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -452,7 +465,8 @@
     <MESSAGE value="Added tests for TargetLanguage.java class. Corrected a mistake." />
     <MESSAGE value="Added tests for Translator.java class." />
     <MESSAGE value="Manually merged parts of develop- and develop_olha_translate branches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manually merged parts of develop- and develop_olha_translate branches" />
+    <MESSAGE value="Added a DeeplAPIWrapper class and its test class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a DeeplAPIWrapper class and its test class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
