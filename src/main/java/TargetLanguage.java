@@ -17,10 +17,10 @@ public class TargetLanguage {
 
     //todo: add functionality to check if the chosen API support the user defined target language
     protected boolean isValidTargetLanguage() {
-        ArrayList<String> validLanguages = deeplAPIWrapper.getLanguageName();
-        if(!validLanguages.contains(targetLanguage)){
-            return false;
-        }
+        //ArrayList<String> validLanguages = deeplAPIWrapper.getLanguageName();
+        //if(!validLanguages.contains(targetLanguage)){
+            //return false;
+       // }
         return true;
     }
 

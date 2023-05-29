@@ -1,7 +1,4 @@
 import com.deepl.api.*;
-
-
-
 import java.util.*;
 
 public class DeeplAPIWrapper {
@@ -15,12 +12,12 @@ public class DeeplAPIWrapper {
     }
 
 
-    //todo: replace with a Hashmap
-    public List <Language> getLanguages () throws Exception{
+
+    //to check if the user´s input language is supported
+    public List <Language> getLanguages (){
         List <Language> languageList = new ArrayList<>();
         try {
              languageList= translator.getTargetLanguages();
-
 
         }catch (Exception e){
             e.printStackTrace();
@@ -28,28 +25,28 @@ public class DeeplAPIWrapper {
         return languageList;
     }
 
-
-    /*public ArrayList <String> getLanguageName () {
-        ArrayList <Language> languageList = getLanguages();
-        ArrayList <String> languageNamesList = new ArrayList<String>();
-        String name;
-
-        for(Language language: languageList){
-            name = language.getName();
-            languageNamesList.add(name);
+    //return the code of the user´s input language
+    public String getLanguageCode (String inputLanguage) {
+        String languageCode="";
+        List <Language> languages = getLanguages();
+        for(Language language: languages){
+            if(language.getName().equals(inputLanguage)) {
+               languageCode= language.getCode();
+            }
         }
-        return languageNamesList;
+        return languageCode;
     }
-    */
 
-
-
-
-
-
-
-
-
+    public String getTranslatedHeading (String heading, String targetLanguageCode) throws Exception {
+        String translatedHeading = "";
+        try {
+            TextResult textResult = translator.translateText(heading, null, targetLanguageCode); //the source language is auto-detected
+            translatedHeading = textResult.getText();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return translatedHeading;
+    }
 
 
 }
