@@ -7,7 +7,11 @@
     <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DeeplAPIWrapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeeplAPIWrapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,13 +118,20 @@
       <command value="gradle wrapper --distribution-type all" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.DeeplAPIWrapperTest.getTranslatedHeading">
-    <configuration name="DeeplAPIWrapperTest.getLanguageCode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.DeeplAPIWrapperTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="WebCrawler.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeeplAPIWrapperTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;DeeplAPIWrapperTest.getLanguageCode&quot;" />
+        <option name="scriptParameters" value="--tests &quot;DeeplAPIWrapperTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -136,12 +147,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DeeplAPIWrapperTest.getLanguages" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TargetLanguageTest.getTargetLanguageFromUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;DeeplAPIWrapperTest.getLanguages&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.getTargetLanguageFromUser&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -157,12 +168,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DeeplAPIWrapperTest.getTranslatedHeading" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TargetLanguageTest.isValidTargetLanguage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;DeeplAPIWrapperTest.getTranslatedHeading&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.isValidTargetLanguage&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -178,33 +189,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TargetLanguageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TargetLanguageTest.setNationalLanguageFormat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TranslatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TranslatorTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.setNationalLanguageFormat&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -222,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DeeplAPIWrapperTest.getTranslatedHeading" />
-        <item itemvalue="Gradle.DeeplAPIWrapperTest.getLanguageCode" />
-        <item itemvalue="Gradle.DeeplAPIWrapperTest.getLanguages" />
-        <item itemvalue="Gradle.TranslatorTest" />
-        <item itemvalue="Gradle.TargetLanguageTest" />
+        <item itemvalue="Gradle.DeeplAPIWrapperTest" />
+        <item itemvalue="Gradle.TargetLanguageTest.getTargetLanguageFromUser" />
+        <item itemvalue="Gradle.TargetLanguageTest.isValidTargetLanguage" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.TargetLanguageTest.setNationalLanguageFormat" />
       </list>
     </recent_temporary>
   </component>
@@ -414,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685359654554</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Improved TargetLanguage to interact with DeeplAPIWrapper">
+      <created>1685363168981</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1685363168981</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -466,7 +463,8 @@
     <MESSAGE value="Added tests for Translator.java class." />
     <MESSAGE value="Manually merged parts of develop- and develop_olha_translate branches" />
     <MESSAGE value="Added a DeeplAPIWrapper class and its test class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a DeeplAPIWrapper class and its test class" />
+    <MESSAGE value="Improved TargetLanguage to interact with DeeplAPIWrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved TargetLanguage to interact with DeeplAPIWrapper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -474,6 +472,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="4" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

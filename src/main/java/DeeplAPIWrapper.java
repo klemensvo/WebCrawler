@@ -13,7 +13,7 @@ public class DeeplAPIWrapper {
 
 
 
-    //to check if the user´s input language is supported
+
     public List <Language> getLanguages (){
         List <Language> languageList = new ArrayList<>();
         try {
@@ -23,6 +23,15 @@ public class DeeplAPIWrapper {
             e.printStackTrace();
         }
         return languageList;
+    }
+
+    //to check if the user´s input language is supported
+    public ArrayList<String> getLanguageNamesList (List <Language> languageList){
+        ArrayList<String> languageNamesList = new ArrayList<>();
+        for(Language language:languageList){
+            languageNamesList.add(language.getName());
+        }
+        return languageNamesList;
     }
 
     //return the code of the user´s input language

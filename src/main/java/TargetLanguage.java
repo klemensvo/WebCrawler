@@ -5,24 +5,30 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TargetLanguage {
+
     String targetLanguage;
 
 
-    String getTargetLanguageFromUser() {
+    protected String getTargetLanguageFromUser() {
         String targetLanguage = "";
         do {
             printPromptForTargetLanguage();
-            String userInput = getUserInputLanguage();   //original user input
+            String userInput = getUserInputLanguage();//original user input
+            System.out.println(userInput);
             String formatedUserInput = getFormattedInputLanguage(userInput); //brings the string f.e. "CHInESE" to form "Chinese"
+            System.out.println(formatedUserInput);
             String normalizedLanguageVariant = getNationalLanguageFormat(formatedUserInput);// converts to an API specific form f.e. "Chinese (simplified)"
+            System.out.println(normalizedLanguageVariant);
             targetLanguage = normalizedLanguageVariant;
+            System.out.println(targetLanguage);
 
-        } while (!isValidTargetLanguage());
+        } while (!isValidTargetLanguage(targetLanguage));
+
         return targetLanguage;
     }
 
     //todo: add functionality to check if the chosen API supports the user defined target language
-    protected boolean isValidTargetLanguage() {
+    protected boolean isValidTargetLanguage(String targetLanguage) {
         DeeplAPIWrapper deeplAPIWrapper = new DeeplAPIWrapper();
         List<Language> supportedAPILanguages = deeplAPIWrapper.getLanguages();
         ArrayList <String> supportedLanguages = deeplAPIWrapper.getLanguageNamesList(supportedAPILanguages);
@@ -34,22 +40,22 @@ public class TargetLanguage {
     }
 
     private void printPromptForTargetLanguage(){
-        System.out.print("Please enter a target language : ");
+        System.out.print("Please enter a target language: ");
     }
 
-    private String getUserInputLanguage(){      //example output "English"
+    protected String getUserInputLanguage(){      //example output "English"
         Scanner scanner = new Scanner(System.in);
         String userInputLanguage = scanner.nextLine();
         return userInputLanguage;
     }
 
-    private String getFormattedInputLanguage (String language){
+    public String getFormattedInputLanguage (String language){
         String formattedInputLanguage = language.substring(0,1).toUpperCase()+language.substring(1).toLowerCase();
         return formattedInputLanguage;
     }
 
     //convertion is required by Deepl API
-    private String getNationalLanguageFormat (String inputLanguageString){
+    protected String getNationalLanguageFormat (String inputLanguageString){
         String formattedLanguageString = "";
         if(inputLanguageString.equals("English")){
             formattedLanguageString = "English "+"(British)";

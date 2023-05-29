@@ -38,6 +38,13 @@ public class DeeplAPIWrapperTest {
     }
 
     @Test
+    void getLanguageNamesList(){
+        ArrayList<String> supportedLanguagesNamesList = deeplAPIWrapper.getLanguageNamesList(deeplAPIWrapper.getLanguages());
+
+        Assertions.assertEquals(supportedLanguagesNamesCheckList, supportedLanguagesNamesList);
+    }
+
+    @Test
     void getLanguageCode() {
         String apiCodeSpanish = deeplAPIWrapper.getLanguageCode("Spanish");
         String apiCodePortuguese = deeplAPIWrapper.getLanguageCode("Portuguese (Brazilian)");

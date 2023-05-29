@@ -2,25 +2,32 @@ import java.util.ArrayList;
 
 public class TranslatorCustom {
 
+    DeeplAPIWrapper deeplAPIWrapper;
     WebsiteNode rootNode;
     String targetLanguage;
 
-    String targetLanguageCode;
 
 
     public TranslatorCustom(WebsiteNode rootNode, String targetLanguage) {
         this.rootNode = rootNode;
         this.targetLanguage = targetLanguage;
+        this.deeplAPIWrapper=new DeeplAPIWrapper();
     }
 
-    public void translateWebsiteNodes() {
+    public void translateWebsiteNodes() throws Exception {
         recursiveTranslate(rootNode, 0);
         // return report.toString();
     }
 
-    private void recursiveTranslate(WebsiteNode websiteNode, int depth) {
+    private String getTargetLanguageCode(){
+        String targetLanguageCode = deeplAPIWrapper.getLanguageCode(targetLanguage);
+        return targetLanguageCode;
+    }
+
+    private void recursiveTranslate(WebsiteNode websiteNode, int depth) throws Exception {
 
         // todo: Abbruchkriterium der Rekursion
+
 
         if (websiteNode.getWebsite() != null) {
             String url = websiteNode.getWebsite().urlString;
@@ -32,12 +39,11 @@ public class TranslatorCustom {
                 // uses only the number of the string "h1 Example Heading", result: '1'
                 int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
 
-
                 String headingToTranslate = headingLevelAndHeading[1]; // heading
 
                 // Zauberei von Olha
 
-                String translatedHeading = "";
+                String translatedHeading = deeplAPIWrapper.getTranslatedHeading(headingToTranslate, getTargetLanguageCode());
 
                 websiteNode.getWebsite().translatedHeadings.add(headingLevel + " "
                         + translatedHeading);
