@@ -139,3 +139,4 @@
 [2023-06-06T17:35:33.158722600] Exception: MalformedURLException - Connection timed out: no further information
 [2023-06-06T17:35:33.159568900] Exception: IOException - Only http & https protocols supported
 [2023-06-06T17:42:07.202343200] Exception: IOException - unknown protocol: javascript
+[2023-06-06T17:50:02.468818] Exception: IOException - unknown protocol: javascript

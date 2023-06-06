@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="The first working version of translation. Web_Crawler_Report.md contains translated headings only.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TranslationDispatcher.java" afterDir="false" />
-    </list>
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="Current result w3schools, depth 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -399,7 +395,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686063101018</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Changed termination condition in recursiveTranslate method. Renamed class">
+      <created>1686065989946</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686065989946</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Removed unnecessary line">
+      <created>1686066053194</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1686066053194</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Current result">
+      <created>1686066082144</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686066082144</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Current result w3schools, depth 3">
+      <created>1686066323226</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686066323226</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,9 +453,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started WebsiteCrawler" />
-    <MESSAGE value="Jsoup added to build.gradle, working now" />
-    <MESSAGE value="refactored getCrawlingDepthFromUser() to use no arguments, started getTargetLanguageFromUser()" />
     <MESSAGE value="new class UserInteraction to handle UserInput" />
     <MESSAGE value="tests for function getStartingWebsiteFromUser with ByteArrayInputStream" />
     <MESSAGE value="moved functions and tests from UserInput to StartingWebsite and StartingWebsiteTest" />
@@ -453,7 +474,11 @@
     <MESSAGE value="Added FileGenerator, changed Main accordingly" />
     <MESSAGE value="Improved Exception Handling" />
     <MESSAGE value="The first working version of translation. Web_Crawler_Report.md contains translated headings only." />
-    <option name="LAST_COMMIT_MESSAGE" value="The first working version of translation. Web_Crawler_Report.md contains translated headings only." />
+    <MESSAGE value="Changed termination condition in recursiveTranslate method. Renamed class" />
+    <MESSAGE value="Removed unnecessary line" />
+    <MESSAGE value="Current result" />
+    <MESSAGE value="Current result w3schools, depth 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Current result w3schools, depth 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
