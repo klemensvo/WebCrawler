@@ -1,0 +1,140 @@
+[2023-06-06T13:12:56.760324200] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T13:17:00.074033800] Exception: IOException - unknown protocol: javascript
+[2023-06-06T13:18:22.619032200] Exception: IOException - unknown protocol: javascript
+[2023-06-06T13:18:22.984727600] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:18:23.781173100] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:18:28.140556800] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:18:37.834406300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:18:43.818657] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:18:43.819787100] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:18:43.820661500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:18:43.822658600] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:19:02.787769] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:19:02.790718800] Exception: IOException - unknown protocol: tel
+[2023-06-06T13:19:11.377136700] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T13:19:11.801988800] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T13:19:11.858853] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T13:19:12.776265500] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T13:19:44.516500600] Exception: MalformedURLException - Read timed out
+[2023-06-06T13:20:29.352592600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:20:30.103673] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:20:30.834650400] Exception: IOException - unknown protocol: javascript
+[2023-06-06T13:20:31.339049300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:20:32.285979300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:20:33.752128] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:20:37.927937300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:20:38.625435900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:20:40.205900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:20:40.913920600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:20:43.839961] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:20:47.243913] Exception: MalformedURLException - Read timed out
+[2023-06-06T13:21:09.540424500] Exception: MalformedURLException - Remote host terminated the handshake
+[2023-06-06T13:21:25.641621800] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T13:21:31.740058400] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T13:21:54.344168] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T13:22:42.413142100] Exception: MalformedURLException - eval.symantec.com
+[2023-06-06T13:22:45.506326600] Exception: MalformedURLException - support.mozilla.com
+[2023-06-06T13:23:12.941053600] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T13:23:36.041767600] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T13:23:41.889995900] Exception: MalformedURLException - www.jisclegal.ac.uk
+[2023-06-06T13:23:43.719745900] Exception: MalformedURLException - www.ico.gov.uk
+[2023-06-06T13:23:51.771279900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:24:16.924677200] Exception: MalformedURLException - Too many redirects occurred trying to load URL https://www.washingtonpost.com/wp-dyn/content/article/2005/07/16/AR2005071600111.html
+[2023-06-06T13:24:25.358786800] Exception: MalformedURLException - PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+[2023-06-06T13:25:00.412273700] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:00.414231500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:00.415648300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:01.084304300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:01.085705500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:01.086318900] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:01.087360400] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:01.088327500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:01.213404200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:25:01.214424500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:01.215321200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:05.785233100] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:05.786390600] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:05.787619] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:06.562551500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:06.563902200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:06.564666500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:06.566554200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:06.567554400] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:06.665767100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:25:06.666553800] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:06.667562] Exception: IOException - Only http & https protocols supported
+[2023-06-06T13:25:09.981432900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T13:25:37.254392700] Exception: MalformedURLException - Read timed out
+[2023-06-06T14:01:50.217365800] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T14:33:12.012511500] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T14:41:28.811964800] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T14:45:42.601960700] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T15:31:59.886752200] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T15:40:01.081172900] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T15:48:27.923663200] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:00:53.809441800] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:00:59.998834] Exception: Undefined Exception - Cannot read field "maxCrawlingDepth" because "this.userData" is null
+[2023-06-06T16:03:04.510069800] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:05:05.736421700] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:16:41.264484500] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:20:34.372454900] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:23:02.545285900] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:47:05.724646300] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:55:49.813996300] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:57:09.246170100] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T16:57:42.663999500] Exception: IllegalArgumentException - text must not be empty
+[2023-06-06T17:00:00.558464200] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T17:00:35.074855700] Exception: IllegalArgumentException - text must not be empty
+[2023-06-06T17:05:47.368979] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T17:06:20.962167100] Exception: IllegalArgumentException - text must not be empty
+[2023-06-06T17:21:14.379764800] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T17:21:49.073148900] Exception: IllegalArgumentException - text must not be empty
+[2023-06-06T17:23:08.595902] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T17:27:00.388137200] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T17:27:48.645041400] Exception: IllegalArgumentException - text must not be empty
+[2023-06-06T17:29:22.356449] Exception: IOException - unknown protocol: javascript
+[2023-06-06T17:31:51.672812500] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.342682300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.344799700] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.346828700] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.986446200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.988801100] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.989385700] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.990383800] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:03.991355800] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:04.111895500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:04.113521900] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:04.115535200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:08.924363600] Exception: IOException - unknown protocol: javascript
+[2023-06-06T17:32:09.912769900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:14.535970400] Exception: MalformedURLException - Too many redirects occurred trying to load URL https://googleads.g.doubleclick.net/ads/preferences/checkcookie?sig=ACi0TCj8_JTvy7qHuOydT0aBOfmWEP_NOVDJMCf463iGI45O6zPh87JlswsMwyNt-QhRpcOJn-Mv&hl=en
+[2023-06-06T17:32:14.602790900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:18.110277500] Exception: MalformedURLException - Too many redirects occurred trying to load URL https://googleads.g.doubleclick.net/ads/preferences/checkcookie?sig=ACi0TCgfzCtJYqitYDMyVGFx92ox9seYjSW7M2z2xdcXakF7ReLVMz3J4GVzrQxa8C8Xz1HSsjK_&hl=en
+[2023-06-06T17:32:22.647006] Exception: MalformedURLException - Too many redirects occurred trying to load URL https://googleads.g.doubleclick.net/ads/preferences/checkcookie?sig=ACi0TChewa2nhyUKRTp8geh5223Hi6e0KZ4VpydHIwuOz8G1rj3bMpeRcA8guZChrmWFE8rEjoyY&hl=en
+[2023-06-06T17:32:26.172490500] Exception: MalformedURLException - Too many redirects occurred trying to load URL https://ads.youtube.com/ads/preferences/getytcookie?sig=ACi0TCgtHb5DsIBBKL2uafwS4rVBOVga3SwOMtOovkxxQWyfct7OPLc957sPtzfKNERppJJ6Rl6d&hl=en
+[2023-06-06T17:32:28.592351100] Exception: MalformedURLException - Too many redirects occurred trying to load URL https://googleads.g.doubleclick.net/ads/preferences/checkcookie?sig=ACi0TCiOc1Hyf3c5FgddK8MtdGRDsrzKvnNmKdk67XImCr_JgpdQ8nrfEc7-QPgbhnDaqQEWdFek&hl=en
+[2023-06-06T17:32:37.741534600] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:32:37.743545300] Exception: IOException - unknown protocol: tel
+[2023-06-06T17:32:53.160456] Exception: IOException - unknown protocol: itms-apps
+[2023-06-06T17:32:53.374861300] Exception: IOException - unknown protocol: itms-apps
+[2023-06-06T17:32:53.475471800] Exception: IOException - unknown protocol: itms-apps
+[2023-06-06T17:32:55.068471] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:55.128475200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:55.158176400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:55.185477900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:55.703642600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:32:57.383504500] Exception: IOException - unknown protocol: itms-apps
+[2023-06-06T17:32:58.359505700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:33:01.969215900] Exception: IOException - unknown protocol: javascript
+[2023-06-06T17:33:09.837198800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:33:09.837198800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:33:13.061195900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T17:33:27.939920700] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T17:33:49.204204200] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T17:34:10.283598] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T17:35:11.369982900] Exception: IOException - Only http & https protocols supported
+[2023-06-06T17:35:11.951292800] Exception: IOException - unknown protocol: javascript
+[2023-06-06T17:35:14.562009900] Exception: IOException - No email address
+[2023-06-06T17:35:25.854995200] Exception: MalformedURLException - Read timed out
+[2023-06-06T17:35:33.158722600] Exception: MalformedURLException - Connection timed out: no further information
+[2023-06-06T17:35:33.159568900] Exception: IOException - Only http & https protocols supported
