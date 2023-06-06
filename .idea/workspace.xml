@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="Improved Exception Handling">
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="The first working version of translation. Web_Crawler_Report.md contains translated headings only.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ResultProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResultProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TranslationDispatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +183,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="WebCrawlerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TranslatorCustomTest.testTranslateWebsiteNodes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -199,7 +196,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WebCrawlerTest&quot;" />
+            <option value="&quot;TranslatorCustomTest.testTranslateWebsiteNodes&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,16 +204,16 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.TranslatorCustomTest.testTranslateWebsiteNodes" />
         <item itemvalue="Gradle.TranslatorCustomTest" />
         <item itemvalue="Gradle.TargetLanguageTest.getTargetLanguageFromUser" />
         <item itemvalue="Gradle.Tests in 'WebCrawler.test'" />
-        <item itemvalue="Gradle.WebCrawlerTest (1)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -395,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686054402451</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="The first working version of translation. Web_Crawler_Report.md contains translated headings only.">
+      <created>1686063101018</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1686063101018</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +452,8 @@
     <MESSAGE value="Main, WebCrawler and ResultProducer are working properly, changes to WebsiteNode" />
     <MESSAGE value="Added FileGenerator, changed Main accordingly" />
     <MESSAGE value="Improved Exception Handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved Exception Handling" />
+    <MESSAGE value="The first working version of translation. Web_Crawler_Report.md contains translated headings only." />
+    <option name="LAST_COMMIT_MESSAGE" value="The first working version of translation. Web_Crawler_Report.md contains translated headings only." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

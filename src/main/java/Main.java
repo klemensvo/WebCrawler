@@ -11,7 +11,7 @@ public class Main {
         crawlingDispatcher.crawlWeb();
         rootNode = crawlingDispatcher.getRootNode();
 
-        TranslatorCustom translator = new TranslatorCustom(rootNode, userData.targetLanguage);
+        TranslationDispatcher translator = new TranslationDispatcher(rootNode, userData.targetLanguage);
         translator.translateWebsiteNodes();
 
         ResultProducer resultProducer = new ResultProducer(userData, rootNode);
