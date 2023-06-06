@@ -42,7 +42,6 @@ public class ExceptionLogger {
         }else if (e != null){
             message.append ("Undefined Exception - ");
         }
-        // todo: add all possibly occurring exceptions
 
         message.append(e.getMessage());
         return message.toString();
