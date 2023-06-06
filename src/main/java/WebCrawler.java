@@ -31,7 +31,7 @@ public class WebCrawler {
         return Jsoup.connect(website.urlString).get();
     }
     private void addHeadingsToWebsite() {
-        for (int i = 0; i <= 6; i++) {
+        for (int i = 1; i <= 6; i++) {
             Elements headings = document.select("h" + i);
             for (Element heading : headings) {
                 website.headings.add("h" + i + " " + heading.text());

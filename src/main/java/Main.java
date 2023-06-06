@@ -1,6 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
+        /* todo: delete later
+        APITestClass apiTestClass = new APITestClass();
+        apiTestClass.testAPI(); */
+
         UserData userData;
         WebsiteNode rootNode;
 
@@ -14,7 +18,7 @@ public class Main {
         // todo: Translator: change API
         // Translator translator = new Translator(rootNode, userData.targetLanguage);
         // translator.translateWebsiteNodes();
-        // translatedRootNode = translator.getTranslatedRootNode(); */
+        // translatedRootNode = translator.getTranslatedRootNode();
 
         // todo: change to translatedRootNode as soon as translation works
         ResultProducer resultProducer = new ResultProducer(userData, rootNode);
