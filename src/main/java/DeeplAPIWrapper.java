@@ -36,7 +36,7 @@ public class DeeplAPIWrapper {
 
     //return the code of the user´s input language
     public String getLanguageCode (String inputLanguage) {
-        String languageCode="";
+        String languageCode=null;
         List <Language> languages = getSupportedLanguages();
         for(Language language: languages){
             if(language.getName().equals(inputLanguage)) {
@@ -47,10 +47,11 @@ public class DeeplAPIWrapper {
     }
 
     public String getTranslatedHeading (String heading, String targetLanguageCode) throws Exception {
-        String translatedHeading = "";
+        String translatedHeading = null;
         try {
             TextResult textResult = translator.translateText(heading, null, targetLanguageCode); //the source language is auto-detected
             translatedHeading = textResult.getText();
+
         } catch (DeepLException e) {
             ExceptionLogger.log(e);
         }

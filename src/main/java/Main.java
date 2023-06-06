@@ -13,9 +13,7 @@ public class Main {
 
         TranslatorCustom translator = new TranslatorCustom(rootNode, userData.targetLanguage);
         translator.translateWebsiteNodes();
-        // translatedRootNode = translator.getTranslatedRootNode();
 
-       // todo: change to translatedRootNode as soon as translation works
         ResultProducer resultProducer = new ResultProducer(userData, rootNode);
         String mdString = resultProducer.makeMdString();
 
@@ -23,6 +21,5 @@ public class Main {
         String mdFileName = "Web_Crawler_Report.md";
         fileGenerator.createMdFile(mdString, mdFileName);
     }
-
 
 }

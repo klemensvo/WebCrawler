@@ -20,7 +20,6 @@ public class TranslatorCustom {
         }catch (Exception e){
             ExceptionLogger.log(e);
         }
-        // return report.toString();
     }
 
     private String getTargetLanguageCode(){
@@ -29,12 +28,13 @@ public class TranslatorCustom {
 
     private void recursiveTranslate(WebsiteNode websiteNode, int depth) throws Exception {
 
-        // todo: Abbruchkriterium der Rekursion
+        // todo: Abbruchkriterium der Rekursion: depth, defined by user
+        if(depth>1){
+            return;
+        }
 
 
         if (websiteNode.getWebsite() != null) {
-            String url = websiteNode.getWebsite().urlString;
-
             ArrayList<String> headings = websiteNode.getWebsite().headings;
 
             for (String heading : headings) {
@@ -43,6 +43,7 @@ public class TranslatorCustom {
                 int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
 
                 String headingToTranslate = headingLevelAndHeading[1]; // heading
+
 
                 // Zauberei von Olha
 
