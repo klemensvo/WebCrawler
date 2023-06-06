@@ -301,3 +301,20 @@
 [2023-06-06T18:17:51.892611600] Exception: IOException - Only http & https protocols supported
 [2023-06-06T18:17:57.985097300] Exception: IOException - Only http & https protocols supported
 [2023-06-06T18:18:16.320379700] Exception: MalformedURLException - Read timed out
+[2023-06-06T18:18:34.572212] Exception: MalformedURLException - Read timed out
+[2023-06-06T18:18:39.500111300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:18:43.614183700] Exception: IOException - unknown protocol: javascript
+[2023-06-06T18:19:23.349500400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:19:23.370838700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:19:25.782947900] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:19:29.114513400] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.116504200] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.118503900] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.339522500] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.341837800] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.345519900] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.721624100] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.723581400] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:29.726971700] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:19:39.200433500] Exception: MalformedURLException - Read timed out
+[2023-06-06T18:20:19.574483200] Exception: Undefined Exception - java.lang.RuntimeException: java.lang.IllegalArgumentException: text must not be empty
