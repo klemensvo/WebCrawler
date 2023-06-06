@@ -4,28 +4,16 @@ WebCrawler is a project of an assignment of the course Clean Code at AAU Klagenf
 - Olha Kupar  
 - Klemens Vospernik
 
-## Basic structure  
-### Main
-entry point
+## GitHub Address
+https://github.com/klemensvo/WebCrawler
 
-### UserQuery  
-url  
-crawlDepth  
-targetLanguage
+## Build, run and test  
 
-### HandleWebsite
-can be called recursively
+### Checkout branch main
+Checkout the main branch on GitHub on with the stable version of the WebCrawler
 
-### WebCrawler
-crawlWebsite
-#### RecordHeadings
-findHeadings
-#### TranslateHeadings
-translateHeadings
-#### RecordURLs
-findURLs
+This WebCrawler was developed and run on Intellij
+In this IDE please run the Main class to start the WebCrawler
+Follow the instructions regarding the starting website, crawling depth and target language
 
-### RenderMarkdownFile
-displayHeadings  
-displayFunctionalURLLinks  
-displayBrokenURLLinks
+To test, please go to /src/test, right click and choose 'Run Tests in WebCrawler'
