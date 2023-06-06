@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class TranslatorCustom {
+public class TranslationDispatcher {
 
     DeeplAPIWrapper deeplAPIWrapper;
     WebsiteNode rootNode;
@@ -8,7 +8,7 @@ public class TranslatorCustom {
 
 
 
-    public TranslatorCustom(WebsiteNode rootNode, String targetLanguage) {
+    public TranslationDispatcher(WebsiteNode rootNode, String targetLanguage) {
         this.rootNode = rootNode;
         this.targetLanguage = targetLanguage;
         this.deeplAPIWrapper=new DeeplAPIWrapper();
@@ -28,31 +28,26 @@ public class TranslatorCustom {
 
     private void recursiveTranslate(WebsiteNode websiteNode, int depth) throws Exception {
 
-        // todo: Abbruchkriterium der Rekursion: depth, defined by user
-        if(depth>1){
+        if (websiteNode.getWebsite() == null) { //Abbruchbedingung für Rekursion
             return;
         }
-
-
-        if (websiteNode.getWebsite() != null) {
             ArrayList<String> headings = websiteNode.getWebsite().headings;
 
             for (String heading : headings) {
-                String[] headingLevelAndHeading = heading.split(" ", 2);
-                // uses only the number of the string "h1 Example Heading", result: '1'
-                int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
+                if(!heading.isEmpty()) {
+                    String[] headingLevelAndHeading = heading.split(" ", 2);
+                    // uses only the number of the string "h1 Example Heading", result: '1'
+                    int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
 
-                String headingToTranslate = headingLevelAndHeading[1]; // heading
+                    String headingToTranslate = headingLevelAndHeading[1]; // heading
 
 
-                // Zauberei von Olha
+                    String translatedHeading = deeplAPIWrapper.getTranslatedHeading(headingToTranslate, getTargetLanguageCode());
 
-                String translatedHeading = deeplAPIWrapper.getTranslatedHeading(headingToTranslate, getTargetLanguageCode());
-
-                websiteNode.getWebsite().translatedHeadings.add(headingLevel + " "
-                        + translatedHeading);
+                    websiteNode.getWebsite().translatedHeadings.add(headingLevel + " "
+                            + translatedHeading);
+                }
             }
-        }
 
         // recursive call to children
         for (WebsiteNode child : websiteNode.getChildren()) {
@@ -61,7 +56,7 @@ public class TranslatorCustom {
     }
 }
 
-/* todo: change API
+/*
 import com.google.cloud.translate.*;
 import com.google.gson.internal.bind.util.ISO8601Utils;
 
