@@ -15,13 +15,16 @@ public class TranslatorCustom {
     }
 
     public void translateWebsiteNodes() throws Exception {
-        recursiveTranslate(rootNode, 0);
+        try {
+            recursiveTranslate(rootNode, 0);
+        }catch (Exception e){
+            ExceptionLogger.log(e);
+        }
         // return report.toString();
     }
 
     private String getTargetLanguageCode(){
-        String targetLanguageCode = deeplAPIWrapper.getLanguageCode(targetLanguage);
-        return targetLanguageCode;
+        return deeplAPIWrapper.getLanguageCode(targetLanguage);
     }
 
     private void recursiveTranslate(WebsiteNode websiteNode, int depth) throws Exception {
@@ -51,8 +54,7 @@ public class TranslatorCustom {
         }
 
         // recursive call to children
-        for (
-                WebsiteNode child : websiteNode.getChildren()) {
+        for (WebsiteNode child : websiteNode.getChildren()) {
             recursiveTranslate(child, depth + 1);
         }
     }

@@ -1,6 +1,6 @@
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         UserData userData;
         WebsiteNode rootNode;
 
@@ -11,8 +11,8 @@ public class Main {
         crawlingDispatcher.crawlWeb();
         rootNode = crawlingDispatcher.getRootNode();
 
-        // Translator translator = new Translator(rootNode, userData.targetLanguage);
-        // translator.translateWebsiteNodes();
+        TranslatorCustom translator = new TranslatorCustom(rootNode, userData.targetLanguage);
+        translator.translateWebsiteNodes();
         // translatedRootNode = translator.getTranslatedRootNode();
 
        // todo: change to translatedRootNode as soon as translation works

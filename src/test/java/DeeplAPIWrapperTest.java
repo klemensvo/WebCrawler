@@ -29,7 +29,7 @@ public class DeeplAPIWrapperTest {
 
     @Test
     void getLanguages() {
-        List<Language> supportedLanguagesWithCodesList = deeplAPIWrapper.getLanguages();
+        List<Language> supportedLanguagesWithCodesList = deeplAPIWrapper.getSupportedLanguages();
         ArrayList<String> supportedLanguagesNamesList = new ArrayList<>();
         for (Language language : supportedLanguagesWithCodesList) {
             supportedLanguagesNamesList.add(language.getName());
@@ -39,7 +39,7 @@ public class DeeplAPIWrapperTest {
 
     @Test
     void getLanguageNamesList(){
-        ArrayList<String> supportedLanguagesNamesList = deeplAPIWrapper.getLanguageNamesList(deeplAPIWrapper.getLanguages());
+        ArrayList<String> supportedLanguagesNamesList = deeplAPIWrapper.getSupportedLanguageNamesList(deeplAPIWrapper.getSupportedLanguages());
 
         Assertions.assertEquals(supportedLanguagesNamesCheckList, supportedLanguagesNamesList);
     }

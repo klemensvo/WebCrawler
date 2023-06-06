@@ -14,19 +14,19 @@ public class DeeplAPIWrapper {
 
 
 
-    public List <Language> getLanguages (){
+    public List <Language> getSupportedLanguages(){
         List <Language> languageList = new ArrayList<>();
         try {
              languageList= translator.getTargetLanguages();
 
-        }catch (Exception e){
-            e.printStackTrace();
+        }catch (DeepLException | InterruptedException e){
+            ExceptionLogger.log(e);
         }
         return languageList;
     }
 
     //to check if the user´s input language is supported
-    public ArrayList<String> getLanguageNamesList (List <Language> languageList){
+    public ArrayList<String> getSupportedLanguageNamesList(List <Language> languageList){
         ArrayList<String> languageNamesList = new ArrayList<>();
         for(Language language:languageList){
             languageNamesList.add(language.getName());
@@ -37,7 +37,7 @@ public class DeeplAPIWrapper {
     //return the code of the user´s input language
     public String getLanguageCode (String inputLanguage) {
         String languageCode="";
-        List <Language> languages = getLanguages();
+        List <Language> languages = getSupportedLanguages();
         for(Language language: languages){
             if(language.getName().equals(inputLanguage)) {
                languageCode= language.getCode();
@@ -51,8 +51,8 @@ public class DeeplAPIWrapper {
         try {
             TextResult textResult = translator.translateText(heading, null, targetLanguageCode); //the source language is auto-detected
             translatedHeading = textResult.getText();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (DeepLException e) {
+            ExceptionLogger.log(e);
         }
         return translatedHeading;
     }

@@ -13,14 +13,15 @@ public class TargetLanguage {
         String targetLanguage = "";
         do {
             printPromptForTargetLanguage();
+
             String userInput = getUserInputLanguage();//original user input
-            System.out.println(userInput);
+
             String formatedUserInput = getFormattedInputLanguage(userInput); //brings the string f.e. "CHInESE" to form "Chinese"
-            System.out.println(formatedUserInput);
+
             String normalizedLanguageVariant = getNationalLanguageFormat(formatedUserInput);// converts to an API specific form f.e. "Chinese (simplified)"
-            System.out.println(normalizedLanguageVariant);
+
             targetLanguage = normalizedLanguageVariant;
-            System.out.println(targetLanguage);
+
 
         } while (!isValidTargetLanguage(targetLanguage));
 
@@ -30,8 +31,8 @@ public class TargetLanguage {
     //todo: add functionality to check if the chosen API supports the user defined target language
     protected boolean isValidTargetLanguage(String targetLanguage) {
         DeeplAPIWrapper deeplAPIWrapper = new DeeplAPIWrapper();
-        List<Language> supportedAPILanguages = deeplAPIWrapper.getLanguages();
-        ArrayList <String> supportedLanguages = deeplAPIWrapper.getLanguageNamesList(supportedAPILanguages);
+        List<Language> supportedAPILanguages = deeplAPIWrapper.getSupportedLanguages();
+        ArrayList <String> supportedLanguages = deeplAPIWrapper.getSupportedLanguageNamesList(supportedAPILanguages);
 
         if(!supportedLanguages.contains(targetLanguage)){
             return false;

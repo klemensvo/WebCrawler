@@ -1,3 +1,5 @@
+import com.deepl.api.DeepLException;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,6 +14,8 @@ public class ExceptionLogger {
 
     MalformedURLException
     IOException
+    IllegalArgumentException
+    DeeplLException and its subclasses
      */
 
     public static void log(Exception e) {
@@ -29,6 +33,14 @@ public class ExceptionLogger {
             message.append("IOException - ");
         } else if (e instanceof IOException) { // todo: manage exceptions
             message.append("MalformedURLException - ");
+        }else if (e instanceof IllegalArgumentException){
+            message.append("IllegalArgumentException - ");
+        }else if(e instanceof DeepLException){
+            message.append("DeepLException - ");
+        }else if(e instanceof InterruptedException){
+            message.append ("InterruptedException - ");
+        }else if (e != null){
+            message.append ("Undefined Exception - ");
         }
         // todo: add all possibly occurring exceptions
 

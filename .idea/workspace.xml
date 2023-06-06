@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="">
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="Added FileGenerator, changed Main accordingly">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_05_2023_23_00_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_05_2023_23_00__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023_21_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023_21_26__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeeplAPIWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ExceptionLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExceptionLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TargetLanguage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TranslatorCustom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DeeplAPIWrapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeeplAPIWrapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TargetLanguageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,23 +47,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="WebCrawler" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="WebCrawler" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="WebCrawler" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="WebCrawler" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -70,15 +57,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop_olha_translateHeadings" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +76,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -100,9 +88,16 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Console" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop__olha__newTranslationAPI&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KuparO/Desktop/AAU/Algo-Dat/Abgabe_2/code&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -118,7 +113,7 @@
       <command value="gradle wrapper --distribution-type all" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.DeeplAPIWrapperTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WebCrawler.main" />
@@ -126,18 +121,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeeplAPIWrapperTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CrawlingDispatcherTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;DeeplAPIWrapperTest&quot;" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CrawlingDispatcherTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -145,6 +142,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="TargetLanguageTest.getTargetLanguageFromUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -152,13 +150,15 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.getTargetLanguageFromUser&quot;" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TargetLanguageTest.getTargetLanguageFromUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -166,14 +166,15 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="TargetLanguageTest.isValidTargetLanguage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'WebCrawler.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.isValidTargetLanguage&quot;" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -187,20 +188,23 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="TargetLanguageTest.setNationalLanguageFormat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WebCrawlerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TargetLanguageTest.setNationalLanguageFormat&quot;" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;WebCrawlerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -208,19 +212,23 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DeeplAPIWrapperTest" />
         <item itemvalue="Gradle.TargetLanguageTest.getTargetLanguageFromUser" />
-        <item itemvalue="Gradle.TargetLanguageTest.isValidTargetLanguage" />
+        <item itemvalue="Gradle.Tests in 'WebCrawler.test'" />
+        <item itemvalue="Gradle.WebCrawlerTest (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.TargetLanguageTest.setNationalLanguageFormat" />
+        <item itemvalue="Gradle.CrawlingDispatcherTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="" />
@@ -228,6 +236,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679233208676</updated>
+      <workItem from="1682002486609" duration="594000" />
+      <workItem from="1682014163477" duration="592000" />
     </task>
     <task id="LOCAL-00001" summary="started WebsiteCrawler">
       <created>1679234445264</created>
@@ -341,78 +351,53 @@
       <option name="project" value="LOCAL" />
       <updated>1681889431816</updated>
     </task>
-    <task id="LOCAL-00017" summary="Created a TargetLanguage.java class">
-      <created>1682336250713</created>
+    <task id="LOCAL-00017" summary="Changed Websites to WebsiteList">
+      <created>1681894983125</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1682336250713</updated>
+      <updated>1681894983125</updated>
     </task>
-    <task id="LOCAL-00018" summary="Created a Translator.java class">
-      <created>1682343584715</created>
+    <task id="LOCAL-00018" summary="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)">
+      <created>1682156077759</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1682343584715</updated>
+      <updated>1682156077759</updated>
     </task>
-    <task id="LOCAL-00019" summary="Improved WebCrawler.java: added a feature to fill out the List of translatedHeadings  of Website.java">
-      <created>1682343919804</created>
+    <task id="LOCAL-00019" summary="restored Main, cleaned WebCrawler, CrawlingDispatcher doesn't yet work properly">
+      <created>1682249261994</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1682343919804</updated>
+      <updated>1682249261994</updated>
     </task>
-    <task id="LOCAL-00020" summary="Changed ResultProducer.java: show translated headings instead">
-      <created>1682344013939</created>
+    <task id="LOCAL-00020" summary="WebsiteNode added instead of WebsiteList, new recursive CrawlingDispatcher">
+      <created>1682258817134</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1682344013939</updated>
+      <updated>1682258817134</updated>
     </task>
-    <task id="LOCAL-00021" summary="Added tests for TargetLanguage.java class. Corrected a mistake.">
-      <created>1682358536477</created>
+    <task id="LOCAL-00021" summary="Main, WebCrawler and ResultProducer are working properly, changes to WebsiteNode">
+      <created>1682269883616</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1682358536477</updated>
+      <updated>1682269883616</updated>
     </task>
-    <task id="LOCAL-00022" summary="Added tests for Translator.java class.">
-      <created>1682361727008</created>
+    <task id="LOCAL-00022" summary="Added FileGenerator, changed Main accordingly">
+      <created>1682442540868</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1682361727008</updated>
+      <updated>1682442540868</updated>
     </task>
-    <task id="LOCAL-00023" summary="Manually merged parts of develop- and develop_olha_translate branches">
-      <created>1682452200736</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1682452200736</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Added a DeeplAPIWrapper class and its test class">
-      <created>1685359599493</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1685359599493</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Added a DeeplAPIWrapper class and its test class">
-      <created>1685359654554</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1685359654554</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Improved TargetLanguage to interact with DeeplAPIWrapper">
-      <created>1685363168981</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1685363168981</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -436,7 +421,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started WebsiteCrawler" />
@@ -455,30 +439,13 @@
     <MESSAGE value="improved CrawlingManager, adds websites to crawlingList while receiving new functionalLinks" />
     <MESSAGE value="ResultProducer and -Test started" />
     <MESSAGE value="ResultProducer advanced, initialized ArrayLists in Website" />
-    <MESSAGE value="Created a TargetLanguage.java class" />
-    <MESSAGE value="Created a Translator.java class" />
-    <MESSAGE value="Improved WebCrawler.java: added a feature to fill out the List of translatedHeadings  of Website.java" />
-    <MESSAGE value="Changed ResultProducer.java: show translated headings instead" />
-    <MESSAGE value="Added tests for TargetLanguage.java class. Corrected a mistake." />
-    <MESSAGE value="Added tests for Translator.java class." />
-    <MESSAGE value="Manually merged parts of develop- and develop_olha_translate branches" />
-    <MESSAGE value="Added a DeeplAPIWrapper class and its test class" />
-    <MESSAGE value="Improved TargetLanguage to interact with DeeplAPIWrapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved TargetLanguage to interact with DeeplAPIWrapper" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.util.NoSuchElementException" package="java.util" />
-          <option name="timeStamp" value="4" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Changed Websites to WebsiteList" />
+    <MESSAGE value="WebCrawler works without checking internal links, Main changed to represent only one Website (must be changed back)" />
+    <MESSAGE value="restored Main, cleaned WebCrawler, CrawlingDispatcher doesn't yet work properly" />
+    <MESSAGE value="WebsiteNode added instead of WebsiteList, new recursive CrawlingDispatcher" />
+    <MESSAGE value="Main, WebCrawler and ResultProducer are working properly, changes to WebsiteNode" />
+    <MESSAGE value="Added FileGenerator, changed Main accordingly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FileGenerator, changed Main accordingly" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WebCrawler$Main.ic" NAME="Main Coverage Results" MODIFIED="1681896331031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
