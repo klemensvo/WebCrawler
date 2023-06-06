@@ -1,29 +1,29 @@
 # Web Crawler Report
 Starting Website: <a>https://w3schools.com</a>
-Crawling Depth: 2
-Target Language: Italian
+Crawling Depth: 3
+Target Language: German
 
 
 
 
 https://w3schools.com
 
-# Imparare a codificare
+# Code lernen
 # HTML
 # CSS
 # JavaScript
-# Pitone
+# Python
 # SQL
-# Editor di codice
-# Spazi W3Schools
-# Il mio apprendimento
-# Diventa un utente PRO
-# Picker di colori
-# Codice gioco
-# Modelli web
-## Tutorial
-## Riferimenti
-## Esercizi e quiz
+# Code-Editor
+# W3Schools-Räume
+# Mein Lernen
+# Werden Sie ein PRO-Benutzer
+# Farbwähler
+# Code Game
+# Web-Vorlagen
+## Anleitungen
+## Referenzen
+## Übungen und Quizfragen
 ## PHP
 ## jQuery
 ## Java
@@ -35,89 +35,89 @@ https://w3schools.com
 ## R
 ## Kotlin
 ## Node.js
-## Reagire
+## Reagieren Sie
 ## JSON
 ## Vue
 ## MySQL
 ## XML
 ## Sass
-## Icone
-## MOTORE A TRAZIONE INTEGRALE
-## Grafica
+## Icons
+## RWD
+## Grafiken
 ## SVG
-## Tela
+## Segeltuch
 ## Raspberry Pi
-## Sicurezza informatica
-## Colori
+## Cyber-Sicherheit
+## Farben
 ## Git
 ## Matplotlib
 ## NumPy
-## Panda
+## Pandas
 ## SciPy
 ## ASP
 ## AngularJS
 ## AppML
-## Vai
-## TypeScript
+## Weiter
+## TypScript
 ## Django
 ## MongoDB
-## Statistiche
-## Scienza dei dati
-## Velocità di battitura
+## Statistik
+## Datenwissenschaft
+## Tippgeschwindigkeit
 ## Excel
-## Fogli di Google
-## Apprendimento automatico
-## Intelligenza artificiale
-## Aiutate la lince a raccogliere le pigne!
-## Esercizi e quiz
-## Date il via alla vostra carriera
-## Come si fa la sezione
-### HTML e CSS
-### Analisi dei dati
-### XML Tutorials
+## Google Sheets
+## Maschinelles Lernen
+## Künstliche Intelligenz
+## Hilf dem Luchs, Tannenzapfen zu sammeln!
+## Übungen und Quizfragen
+## Starten Sie Ihre Karriere
+## Anleitung zum Abschnitt
+### HTML und CSS
+### Datenanalyse
+### XML-Tutorials
 ### JavaScript
-### Programmazione
-### Lato server
-### Costruzione web
-### Analisi dei dati
-### XML Tutorials
+### Programmierung
+### Server-Seite
+### Web-Gebäude
+### Datenanalyse
+### XML-Tutorials
 ### HTML
 ### CSS
 ### JavaScript
-### Programmazione
-### Lato server
+### Programmierung
+### Server-Seite
 ### XML
-### Set di caratteri
-### Esercizi
-### Quizzes
-### Gare
-### Certificati
-### Con il più grande sito di sviluppatori web del mondo.
-### Esempio HTML:
-### Esempio di CSS:
-### Esempio di JavaScript:
-### Esempio Python:
-### Esempio SQL:
-### Se volete creare il vostro sito web, date un'occhiata a W3Schools Spaces.
-### L'utilizzo è gratuito e non richiede alcuna configurazione:
-### E sbloccare potenti funzioni:
-#### Non sapete da dove cominciare?
-#### Con il nostro editor di codice online, è possibile modificare il codice e visualizzare il risultato nel browser.
-#### Seguite i vostri progressi con il nostro programma gratuito "My Learning".
-#### Accedi al tuo account e inizia a guadagnare punti!
-#### Il famoso selezionatore di colori di W3Schools:
-#### Mettete alla prova le vostre abilità!
-#### Sfoglia la nostra selezione di modelli HTML reattivi gratuiti
-#### Snippet di codice per HTML, CSS e JavaScript
-##### Un linguaggio di programmazione per server web
-##### Una libreria JS per lo sviluppo di pagine web
-##### Un linguaggio di programmazione
-##### Un linguaggio di programmazione
-##### Un framework CSS per pagine web reattive più veloci e migliori
-##### Un framework CSS per progettare pagine web migliori
-###### Prossimo Bootcamp:
-###### 19 giugno
-###### Ad esempio, come creare una presentazione:
+### Zeichensätze
+### Übungen
+### Quizze
+### Rennen
+### Bescheinigungen
+### Mit der weltweit größten Website für Webentwickler.
+### HTML-Beispiel:
+### CSS-Beispiel:
+### JavaScript Beispiel:
+### Python-Beispiel:
+### SQL-Beispiel:
+### Wenn Sie Ihre eigene Website erstellen möchten, besuchen Sie W3Schools Spaces.
+### Die Nutzung ist kostenlos und erfordert keine Einrichtung:
+### Und schalten Sie leistungsstarke Funktionen frei:
+#### Sie wissen nicht, wo Sie anfangen sollen?
+#### Mit unserem Online-Code-Editor können Sie den Code bearbeiten und das Ergebnis in Ihrem Browser anzeigen
+#### Verfolgen Sie Ihre Fortschritte mit unserem kostenlosen Programm "My Learning".
+#### Loggen Sie sich in Ihr Konto ein und beginnen Sie mit dem Sammeln von Punkten!
+#### Der berühmte Farbwähler von W3Schools:
+#### Testen Sie Ihre Fähigkeiten!
+#### Stöbern Sie in unserer Auswahl an kostenlosen responsiven HTML-Vorlagen
+#### Codeschnipsel für HTML, CSS und JavaScript
+##### Eine Programmiersprache für Webserver
+##### Eine JS-Bibliothek für die Entwicklung von Web-Seiten
+##### Eine Programmiersprache
+##### Eine Programmiersprache
+##### Ein CSS-Framework für schnellere und bessere responsive Webseiten
+##### Ein CSS-Framework für die Gestaltung besserer Webseiten
+###### Nächstes Bootcamp:
+###### 19. Juni
+###### Zum Beispiel, wie man eine Diashow erstellt:
 
 Functional Links: 
 
