@@ -140,3 +140,164 @@
 [2023-06-06T17:35:33.159568900] Exception: IOException - Only http & https protocols supported
 [2023-06-06T17:42:07.202343200] Exception: IOException - unknown protocol: javascript
 [2023-06-06T17:50:02.468818] Exception: IOException - unknown protocol: javascript
+[2023-06-06T17:57:10.257073700] Exception: IOException - unknown protocol: javascript
+[2023-06-06T17:59:13.116186900] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T17:59:30.661372900] Exception: IllegalArgumentException - text must not be empty
+[2023-06-06T18:07:38.749126100] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T18:07:55.074389] Exception: Undefined Exception - java.lang.RuntimeException: java.lang.IllegalArgumentException: text must not be empty
+[2023-06-06T18:12:41.819175200] Exception: MalformedURLException - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[2023-06-06T18:12:49.710300200] Exception: Undefined Exception - java.lang.IndexOutOfBoundsException: Index: 2, Size: 1
+[2023-06-06T18:16:03.255799100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:16:03.828182800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:16:07.074082300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:16:08.898920] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:08.900931800] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:08.927051100] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:09.488209400] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:09.491071100] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:09.503349700] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:09.636143600] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:09.637768800] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:09.640753900] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:16:38.446423700] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:16:58.203308900] Exception: MalformedURLException - Read timed out
+[2023-06-06T18:17:07.416561300] Exception: IOException - unknown protocol: tel
+[2023-06-06T18:17:07.675220900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.728299700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.755295600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.780328] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.807293] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.833293600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.860295100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.886585900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.919036900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.943466300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.968382400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:07.995981800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.019969600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.108316400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.169318800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.208320500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.334060] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.443258300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.504195700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.559066700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.663065800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.752064900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.808535900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:08.833209200] Exception: IOException - unknown protocol: javascript
+[2023-06-06T18:17:09.003667100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.067607800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.310946100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.386785600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.448796100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.552545400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.609893900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.666556400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.723749500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.780548600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.850755400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.904555700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:09.944568200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:10.000988400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:10.739148100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:10.877157900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:10.991157500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.048851] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.098899500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.205576800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.342137] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.415263600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.482875800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.525841400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.576978900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.602933700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.638860500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.683977100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.741842600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.773913600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.808897800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.839841600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.866877200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.900877900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:11.954843400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.034848600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.067093800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.138841900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.212126400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.324308300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.376217700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.429066] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.476847700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.549887] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.592831100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.645542200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.719833400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.780119200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.831961500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.889794300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:12.955791] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.012563200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.053560300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.105806600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.152774700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.234564700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.278113700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.318934500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.368825700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.415569300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.462022400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.519598] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.561811400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:13.996381100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.042491600] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.114572500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.157570200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.202573700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.261069500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.335575400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.383579300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.416579300] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.485448100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.552497900] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.593584200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.663512200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.704705700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.744694800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.784698700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.832694500] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.900709] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.942259100] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:14.982743400] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:15.533397900] Exception: MalformedURLException - Unexpected end of file from server
+[2023-06-06T18:17:25.956670800] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:32.296963700] Exception: MalformedURLException - Unexpected end of file from server
+[2023-06-06T18:17:33.118166900] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:33.130377100] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:17:33.133253600] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:17:33.146368200] Exception: MalformedURLException - Connection refused: no further information
+[2023-06-06T18:17:37.716535200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:37.774446600] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:39.027903400] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:39.684446700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:40.055575100] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:41.552738200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:43.031684800] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:43.492439] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:44.146783700] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:44.445050200] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:45.521645200] Exception: MalformedURLException - Unhandled content type. Must be text/*, application/xml, or application/*+xml
+[2023-06-06T18:17:45.524646700] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:46.201495800] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:46.913323100] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:49.134008800] Exception: MalformedURLException - mobile.bbc.co.uk
+[2023-06-06T18:17:49.135006500] Exception: MalformedURLException - mobile.bbc.co.uk
+[2023-06-06T18:17:49.136005300] Exception: MalformedURLException - mobile.bbc.co.uk
+[2023-06-06T18:17:49.137007400] Exception: MalformedURLException - mobile.bbc.co.uk
+[2023-06-06T18:17:49.138006400] Exception: MalformedURLException - mobile.bbc.co.uk
+[2023-06-06T18:17:49.139009900] Exception: MalformedURLException - mobile.bbc.co.uk
+[2023-06-06T18:17:49.756919500] Exception: MalformedURLException - Unexpected end of file from server
+[2023-06-06T18:17:51.721978800] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:51.892611600] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:17:57.985097300] Exception: IOException - Only http & https protocols supported
+[2023-06-06T18:18:16.320379700] Exception: MalformedURLException - Read timed out

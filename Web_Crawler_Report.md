@@ -1,126 +1,164 @@
 # Web Crawler Report
-Starting Website: <a>https://w3schools.com</a>
-Crawling Depth: 2
+Starting Website: <a>https://javatpoint.com</a>
+Crawling Depth: 1
 Target Language: Italian
 
 
 
 
-https://w3schools.com
+https://javatpoint.com
 
-## jQuery
-## SVG
-## TypeScript
-## Come si fa la sezione
-# Il mio apprendimento
-## Aiutate la lince a raccogliere le pigne!
-#### Snippet di codice per HTML, CSS e JavaScript
-## PHP
-## Grafica
-## Vai
-## Intelligenza artificiale
-## Date il via alla vostra carriera
-# Spazi W3Schools
-#### Sfoglia la nostra selezione di modelli HTML responsive gratuiti
-## MOTORE A TRAZIONE INTEGRALE
-## Apprendimento automatico
-### Analisi dei dati
-## AppML
-# Editor di codice
-## Esercizi e quiz
-### XML Tutorials
-### Lato server
-### Quizzes
-### Esercizi
-### JavaScript
-### Set di caratteri
-### XML
-### Programmazione
-### Programmazione
-### Lato server
-### HTML
-### Costruzione web
-### CSS
-## Icone
-## MySQL
-## Vue
-## XML
-## Sass
-## Sicurezza informatica
-## Colori
-## Raspberry Pi
-## JSON
-### Esempio di CSS:
-### Esempio SQL:
-#### Seguite i vostri progressi con il nostro programma gratuito "My Learning".
-### L'utilizzo è gratuito e non richiede alcuna configurazione:
-### Se volete creare il vostro sito web, date un'occhiata a W3Schools Spaces.
-## Tela
-## Reagire
-### Esempio HTML:
-##### Un framework CSS per pagine web reattive più veloci e migliori
-#### Con il nostro editor di codice online, è possibile modificare il codice e visualizzare il risultato nel browser.
-###### Ad esempio, come creare una presentazione:
-##### Un framework CSS per progettare pagine web migliori
-###### Prossimo Bootcamp:
-### Esempio Python:
-#### Accedi al tuo account e inizia a guadagnare punti!
-##### Un linguaggio di programmazione
-###### 19 giugno
-#### Non sapete da dove cominciare?
-#### Il famoso selezionatore di colori di W3Schools:
-### Esempio di JavaScript:
-#### Mettete alla prova le vostre abilità!
-##### Un linguaggio di programmazione
-##### Un linguaggio di programmazione per server web
-### E sbloccare potenti funzioni:
-##### Una libreria JS per lo sviluppo di pagine web
-## C
-### Con il più grande sito di sviluppatori web del mondo.
-## Node.js
-## Riferimenti
-## R
-## Tutorial
-## C#
-### Certificati
-## Bootstrap
-### Analisi dei dati
-## Kotlin
-## C++
-## Java
-## Esercizi e quiz
-## W3.CSS
-### HTML e CSS
-## NumPy
-### XML Tutorials
-### Gare
-### JavaScript
-## AngularJS
-## Panda
-## Scienza dei dati
-## MongoDB
-## Statistiche
-## SciPy
-## Matplotlib
-## ASP
-## Velocità di battitura
-## Excel
-# CSS
-## Git
-## Fogli di Google
-## Django
-# Pitone
-# JavaScript
-# HTML
-# SQL
-# Picker di colori
-# Codice gioco
-# Modelli web
-# Diventa un utente PRO
-# Imparare a codificare
+## Tutorial sui test
+# Ultimi tutorial
+## Tecnologie cloud
+## Preparazione
+## Tutorial su Python
+## Tecnologie di tendenza
+## B.Tech / MCA
+## Tutorial PHP
+## Tutorial sul database
+## Tecnologia web
+## Strumenti per l'ufficio
+## Tecnologia Java
+## Tecnologie .Net
+## Tutorial popolari
+## Americano
+## Argomenti vari
+## India
+## Argomenti non tecnici
+## Vista dell'autore
+## Feedback
+## Servizi Javatpoint
+## 100+ Ultimi aggiornamenti
+## Formazione per il campus universitario
+### 14 giorni di prova gratuita di Semrush Pro per Javatpoint
+### Imparare i tutorial
+### I nostri siti web
+### I nostri servizi
+### Contatto
+
+Functional Links: 
+
+--> Functional Link to: <a>https://www.quoteperson.com</a>
+--> Functional Link to: <a>https://feeds.feedburner.com/javatpointsonoo</a>
+--> Functional Link to: <a>https://www.facebook.com/javatpoint</a>
+--> Functional Link to: <a>https://javatpoint.blogspot.com</a>
+--> Functional Link to: <a>https://www.hindi100.com</a>
+--> Functional Link to: <a>https://www.lyricsia.com</a>
+--> Functional Link to: <a>https://www.quoteperson.com</a>
+
+Broken Links: 
+
+--> Broken Link to: <a>https://bit.ly/2FOeX6S</a>
+--> Broken Link to: <a>https://semrush.sjv.io/c/4124850/1648349/13053</a>
+--> Broken Link to: <a>https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo</a>
+--> Broken Link to: <a>https://twitter.com/pagejavatpoint</a>
+--> Broken Link to: <a>https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg</a>
+--> Broken Link to: <a>https://www.jobandplacement.com</a>
+
+
+
+https://www.quoteperson.com
+
+# CitazionePersona
+## Citazioni per argomenti
+## Citazioni di autori
+
+Functional Links: 
+
+--> Functional Link to: <a>https://www.facebook.com/profile.php?id=100017216440210</a>
+
+Broken Links: 
+
+--> Broken Link to: <a>https://twitter.com/quoteperson_com</a>
+--> Broken Link to: <a>https://plus.google.com/u/0/104681570564870195499</a>
+
+
+
+https://feeds.feedburner.com/javatpointsonoo
+
 
 Functional Links: 
 
 
 Broken Links: 
 
+
+
+
+https://www.facebook.com/javatpoint
+
+
+Functional Links: 
+
+
+Broken Links: 
+
+
+
+
+https://javatpoint.blogspot.com
+
+
+Functional Links: 
+
+
+Broken Links: 
+
+
+
+
+https://www.hindi100.com
+
+## ?????? ???? ????? ??? | Pasta kaise banate hai
+## ???? ??? ?? ?? ???? ?? ??? ?? | Shree Ram ji ka janm kab hua tha
+## ????? ?? ????? ???? ????? ??? | Kaddu ki sabji kaise banate hai
+## ?????? ???????? ???? ?? | Riscaldamento globale kya hai
+## ???????? ?? ???? ???? ????? ???? | Ricetta del Panipuri fatto in casa
+## ?????????? ?? ???? ??? ?? | Bangladesh kab aazaad hua tha
+## ??? ???? ?? ???? ?? ??? ?? | Isaa masih ka janm kab hua tha
+## ???????? ????? ???? ????? ??? | Aayushman Card kaise banate hai
+## ???? ?? ?????? ?? ??? ???? ????? ??? | Sooji our Chocolate ka cake kaise bnate hai
+## ???? ?? ??? ?? ?????? ???? ????? ??? | Suji our aloo ka nashta kaise banate hai
+## ???? ?? ???????? ???? ????? ??? | Suji ka pizza kaise bnate hai
+## ???? ?? ???? ???? ????? ??? | Suji ka Chila kaise banate hai
+## ???? ?? ????? ???? ????? ??? | Suji ki mithai kaise banate hai
+## ???? ?? ???? ?? ?????? ???? ????? ??? | Suji o maida ki Gujhiya kaise banate hai
+## ???? ?? ??? ???? ????? ??? | Sooji ka Cake kaise banate hai
+## 26/11 ?? ???? ?? ??? ?? | 26/11 ka hamla kab hua tha
+#### Seguiteci
+## ???? ???? ???? ????? ??? | Chicken stu kaise banate hai
+## ????? ???? ????? ??? | Omlete kaise banate hai
+## ????? ?? ???? ???? ????? ??? | Karele ka achar kaise banate hai
+## ?? ????? ????? ?? ???? ?? ??? ??? | Dr Zakir Hussain Biografia
+#### ?? ?? ??? / Cos'è oggi
+#### Messaggi recenti
+
+Functional Links: 
+
+--> Functional Link to: <a>https://facebook.com/hindi100dotcom</a>
+--> Functional Link to: <a>https://pinterest.com/hindi100dotcom/_created/</a>
+--> Functional Link to: <a>https://www.instagram.com/hindi100dotcom/</a>
+--> Functional Link to: <a>https://www.facebook.com/hindi100dotcom/</a>
+--> Functional Link to: <a>https://www.instagram.com/hindi100dotcom/</a>
+--> Functional Link to: <a>http://feeds.feedburner.com/Hindi100</a>
+
+Broken Links: 
+
+--> Broken Link to: <a>https://twitter.com/hindi100_com</a>
+--> Broken Link to: <a>https://youtube.com/channel/UC_RV49LF0nXBCAyTQuo2pYg</a>
+--> Broken Link to: <a>https://twitter.com/hindi100_com</a>
+
+
+
+https://www.lyricsia.com
+
+#### Ultimi testi di canzoni
+
+Functional Links: 
+
+--> Functional Link to: <a>https://www.facebook.com/lyricsiadotcom/</a>
+
+Broken Links: 
+
+--> Broken Link to: <a>https://twitter.com/lyricsia</a>

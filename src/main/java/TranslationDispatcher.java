@@ -1,15 +1,13 @@
 import java.util.ArrayList;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class TranslationDispatcher {
-
-    DeeplAPIWrapper deeplAPIWrapper;
-    WebsiteNode rootNode;
-    String targetLanguage;
+    private DeeplAPIWrapper deeplAPIWrapper;
+    private WebsiteNode rootNode;
+    private String targetLanguage;
 
     public TranslationDispatcher(WebsiteNode rootNode, String targetLanguage) {
         this.rootNode = rootNode;
@@ -17,10 +15,10 @@ public class TranslationDispatcher {
         this.deeplAPIWrapper = new DeeplAPIWrapper();
     }
 
-    public void translateWebsiteNodes() throws Exception {
+    public void translateWebsiteNodes() {
         try {
-            recursiveTranslate(rootNode);
-        } catch (Exception e) {
+            recursiveTranslate(rootNode, 0).get();
+        } catch (InterruptedException | ExecutionException e) {
             ExceptionLogger.log(e);
         }
     }
@@ -29,92 +27,60 @@ public class TranslationDispatcher {
         return deeplAPIWrapper.getLanguageCode(targetLanguage);
     }
 
-    private void recursiveTranslate(WebsiteNode websiteNode) throws Exception {
+    private CompletableFuture<Void> recursiveTranslate(WebsiteNode websiteNode, int depth) {
         if (websiteNode.getWebsite() == null) {
-            return;
+            return CompletableFuture.completedFuture(null); // Termination condition for recursion
         }
 
         ArrayList<String> headings = websiteNode.getWebsite().headings;
 
-        List<CompletableFuture<Void>> translationFutures = headings.parallelStream()
-                .filter(heading -> !heading.isEmpty())
-                .map(heading -> {
-                    String[] headingLevelAndHeading = heading.split(" ", 2);
-                    int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
-                    String headingToTranslate = headingLevelAndHeading[1];
+        // Create a list of CompletableFuture for concurrent translation
+        List<CompletableFuture<Void>> translationFutures = new ArrayList<>();
 
-                    CompletableFuture<String> translationFuture = CompletableFuture.supplyAsync(() -> {
-                        try {
-                            return deeplAPIWrapper.getTranslatedHeading(headingToTranslate, getTargetLanguageCode());
-                        } catch (Exception e) {
-                            ExceptionLogger.log(e);
-                            return null;
-                        }
-                    });
+        // Atomic index to maintain the order of translated headings
+        AtomicInteger index = new AtomicInteger(0);
 
-                    return translationFuture.thenAcceptAsync(translatedHeading -> {
-                        if (translatedHeading != null) {
-                            websiteNode.getWebsite().translatedHeadings.add(headingLevel + " " + translatedHeading);
-                        }
-                    });
-                })
-                .collect(Collectors.toList());
+        for (String heading : headings) {
+            if (!heading.isEmpty()) {
+                String[] headingLevelAndHeading = heading.split(" ", 2);
+                int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
+                String headingToTranslate = headingLevelAndHeading[1];
 
-        CompletableFuture.allOf(translationFutures.toArray(new CompletableFuture[0])).join();
+                // Perform the translation asynchronously
+                CompletableFuture<String> translationFuture = CompletableFuture
+                        .supplyAsync(() -> {
+                            try {
+                                return deeplAPIWrapper.getTranslatedHeading(headingToTranslate, getTargetLanguageCode());
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
 
-        // recursive call to children
-        for (WebsiteNode child : websiteNode.getChildren()) {
-            recursiveTranslate(child);
+                // Combine the translated heading with the level and update the translatedHeadings list at the corresponding index
+                CompletableFuture<Void> updateTranslationFuture = translationFuture.thenAccept(translatedHeading -> {
+                    String translatedHeadingWithLevel = headingLevel + " " + translatedHeading;
+                    int currentIndex = index.getAndIncrement();
+                    websiteNode.getWebsite().translatedHeadings.add(currentIndex, translatedHeadingWithLevel);
+                });
+
+                translationFutures.add(updateTranslationFuture);
+            }
         }
+
+        // Recursive call to children
+        List<CompletableFuture<Void>> childTranslationFutures = new ArrayList<>();
+        for (WebsiteNode child : websiteNode.getChildren()) {
+            CompletableFuture<Void> childTranslationFuture = recursiveTranslate(child, depth + 1);
+            childTranslationFutures.add(childTranslationFuture);
+        }
+
+        // Combine all CompletableFuture for synchronization
+        translationFutures.addAll(childTranslationFutures);
+        return CompletableFuture.allOf(translationFutures.toArray(new CompletableFuture[0]));
     }
 }
 
 
-/*
-import com.google.cloud.translate.*;
-import com.google.gson.internal.bind.util.ISO8601Utils;
 
-import java.util.ArrayList;
 
-public class Translator {
 
-    TargetLanguage targetLanguage = new TargetLanguage();
-    String targetLanguageCode = targetLanguage.getTargetLanguageAsISO639Code();
-
-    protected ArrayList<String> getTranslatedListOfHeadings(ArrayList<String> headings){
-        String translation;
-        ArrayList<String> translatedHeadings = new ArrayList<>();
-
-        for(String heading: headings){
-            translation=getTranslatedHeading(heading);
-            translatedHeadings.add(translation);
-        }
-
-        return translatedHeadings;
-    }
-
-    protected String getTranslatedHeading(String heading){
-        String sourceLanguage = getSourceLanguage(heading);
-
-        Translate translate = TranslateOptions.getDefaultInstance().getService();
-        Translation translation = translate.translate(heading, Translate.TranslateOption.sourceLanguage(sourceLanguage),
-                Translate.TranslateOption.targetLanguage(targetLanguageCode));
-
-        String translatedHeading = translation.getTranslatedText();
-
-        return translatedHeading;
-    }
-
-    protected String getSourceLanguage(String heading){
-        String sourceLanguageCode="";
-        try {
-            Translate translate = TranslateOptions.getDefaultInstance().getService();
-            Detection detection = translate.detect(heading);
-            sourceLanguageCode = detection.getLanguage();
-        }catch (TranslateException e){
-            System.out.println("The text language cannot be detected.");
-        }
-
-        return sourceLanguageCode;
-    }
-} */

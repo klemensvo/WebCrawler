@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="Current result w3schools, depth 3" />
+    <list default="true" id="574178bc-074b-4777-8009-0b3a36efd5fe" name="Changes" comment="Concurrent translation -&gt; performance improved, but the order is incorrect">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_Crawler_Report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Crawler_Report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exceptions.log" beforeDir="false" afterPath="$PROJECT_DIR$/exceptions.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TranslationDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TranslationDispatcher.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -423,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686066323226</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Concurrent translation -&gt; performance improved, but the order is incorrect">
+      <created>1686066729343</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1686066729343</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new class UserInteraction to handle UserInput" />
     <MESSAGE value="tests for function getStartingWebsiteFromUser with ByteArrayInputStream" />
     <MESSAGE value="moved functions and tests from UserInput to StartingWebsite and StartingWebsiteTest" />
     <MESSAGE value="cleared StartingWebsite, moved prependHttpsIfNecessary()" />
@@ -478,7 +489,8 @@
     <MESSAGE value="Removed unnecessary line" />
     <MESSAGE value="Current result" />
     <MESSAGE value="Current result w3schools, depth 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Current result w3schools, depth 3" />
+    <MESSAGE value="Concurrent translation -&gt; performance improved, but the order is incorrect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Concurrent translation -&gt; performance improved, but the order is incorrect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
