@@ -8,12 +8,12 @@ class ResultProducerTest {
     void printTestPage1() {
         UserData userData = new UserData();
         userData.startingWebsite = "https://javatpoint.com";
-        userData.crawlingDepth = 2;
+        userData.maxCrawlingDepth = 2;
         userData.targetLanguage = "German";
 
         WebsiteNode websiteNode = new WebsiteNode();
         Website website = new Website();
-        website.url = "https://google.com";
+        website.urlString = "https://google.com";
         website.headings.add("h1 Test");
 
         ResultProducer resultProducer = new ResultProducer(userData, websiteNode);
@@ -23,7 +23,7 @@ class ResultProducerTest {
                 + "\nStarting Website: <a>"
                 + userData.startingWebsite + "</a>"
                 + "\nCrawling Depth: "
-                + userData.crawlingDepth
+                + userData.maxCrawlingDepth
                 + "\nTarget Language: "
                 + userData.targetLanguage
                 + "\n\n";

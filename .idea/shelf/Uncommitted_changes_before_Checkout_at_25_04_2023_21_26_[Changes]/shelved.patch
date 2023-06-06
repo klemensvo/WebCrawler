@@ -1,0 +1,57 @@
+Index: src/test/java/TranslatorTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.junit.jupiter.api.Assertions;\r\nimport org.junit.jupiter.api.BeforeEach;\r\nimport org.junit.jupiter.api.Test;\r\n\r\npublic class TranslatorTest {\r\n\r\n    @Test\r\n    void testGetSourceLanguage(){\r\n        Translator translator = new Translator();\r\n        String result = translator.getSourceLanguage(\"Heute\");\r\n\r\n        Assertions.assertEquals(\"de\", result);\r\n    }\r\n\r\n    @Test\r\n    void testGetTranslatedHeading(){\r\n        Translator translator = new Translator();\r\n        String heading = \"Heute ist Sonntag\";\r\n        translator.targetLanguageCode=\"en\";\r\n        String result = translator.getTranslatedHeading(heading);\r\n        System.out.println(result);\r\n\r\n        Assertions.assertEquals(\"Today is Sunday\", result);\r\n    }\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/TranslatorTest.java b/src/test/java/TranslatorTest.java
+--- a/src/test/java/TranslatorTest.java	
++++ b/src/test/java/TranslatorTest.java	
+@@ -1,10 +1,12 @@
+ import org.junit.jupiter.api.Assertions;
+-import org.junit.jupiter.api.BeforeEach;
+ import org.junit.jupiter.api.Test;
+ 
+ public class TranslatorTest {
+ 
+-    @Test
++    UserData userData = new UserData();
++
++
++    /*@Test
+     void testGetSourceLanguage(){
+         Translator translator = new Translator();
+         String result = translator.getSourceLanguage("Heute");
+@@ -21,6 +23,6 @@
+         System.out.println(result);
+ 
+         Assertions.assertEquals("Today is Sunday", result);
+-    }
++    }*/
+ 
+ }
+Index: src/main/java/Translator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import com.google.cloud.translate.*;\r\nimport com.google.gson.internal.bind.util.ISO8601Utils;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class Translator {\r\n\r\n    TargetLanguage targetLanguage = new TargetLanguage();\r\n    String targetLanguageCode = targetLanguage.getTargetLanguageAsISO639Code();\r\n\r\n\r\n    protected ArrayList<String> getTranslatedListOfHeadings(ArrayList<String> headings){\r\n        String translation;\r\n        ArrayList<String> translatedHeadings = new ArrayList<>();\r\n\r\n        for(String heading: headings){\r\n            translation=getTranslatedHeading(heading);\r\n            translatedHeadings.add(translation);\r\n        }\r\n\r\n        return translatedHeadings;\r\n    }\r\n\r\n    protected String getTranslatedHeading(String heading){\r\n        String sourceLanguage = getSourceLanguage(heading);\r\n\r\n        Translate translate = TranslateOptions.getDefaultInstance().getService();\r\n        Translation translation = translate.translate(heading, Translate.TranslateOption.sourceLanguage(sourceLanguage),\r\n                Translate.TranslateOption.targetLanguage(targetLanguageCode));\r\n\r\n        String translatedHeading = translation.getTranslatedText();\r\n\r\n        return translatedHeading;\r\n    }\r\n\r\n    protected String getSourceLanguage(String heading){\r\n        String sourceLanguageCode=\"\";\r\n        try {\r\n            Translate translate = TranslateOptions.getDefaultInstance().getService();\r\n            Detection detection = translate.detect(heading);\r\n            sourceLanguageCode = detection.getLanguage();\r\n        }catch (TranslateException e){\r\n            System.out.println(\"The text language cannot be detected.\");\r\n        }\r\n\r\n        return sourceLanguageCode;\r\n    }\r\n\r\n    /*protected String getTargetLanguageAsISO639Code(){\r\n        String languageCodeISO639=\"\";\r\n        Iterable<Language> supportedLanguages = getSupportedLanguagesWithCodeFromTranlateAPI();\r\n        for (Language language: supportedLanguages){\r\n            if(targetLanguage==language.getName()){\r\n                languageCodeISO639=language.getCode();\r\n            }\r\n        }\r\n        return languageCodeISO639;\r\n    }\r\n\r\n    Iterable<Language> getSupportedLanguagesWithCodeFromTranlateAPI(){\r\n        Translate translate = TranslateOptions.getDefaultInstance().getService();\r\n        Iterable<Language> languages = translate.listSupportedLanguages();\r\n        return languages;\r\n    }*/\r\n}\r\n\r\n
+===================================================================
+diff --git a/src/main/java/Translator.java b/src/main/java/Translator.java
+--- a/src/main/java/Translator.java	
++++ b/src/main/java/Translator.java	
+@@ -4,10 +4,15 @@
+ import java.util.ArrayList;
+ 
+ public class Translator {
++    String targetLanguage;
++    String targetLanguageCode;
+ 
+-    TargetLanguage targetLanguage = new TargetLanguage();
+-    String targetLanguageCode = targetLanguage.getTargetLanguageAsISO639Code();
++    TargetLanguage targetLanguageClass = new TargetLanguage();
+ 
++    Translator (UserData userData){
++        this.targetLanguage = userData.targetLanguage;
++        this.targetLanguageCode = targetLanguageClass.getTargetLanguageAsISO639Code(targetLanguage);
++    }
+ 
+     protected ArrayList<String> getTranslatedListOfHeadings(ArrayList<String> headings){
+         String translation;

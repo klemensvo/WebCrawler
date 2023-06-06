@@ -1,19 +1,11 @@
 import org.jsoup.Connection;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import java.io.IOException;
-
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.argThat;
-import static org.mockito.Mockito.when;
 
 public class WebCrawlerTest {
 
@@ -44,7 +36,7 @@ public class WebCrawlerTest {
         // WebCrawler webCrawler = new WebCrawler("https://w3schools.com");
 
         Website website = webCrawler.getWebsiteHeadingsAndLinks();
-        System.out.println("\nWebsite: " + website.url);
+        System.out.println("\nWebsite: " + website.urlString);
         System.out.println("\nHeadings: ");
         int headerCounter = 1;
         for (String heading : website.headings) {

@@ -1,6 +1,6 @@
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         UserData userData;
         WebsiteNode rootNode;
 
@@ -11,12 +11,9 @@ public class Main {
         crawlingDispatcher.crawlWeb();
         rootNode = crawlingDispatcher.getRootNode();
 
-        // todo: Translator: change API
-        // Translator translator = new Translator(rootNode, userData.targetLanguage);
-        // translator.translateWebsiteNodes();
-        // translatedRootNode = translator.getTranslatedRootNode(); */
+        TranslationDispatcher translator = new TranslationDispatcher(rootNode, userData.targetLanguage);
+        translator.translateWebsiteNodes();
 
-        // todo: change to translatedRootNode as soon as translation works
         ResultProducer resultProducer = new ResultProducer(userData, rootNode);
         String mdString = resultProducer.makeMdString();
 
@@ -24,4 +21,5 @@ public class Main {
         String mdFileName = "Web_Crawler_Report.md";
         fileGenerator.createMdFile(mdString, mdFileName);
     }
+
 }

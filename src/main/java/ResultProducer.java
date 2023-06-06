@@ -25,7 +25,7 @@ public class ResultProducer {
         // todo: next we will make it clean
 
         if (websiteNode.getWebsite() != null) {
-            String url = websiteNode.getWebsite().url;
+            String url = websiteNode.getWebsite().urlString;
             report.append(newLine());
             report.append(newLine());
             report.append(newLine());
@@ -33,16 +33,15 @@ public class ResultProducer {
             report.append(newLine());
             report.append(newLine());
 
-            ArrayList<String> headings = websiteNode.getWebsite().headings;
-            for (String heading : headings) {
-                String[] headingLevelAndHeading = heading.split(" ", 2);
-                // uses only the number of the string "h1 Example Heading", result: '1'
-                int headingLevel = Integer.parseInt(headingLevelAndHeading[0].substring(1));
+            ArrayList<String> headings = websiteNode.getWebsite().translatedHeadings;
+            for (String translatedHeading : headings) {
+                    String[] headingLevelAndHeading = translatedHeading.split(" ", 2);
+                    // uses only the number of the string "h1 Example Heading", result: '1'
+                    int headingLevel = Integer.parseInt(headingLevelAndHeading[0]);
 
-                for (int i = 0; i < headingLevel; i++) {
-                    report.append("#");
-                }
-                report.append(" ").append(headingLevelAndHeading[1]).append(newLine());
+                    report.append("#".repeat(Math.max(0, headingLevel)));
+                    report.append(" ").append(headingLevelAndHeading[1]).append(newLine());
+
             }
 
             report.append(newLine());
@@ -77,7 +76,7 @@ public class ResultProducer {
     }
     String assembleInput() {
         return "Starting Website: <a>" + userData.startingWebsite + "</a>\n"
-                + "Crawling Depth: " + userData.crawlingDepth + "\n"
+                + "Crawling Depth: " + userData.maxCrawlingDepth + "\n"
                 + "Target Language: " + userData.targetLanguage + "\n";
     }
 
